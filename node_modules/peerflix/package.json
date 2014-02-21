@@ -1,0 +1,44 @@
+{
+  "name": "peerflix",
+  "version": "0.1.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mafintosh/peerflix.git"
+  },
+  "bin": {
+    "peerflix": "./app.js"
+  },
+  "dependencies": {
+    "bitfield": "~0.1.0",
+    "clivas": "~0.1.4",
+    "range-parser": "0.0.4",
+    "hat": "0.0.3",
+    "mime": "~1.2.9",
+    "numeral": "~1.4.7",
+    "readable-stream": "~1.0.2",
+    "read-torrent": "~0.1.0",
+    "network-address": "0.0.4",
+    "peer-wire-protocol": "~0.3.6",
+    "peer-wire-swarm": "~0.0.7",
+    "part-file": "~0.1.0",
+    "optimist": "~0.3.5",
+    "speedometer": "~0.1.1",
+    "once": "~1.1.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "readme": "# peerflix\n\na streaming torrent client.\nit requires node.js to run.\n\n\tnpm install -g peerflix\n\nthis will install a terminal app called `peerflix`. simply call it with a torrent file\n\n\tpeerflix http://www.clearbits.net/get/53-star-wreck---in-the-pirkinning.torrent --vlc\n\npeerflix will print a terminal interface. this first line contains a address to a http server.\nusing `--vlc` will open the file in vlc when it's ready to stream.\n\n![peerflix](https://raw.github.com/mafintosh/peerflix/master/screenshot.png)\n\nsimply open this address in vlc or similar to start viewing the file. If the torrent contains multiple files `peerflix` will choose the biggest one.\n\nTo get a full list of available options run\n\n\tpeerflix --help\n",
+  "readmeFilename": "README.md",
+  "description": "a streaming torrent client. it requires node.js to run.",
+  "bugs": {
+    "url": "https://github.com/mafintosh/peerflix/issues"
+  },
+  "_id": "peerflix@0.1.5",
+  "dist": {
+    "shasum": "954e89d99d28469fb790bc8cb20a182d81497fb2"
+  },
+  "_from": "peerflix@",
+  "_resolved": "https://registry.npmjs.org/peerflix/-/peerflix-0.1.5.tgz"
+}
