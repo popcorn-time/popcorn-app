@@ -215,10 +215,9 @@ h1 {
 
 
 sidebar {
-    right:0;
-    position: absolute;
     height: 100%;
     z-index: 125;
+    width:100%;
     -webkit-transform-style: preserve-3d;
     animation: sidebareffect .5s;
     -webkit-animation: sidebareffect .5s; /* Safari and Chrome */
@@ -260,15 +259,168 @@ sidebar {
         }
     }
 
+    .movie-coverback:before {
+          content : "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 250px;
+          opacity : 0.3;
+          background-size: cover;
+          z-index: -1;
+    }
+    .movie-coverback {
+        z-index: 10;
+
+        .poster {
+          width:30%;
+          display: inline-block;
+          box-sizing: border-box;
+          padding:20px;
+          vertical-align: top;
+
+          img.big-poster {
+              background: #000;
+              height: 193px;
+              width: 130px;
+              box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15), 0 2px 3px rgba(0,0,0,0.3);
+              border-radius:3px;
+              border:1px solid #000;
+              display: block;
+              margin: 10px auto;
+          }
+
+        }
+        .movie-resume {
+          width:65%%;
+          display: inline-block;
+          box-sizing: border-box;
+          vertical-align: top;
+          padding-top: 20px;
+
+          h2 {
+            font-size: 36px;
+            
+          }
+          h6 {
+            color:#4e9cff;
+          }
+        }
+    }
+
+    .movie-menu  {
+      background: #040404;
+        .menu-item {
+          width:24.5%;
+          display: inline-block;
+          position: relative;
+          padding:10px 20px;
+          box-sizing: border-box;
+          min-height: 35px;
+          text-align: center;
+      }
+
+
+
+      .switch {
+        background: transparent;
+        border-radius: 32px;
+        display: block;
+        height: 12px;
+        position: absolute;
+        width: 25px;
+        border: 2px solid #FFF;
+        right: 52px;
+        top: 14px;
+        cursor: pointer;
+        label {
+          color: #fff;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          -webkit-transition: color .2s ease;
+          -moz-transition: color .2s ease;
+          -ms-transition: color .2s ease;
+          -o-transition: color .2s ease;
+          transition: color .2s ease;
+          width: 20px;
+          cursor: pointer;
+          &:nth-of-type(1) {
+            left: -38px;
+            position: absolute;
+            text-align: right;
+          }
+          &:nth-of-type(2) {
+            position: absolute;
+            right: -30px;
+            text-align: left;
+          }
+        }
+        input {
+          height: 64px;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          width: 60px;
+          z-index: 2;
+          cursor: pointer;
+          &:checked {
+            ~ label {
+              &:nth-of-type(1) {
+                color: #0cff00;
+              }
+              &:nth-of-type(2) {
+                color: #FFF;
+              }
+            }
+            ~ .toggle {
+              left: 2px;
+            }
+            z-index: 0;
+          }
+          ~ :checked ~ label {
+            &:nth-of-type(1) {
+              color: #FFF;
+            }
+            &:nth-of-type(2) {
+              color: #0cff00;
+            }
+          }
+          ~ :checked ~ .toggle {
+            left: 13px;
+          }
+        }
+      }
+
+      .toggle {
+        background: #0cff00;
+        border-radius: 50%;
+        height: 10px;
+        left: 0;
+        position: absolute;
+        top: 1px;
+        -webkit-transition: left .2s ease;
+        -moz-transition: left .2s ease;
+        -ms-transition: left .2s ease;
+        -o-transition: left .2s ease;
+        transition: left .2s ease;
+        width: 10px;
+        z-index: 1;
+      }
+
+    }
     .play {
 
         background: $body-bg;
         box-shadow:-3px 0 3px rgba(0,0,0,0.2);
         height: 100%;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
-        width: 220px;
+        width: 100%;
         z-index: 100;
 
         @include scrollable();
@@ -309,11 +461,8 @@ sidebar {
         }
     }
 
-    img.big-poster {
-        background: #000;
-        height: 326px;
-        width: 220px;
-    }
+
+
 
     a.play-button {
         background: #3498db;
@@ -678,14 +827,7 @@ sidebar {
 }
 
 .movie-config {
-        -webkit-transition: all .25s ease;
-      -moz-transition: all .25s ease;
-      -ms-transition: all .25s ease;
-      -o-transition: all .25s ease;
-      transition: all .25s ease;
 
-    position:absolute;
-    bottom:-90px;
     background:rgba(0,0,0,0.6);
     width:100%;
     color:#FFF;
@@ -728,92 +870,7 @@ input {
 
 /* ---------- SWITCH ---------- */
 
-.switch {
-  background: transparent;
-  border-radius: 32px;
-  display: block;
-  height: 12px;
-  position: absolute;
-  width: 25px;
-  border: 2px solid #FFF;
-  right: 52px;
-  top: 14px;
-  cursor: pointer;
-  label {
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -ms-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-    width: 20px;
-    cursor: pointer;
-    &:nth-of-type(1) {
-      left: -38px;
-      position: absolute;
-      text-align: right;
-    }
-    &:nth-of-type(2) {
-      position: absolute;
-      right: -30px;
-      text-align: left;
-    }
-  }
-  input {
-    height: 64px;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 60px;
-    z-index: 2;
-    cursor: pointer;
-    &:checked {
-      ~ label {
-        &:nth-of-type(1) {
-          color: #0cff00;
-        }
-        &:nth-of-type(2) {
-          color: #FFF;
-        }
-      }
-      ~ .toggle {
-        left: 2px;
-      }
-      z-index: 0;
-    }
-    ~ :checked ~ label {
-      &:nth-of-type(1) {
-        color: #FFF;
-      }
-      &:nth-of-type(2) {
-        color: #0cff00;
-      }
-    }
-    ~ :checked ~ .toggle {
-      left: 13px;
-    }
-  }
-}
 
-.toggle {
-  background: #0cff00;
-  border-radius: 50%;
-  height: 10px;
-  left: 0;
-  position: absolute;
-  top: 1px;
-  -webkit-transition: left .2s ease;
-  -moz-transition: left .2s ease;
-  -ms-transition: left .2s ease;
-  -o-transition: left .2s ease;
-  transition: left .2s ease;
-  width: 10px;
-  z-index: 1;
-}
 
 }
 

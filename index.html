@@ -33,7 +33,41 @@
     </section>
 
     <script id="sidebar-tpl" type="text/x-template">
+      <style>.movie-coverback:before {background-image: url(http://img838.imageshack.us/img838/6450/86iq.jpg); } </style>
       <div class="play">
+        <div class="movie-coverback">
+          <div class="poster">
+            <img class="big-poster" src="<%= bigImage %>" alt="<%= title %>" />
+          </div>
+          <div class="movie-resume">
+            <h2><%= title %></h2>
+            <h6>154m  • <%= year %> • PG-13  • Adventure</h6>
+            <p><%= synopsis %></p>
+          </div>
+      </div>
+      <div class="movie-menu">
+          <div class="menu-item"><a href="">Play now</a></div>
+          <div class="menu-item"><span>Good Health</span></div>
+          <div class="menu-item"><span><strong>8.4</strong> Rating</span></div>
+          <% if (this.model.get('quality') && this.model.get('torrents')) { %>
+              <div class="menu-item" class="options">
+                <% if (this.model.get('torrents')["720p"] && this.model.get('torrents')["1080p"]) { %>
+                  <div class="quality switch white">
+                    <input type="radio" name="switch" id="switch-off"<% if (this.model.get('quality') === '720p') { %> checked<% } %>>
+                    <input type="radio" name="switch" id="switch-on"<% if (this.model.get('quality') === '1080p') { %> checked<% } %>>
+                    <label for="switch-off">720p</label>
+                    <label for="switch-on">1080p</label>
+                    <span class="toggle"></span>
+                  </div>
+                <% } else { %>
+                  <span class="quality"><%= quality %></span>
+                <% } %>
+              </div>
+            <% } %>
+      </div>
+      <div class="movie-info">
+      </div>
+
         <div class="closer"><i class="fa fa-times"></i></div>
         <div class="poster-cont">
           <ul class="movie-config">
@@ -48,24 +82,9 @@
                 <% } %>
               </li>
             <% } %>
-            <% if (this.model.get('quality') && this.model.get('torrents')) { %>
-              <li class="options">
-                <%= Language['quality'] %>
-                <% if (this.model.get('torrents')["720p"] && this.model.get('torrents')["1080p"]) { %>
-                  <div class="quality switch white">
-                    <input type="radio" name="switch" id="switch-off"<% if (this.model.get('quality') === '720p') { %> checked<% } %>>
-                    <input type="radio" name="switch" id="switch-on"<% if (this.model.get('quality') === '1080p') { %> checked<% } %>>
-                    <label for="switch-off">720p</label>
-                    <label for="switch-on">1080p</label>
-                    <span class="toggle"></span>
-                  </div>
-                <% } else { %>
-                  <span class="quality"><%= quality %></span>
-                <% } %>
-              </li>
-            <% } %>
+            
           </ul>
-          <img class="big-poster" src="<%= bigImage %>" alt="<%= title %>" />
+          
         </div>
 
         <div class="side-content">
