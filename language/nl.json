@@ -1,0 +1,46 @@
+{
+    "beforeQuit": "Weet je zeker dat je wilt stoppen?",
+    "loading": "Wacht even...",
+    "loadingVideo": "Bufferen, wacht even",
+    "searchLoading": "Zoeken...",
+    "noResults": "Geen resultaten voor jouw zoekopdracht.",
+
+	"search": "Zoeken",
+    "movies": "Films",
+
+    "subtitledIn": "Ondertiteling in",
+    "quality": "Kwaliteit",
+    "watchItNow": "Kijk Nu",
+    "durationUnit": "min",
+
+    "connecting": "Verbinden...",
+    "startingDownload": "Download Starten...",
+    "downloading": "Downloaden...",
+
+    "genres": {
+        "all": "Populair",
+        "action": "Actie",
+        "adventure": "Avontuur",
+        "animation": "Animatie",
+        "biography": "Biografie",
+        "comedy": "Comedy",
+        "crime": "Misdaad",
+        "documentary": "Documentaire",
+        "drama": "Drama",
+        "family": "Familie",
+        "fantasy": "Fantasie",
+        "film-noir": "Film-Noir",
+        "history": "Geschiedenis",
+        "horror": "Horror",
+        "music": "Muziek",
+        "musical": "Musical",
+        "mystery": "Mysterie",
+        "romance": "Romantiek",
+        "sci-fi": "Sci-Fi",
+        "short": "Kort",
+        "sport": "Sport",
+        "thriller": "Thriller",
+        "war": "Oorlog",
+        "western": "Western"
+    }
+}
