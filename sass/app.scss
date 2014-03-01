@@ -48,7 +48,7 @@ body {
     border-radius: 5px;
     color: #333;
     cursor: default;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     color:$text-color;
 }
@@ -62,7 +62,6 @@ button {
 }
 
 h1 {
-    font-family: 'Lucida Grande', 'Myriad Pro', sans-serif;
     font-size: 13px;
 }
 
@@ -592,6 +591,54 @@ body.has-notification {
     }
 }
 
+
+.pagination {
+    border-radius: 4px;
+    display: block;
+    margin: 40px 0;
+    padding-left: 0;
+    text-align: center;
+}
+.pagination ul li{
+  display: inline-block;
+}
+.pagination li:first-child > a, .pagination li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+    
+}
+.pagination li:last-child > a, .pagination li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.pagination li > a, .pagination li > span {
+    border: 1px solid rgba(255,255,255, 0.2);
+    color: #999999;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    @include box-sizing(border-box);
+    border: 1px solid #000;
+    text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 1px rgba(0,0,0, 0.6);
+    background-image: linear-gradient(to bottom, #2a2a2a 0%, #1b1b1b 100%);
+}
+.pagination li > a:hover{
+  opacity: 0.8;
+}
+
+.pagination ul li.active a, .pagination li > a:active{
+    background-image: linear-gradient(to bottom, #121212 0%, #191919 100%);
+    box-shadow: 0 1px 0px rgba(255,255,255, 0.1), inset 0 1px 1px rgba(0,0,0, 0.5);
+    color: #fff;
+}
+
+
+
 .torrent-health {
   display: inline-block;
   padding: 3px 5px;
@@ -726,7 +773,7 @@ body.has-notification {
     border-radius: 5px;
     color: #FFF;
     display: block;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-top: 10px;
@@ -760,7 +807,7 @@ body.has-notification {
 
         &.description {
             color: #777;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 18px;
             margin-bottom:20px;
         }
@@ -828,12 +875,28 @@ body.has-notification {
   padding: 0;
 }
 
+.flag {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  
+  &.flag-eng { background-image: url(../images/eng.png); }
+  &.flag-fre { background-image: url(../images/fre.png); }
+  &.flag-hol { background-image: url(../images/hol.png); }
+  &.flag-pob { background-image: url(../images/pob.png); }
+  &.flag-por { background-image: url(../images/por.png); }
+  &.flag-rum { background-image: url(../images/rum.png); }
+  &.flag-spa { background-image: url(../images/spa.png); }
+  &.flag-tur { background-image: url(../images/tur.png); }
+}
+
 .movie-config {
-        -webkit-transition: all .25s ease;
-      -moz-transition: all .25s ease;
-      -ms-transition: all .25s ease;
-      -o-transition: all .25s ease;
-      transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
 
     position:absolute;
     bottom:-90px;
@@ -860,12 +923,13 @@ body.has-notification {
         span.available-subtitles {
           float: right;
           margin-top: -3px;
-          > img {
+          > .flag {
             margin-left: 5px;
           }
         }
     }
 
+   
 input {
   font-family: inherit;
   font-size: 100%;
@@ -1073,7 +1137,6 @@ a {
   height: calc(100% - #{$header_height});
   background: #121212;
   border-right:1px solid #000;
-  font-family: 'Myriad Pro', 'Lucida Grande', sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1214,6 +1277,12 @@ a {
   opacity: 1.0;
   pointer-events: all;
   @include transition(opacity 0.2s ease-out);
+}
+#video_player.vjs-user-inactive {
+  video {
+    // Disable the cursor when playing the video
+    cursor: none;
+  }
 }
 
 // The font size for the subtitles is applied to #video-container, so we have to change a few styles for it to propagate properly.
