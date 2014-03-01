@@ -101,3 +101,5 @@ node-webkit.app/Contents/MacOS/node-webkit
 node-webkit.app/Contents/PkgInfo
 
 node-webkit.app/Contents/Resources/nw.icns
+
+node_modules/
