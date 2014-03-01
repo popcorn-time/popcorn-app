@@ -57,7 +57,12 @@ OutputDir=.\
 [Languages]
 Name: "en"; MessagesFile: ".\languages\English.isl"
 Name: "es"; MessagesFile: ".\languages\Spanish.isl"
-
+Name: "pt"; MessagesFile: ".\languages\Portuguese.isl"
+Name: "pt-br"; MessagesFile: ".\languages\BrazilianPortuguese.isl"
+Name: "fr"; MessagesFile: ".\languages\French.isl"
+Name: "de"; MessagesFile: ".\languages\German.isl"
+Name: "tk"; MessagesFile: ".\languages\Turkish.isl"
+Name: "nl"; MessagesFile: ".\languages\Dutch.isl"
 
 [Files]
 Source: ".\run.bat"; DestDir: "{app}"; Flags: ignoreversion
