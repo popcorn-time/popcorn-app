@@ -23,7 +23,7 @@
         win: true,
         linux32: true,
       },
-      src: ['./index.html', './package.json', './css/**/*', './js/**/*', './fonts/**/*', './images/**/*', './language/**/*', './tmp/**/*', './node_modules/**/*'] // Your node-webkit app
+      src: ['./index.html', './package.json', './css/**/*', './js/**/*', './fonts/**/*', './images/**/*', './language/**/*', './tmp/**/*', './node_modules/**/*']
     },
   });
 
