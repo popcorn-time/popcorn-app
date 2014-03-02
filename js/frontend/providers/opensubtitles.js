@@ -75,7 +75,7 @@ App.findSubtitle = function (model, cb, isFallback) {
             token,
             queries,
             {
-                limit: 5
+                limit: 20
             }
         ];
 
