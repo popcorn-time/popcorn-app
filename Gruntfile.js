@@ -14,7 +14,17 @@
       options: {
         livereload: true,
       },
-    }
+    },
+    nodewebkit: {
+      options: {
+        build_dir: './build',
+        mac_icns: './dist/mac/popcorntime.icns',
+        mac: true,
+        win: true,
+        linux32: true,
+      },
+      src: ['./index.html', './package.json', './css/**/*', './js/**/*', './fonts/**/*', './images/**/*', './language/**/*', './tmp/**/*', './node_modules/**/*'] // Your node-webkit app
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -23,5 +33,7 @@
   grunt.registerTask('css', ['compass']);
 
   grunt.registerTask('default', ['compass']);
+  
+  grunt.loadNpmTasks('grunt-node-webkit-builder');
 
 };
