@@ -28,8 +28,8 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-node-webkit-builder": "~0.1.16",
-    "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.7.1"
+    "grunt-contrib-compass": "~0.7.1",
+    "load-grunt-tasks": "~0.3.0"
   }
 }
