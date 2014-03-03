@@ -8,13 +8,16 @@ var request = require('request'),
     baseUrl = 'http://www.yifysubtitles.com',
 
     Languages = window.Languages = {
-        'spanish': 'Spanish',
-        'english': 'English'
+        'spanish'   : 'Español',
+        'english'   : 'English',
+        'french'    : 'Français',
+        'turkish'   : 'Türkçe',
+        'romanian'  : 'Română',
+        'portuguese': 'Português'
     };
 
 App.findSubtitle = function (model, cb, isFallback) {
     var doRequest = function () {
-
         var requestOptions = {
             url: baseUrl + '/movie-imdb/tt' + model.imdb,
             headers: {

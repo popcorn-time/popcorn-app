@@ -224,7 +224,7 @@ sidebar {
 .movie-config {
   @include transition(all .25s ease);
   position: absolute;
-  bottom: -90px;
+  bottom: -130px;
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   color: #FFF;
@@ -234,6 +234,7 @@ sidebar {
   li.options {
     padding: 15px;
     position: relative;
+    overflow: hidden;
 
     span.extra-data {
       font-weight: bold;
@@ -249,6 +250,9 @@ sidebar {
     span.available-subtitles {
       float: right;
       margin-top: -3px;
+      margin-bottom: -15px;
+      max-width: 100px;
+      text-align: right;
 
       > .flag { margin-left: 5px; }
     }

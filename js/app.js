@@ -17,19 +17,19 @@ var
 
     // browser window object
     win = gui.Window.get(),
-    
+
     // os object
     os = require('os'),
-    
+
     // path object
     path = require('path'),
-    
-    // fs object    
+
+    // fs object
     fs = require('fs'),
 
     // Localization support
     Language = require('./language/' + 'en' + '.json'),
-    
+
     // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time');
 
@@ -47,7 +47,7 @@ var config = {
 };
 
 
-// Create the Temp Folder    
+// Create the Temp Folder
 if( ! fs.existsSync(tmpFolder) ) { fs.mkdirSync(tmpFolder); }
 
 
@@ -136,13 +136,13 @@ win.title = 'Popcorn Time';
 win.focus();
 
 
-// Prompting before quitting
-win.on('close', function() {
-    if (confirm(Language.beforeQuit)) {
-        this.close(true);
+document.addEventListener('keydown', function(event){
+    var $el = $('.popcorn-quit');
+    if(!$el.hasClass('hidden')) {  
+        // Esc
+        if( event.keyCode == 27 ) { $el.addClass('hidden'); }
     }
 });
-
 
 // Cancel all new windows (Middle clicks / New Tab)
 win.on('new-win-policy', function (frame, url, policy) {
@@ -216,8 +216,8 @@ var checkForUpdates = function() {
             if( updateInfo[currentOs].version > config.version ) {
                 // Check if there's a newer version and show the update notification
                 $('#notification').html(
-                    'Popcorn Time '+ updateInfo[currentOs].versionName +' was just released. You should get it now!'+
-                    '<a class="btn" href="#" onclick="gui.Shell.openExternal(\'' + updateInfo[currentOs].downloadUrl + '\');">Update Popcorn Time</a>'
+                    'Popcorn Time '+ updateInfo[currentOs].versionName + Language.UpgradeVersionDescription +
+                    '<a class="btn" href="#" onclick="gui.Shell.openExternal(\'' + updateInfo[currentOs].downloadUrl + '\');"> '+ Language.UpgradeVersion + '</a>'
                 );
                 $('body').addClass('has-notification');
             }
@@ -235,7 +235,7 @@ var videoPeerflix = null;
 var playTorrent = window.playTorrent = function (torrent, subs, callback, progressCallback) {
 
     videoPeerflix ? $(document).trigger('videoExit') : null;
-    
+
     // Create a unique file to cache the video (with a microtimestamp) to prevent read conflicts
     var tmpFilename = ( torrent.toLowerCase().split('/').pop().split('.torrent').shift() ).slice(0,100);
     tmpFilename = tmpFilename.replace(/([^a-zA-Z0-9-_])/g, '_')+'-'+ (new Date()*1) +'.mp4';
@@ -297,10 +297,10 @@ var playTorrent = window.playTorrent = function (torrent, subs, callback, progre
                 flix.clearCache();
                 flix.destroy();
                 videoPeerflix = null;
-                
+
                 // Unbind the event handler
                 $(document).off('videoExit');
-                
+
                 delete flix;
             });
         });
