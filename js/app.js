@@ -27,13 +27,28 @@ var
     // fs object
     fs = require('fs'),
 
-    // Localization support
-    Language = require('./language/' + 'en' + '.json'),
-
     // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time');
 
 
+var config = {
+    "version": "0.1.0",
+    // Used to check for the latest version
+    "updateNotificationUrl": "http://getpopcornti.me/update.json",
+    // Used to check if there's an internet connection
+    "connectionCheckUrl": "http://www.google.com",
+    // YIFY Endpoint
+    "yifyApiEndpoint": "http://yify-torrents.com/api/",
+    // A mirror for YIFY (for users in the UK -Yify is blocked there-)
+    "yifyApiEndpointMirrors": ["http://yify.unlocktorrent.com/api/"]
+};
+
+var i18n = require("i18n");
+i18n.configure({
+  defaultLocale: 'en',
+  locales: ['en', 'de', 'es', 'fr', 'nl', 'pt', 'ro', 'tr'],
+  directory: './language'
+});
 // Create the Temp Folder
 if( ! fs.existsSync(tmpFolder) ) { fs.mkdirSync(tmpFolder); }
 
@@ -43,11 +58,11 @@ var detectLanguage = function(preferred) {
 	var fs = require('fs');
 	var bestLanguage = navigator.language.slice(0,2);
 
-	if( fs.existsSync('./language/' + bestLanguage + '.json') ) {
-		Language = require('./language/' + bestLanguage + '.json');
-	} else {
-		Language = require('./language/' + preferred + '.json');
-	}
+    if( fs.existsSync('./language/' + bestLanguage + '.json') ) {
+        i18n.setLocale(bestLanguage);
+    } else {
+        i18n.setLocale(preferred);
+    }
 
 	// This is a hack to translate non-templated UI elements. Fuck it.
 	$('[data-translate]').each(function(){
@@ -55,9 +70,9 @@ var detectLanguage = function(preferred) {
 		var key = $el.data('translate');
 
 		if( $el.is('input') ) {
-			$el.attr('placeholder', Language[key]);
+			$el.attr('placeholder', i18n.__(key));
 		} else {
-			$el.text(Language[key]);
+			$el.text(i18n.__(key));
 		}
 	});
 
@@ -70,9 +85,9 @@ var populateCategories = function() {
 	var category_html = '';
 	var defaultCategory = 'all';
 
-	for( key in Language.genres ) {
+	for( key in i18n.__("genres") ) {
 		category_html += '<li'+ (defaultCategory == key ? ' class="active" ' : '') +'>'+
-				           '<a href="#" data-genre="'+key+'">'+Language.genres[key]+'</a>'+
+				           '<a href="#" data-genre="'+key+'">'+ i18n.__("genres")[key] +'</a>'+
 				         '</li>';
 	}
 
@@ -124,7 +139,7 @@ win.focus();
 
 document.addEventListener('keydown', function(event){
     var $el = $('.popcorn-quit');
-    if(!$el.hasClass('hidden')) {  
+    if(!$el.hasClass('hidden')) {
         // Esc
         if( event.keyCode == 27 ) { $el.addClass('hidden'); }
     }
@@ -201,8 +216,8 @@ var checkForUpdates = function() {
             if( updateInfo[currentOs].version > Settings.get('version') ) {
                 // Check if there's a newer version and show the update notification
                 $('#notification').html(
-                    'Popcorn Time '+ updateInfo[currentOs].versionName + Language.UpgradeVersionDescription +
-                    '<a class="btn" href="#" onclick="gui.Shell.openExternal(\'' + updateInfo[currentOs].downloadUrl + '\');"> '+ Language.UpgradeVersion + '</a>'
+                    i18n.__('UpgradeVersionDescription', updateInfo[currentOs].versionName) +
+                    '<a class="btn" href="#" onclick="gui.Shell.openExternal(\'' + updateInfo[currentOs].downloadUrl + '\');"> '+ i18n.__('UpgradeVersion') + '</a>'
                 );
                 $('body').addClass('has-notification');
             }
