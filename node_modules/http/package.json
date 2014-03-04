@@ -1,0 +1,18 @@
+{
+  "name": "http",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "readme": "ERROR: No README data found!",
+  "_id": "http@0.0.0",
+  "dist": {
+    "shasum": "86e6326d29c5d039de9fac584a45689f929f4f72"
+  },
+  "_from": "http@",
+  "_resolved": "https://registry.npmjs.org/http/-/http-0.0.0.tgz"
+}

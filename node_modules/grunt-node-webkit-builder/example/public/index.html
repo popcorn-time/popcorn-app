@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World from grunt-node-webkit-builder!</title>
+<script>
+    var deck = require('deck');
+    var xs = deck.shuffle([ 1, 2, 3, 4 ]);
+    console.log(deck, xs);
+</script>
+</head>
+<body>
+<h1>Hello World!</h1>
+We are using node.js <script>document.write(process.version)</script>
+
+<h2>Here is a required node_module</h2>
+<ul>
+<script>
+for (var counter=0; counter<xs.length; counter++) {
+   document.write("<li>" + xs[counter] + "</li>");
+}
+</script>
+</ul>
+
+<h2>And here is a cute kitten:</h2>
+<img src="images/kitten.jpg">
+</body>
+</html>
