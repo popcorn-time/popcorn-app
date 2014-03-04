@@ -1,21 +1,28 @@
+
 {
+    "quit": "Çıkış",
+    "cancel": "İptal",
     "beforeQuit": "Çıkmak istediğinden emin misin?",
     "loading": "Lütfen bekleyin...",
     "loadingVideo": "Video Yükleniyor, Lütfen bekleyin..",
     "searchLoading": "Aranıyor...",
     "noResults": "Hiçbir sonuç bulunamadı, başka bir kelime deneyin..",
 
-	"search": "Ara",
+    "search": "Ara",
     "movies": "Filmler",
 
     "subtitledIn": "Altyazılı",
     "quality": "Kalite",
     "watchItNow": "Hemen izle",
+    "durationUnit": "dakika",
 
     "connecting": "Bağlanılıyor...",
     "startingDownload": "Yükleme başlıyor...",
     "downloading": "Yükleniyor...",
 
+    "UpgradeVersion": "Popcorn Time Güncelle ",
+    "UpgradeVersionDescription": " Yeni sürüm yayınlandı. Hemen yükle!",
+    
     "genres": {
         "all": "Popüler",
         "action": "Aksiyon",
