@@ -1,0 +1,27 @@
+{
+  "name": "moviedb",
+  "description": "Library for interacting with themoviedb.com API",
+  "version": "0.1.1",
+  "keywords": [
+    "themoviedb",
+    "api"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "index.js",
+  "author": {
+    "name": "Dan Zajdband",
+    "email": "dan.zajdband@gmail.com"
+  },
+  "dependencies": {
+    "superagent": "0.9.7"
+  },
+  "devDependencies": {
+    "mocha": "1.0.x"
+  },
+  "readme": "# MovieDB\n\nnode.js library that makes the interaction with themoviedb.org V3 API easy.\n\n## How to install\n\n    npm install moviedb\n\n## How to use\n\nRequire MovieDB and provide your themoviedb.org API KEY\n\n    var MovieDB = require('moviedb')('your api key');\n\nUse the api methods as you want, for example:\n\n    mdb.searchMovie({query: 'Alien' }, function(err, res){\n      console.log(res);\n    });\n\nor\n\n    mdb.movieInfo({id: 666}, function(err, res){\n      console.log(res);\n    });\n\nnow you can also make chain calls\n\n    mdb.searchMovie({query: 'Zoolander' }, function(err, res){\n      console.log(res);\n    }).movieInfo({id: 123}, function(err, res){\n      console.log(res);\n    });\n\n## Available methods\n\nAll themoviedb.org API v3 methods included (I have plans to change this method names, stay tuned):\n\n| Method      | API url  |\n|:-----------:|:------------:|\n| configuration | configuration |\n| searchMovie | search/movie |\n| searchPerson | search/person |\n| collectionInfo | collection/:id |\n| movieInfo | movie/:id |\n| movieAlternativeTitles | movie/:id/alternative_titles |\n| movieCasts | movie/:id/casts |\n| movieImages | movie/:id/keywords |\n| movieKeywords | movie/:id/keywords |\n| movieReleases | movie/:id/releases |\n| movieTrailers | movue/:id/trailers |\n| movieTranslations | movie/:id/translations |\n| movieSimilar | movie/:id/similar_movies |\n| personInfo | person/:id |\n| personCredits | person/:id/credits |\n| personImages | person/:id/images |\n| miscLatestMovie | latest/movie |\n| miscNowPlaying | movue/now-playing |\n| miscPopularMovies | movie/popular |\n| miscTopRatedMovies | movie/top-rated |\n| miscAddMovieRating | movie/:id/rating |\n| companyInfo | company/:id |\n| companyMovies | company/:id/movies |\n| accountInfo | account |\n| accountFavoriteMovies | account/:id/favorite_movies |\n| accoutRatedMovies | account/:id/rated_movies |\n| accountAddFavorite | account/:id/favorite |\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2012 Dan Zajdband &lt;dan.zajdband@gmail.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+  "readmeFilename": "Readme.md",
+  "_id": "moviedb@0.1.1",
+  "_from": "moviedb@~0.1.1"
+}

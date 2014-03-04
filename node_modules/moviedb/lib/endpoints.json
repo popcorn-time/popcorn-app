@@ -1,0 +1,91 @@
+{
+    "base_url": "https://api.themoviedb.org/3/"
+  , "authentication" : {
+        "requestToken" : "authentication/token/new"
+      , "sessionId" : "authentication/session/new"
+    }
+  , "methods" : {
+        "configuration" : {
+            "": { "resource":"configuration", "method": "get" }
+        }
+      , "find" : {
+            "" : { "resource": "find/:id", "method": "get" }
+      	}
+      , "search" : {
+            "Movie" : { "resource": "search/movie", "method": "get" } 
+          , "Collection"  : { "resource": "search/collection", "method": "get" }
+          , "Person"  : { "resource": "search/person", "method": "get" }
+          , "List"  : { "resource": "search/list", "method": "get" }
+          , "Company"  : { "resource": "search/company", "method": "get" }
+          , "Keyword"  : { "resource": "search/keyword", "method": "get" }
+        }
+      , "collection" : {
+            "Info"  : { "resource": "collection/:id", "method": "get" }
+          , "Images"  : { "resource": "collection/:id/images", "method": "get" }
+        }
+      , "movie" : {
+            "Info" : { "resource": "movie/:id", "method": "get" }
+          , "AlternativeTitles" : { "resource": "movie/:id/alternative_titles", "method": "get" }
+          , "Credits" : { "resource": "movie/:id/credits", "method": "get" }
+          , "Images" : { "resource": "movie/:id/images", "method": "get" }
+          , "Keywords" : { "resource": "movie/:id/keywords", "method": "get" }
+          , "Releases" : { "resource":"movie/:id/releases", "method": "get" }
+          , "Trailers" : { "resource": "movie/:id/trailers", "method": "get" }
+          , "Translations" : { "resource": "movie/:id/translations", "method": "get" }
+          , "Similar" : { "resource": "movie/:id/similar_movies", "method": "get" }
+          , "Reviews" : { "resource": "movie/:id/reviews", "method": "get" }
+          , "Lists" : { "resource": "movie/:id/lists", "method": "get" }
+          , "Changes" : { "resource": "movie/:id/changes", "method": "get" }
+          , "RatingUpdate" : { "resource": "movie/:id/rating", "method": "post" }
+        }
+      , "tv" : {
+            "Info" : { "resource": "tv/:id", "method": "get" }
+          , "Credits" : { "resource": "tv/:id/credits", "method": "get" }
+          , "ExternalIds" : { "resource": "tv/:id/external_ids", "method": "get" }
+          , "Images" : { "resource": "tv/:id/images", "method": "get" }
+          , "Translations" : { "resource": "tv/:id/translations", "method": "get" }
+        }
+      , "person" : {
+            "Info" : { "resource": "person/:id", "method": "get" }
+          , "Credits" : { "resource": "person/:id/credits", "method": "get" }
+          , "Images" : { "resource": "person/:id/images", "method": "get" }
+          , "Changes" : { "resource": "person/:id/changes", "method": "get" }
+          , "Latest" : { "resource": "person/latest", "method": "get" }
+        }
+      , "list" : {
+            "Info" : { "resource": "list/:id", "method": "get" }
+        }
+      , "genre" : {
+            "List" : { "resource": "genre/list", "method": "get" }
+          , "Movies" : { "resource": "genre/:id/movies", "method": "get" }
+        }
+      , "keyword" : {
+            "Info" : { "resource": "keyword/:id", "method": "get" }
+          , "Movies" : { "resource": "keyword/:id/movies", "method": "get" }
+        }
+      , "company" : {
+            "Info" : { "resource": "company/:id", "method": "get" }
+          , "Movies" : { "resource": "company/:id/movies", "method": "get" }
+        }
+      , "account" : {
+            "Info" : { "resource": "account", "method": "get" }
+          , "Lists" : { "resource": "account/:id/lists", "method": "get" }
+          , "FavoriteMovies" : { "resource": "account/:id/favorite_movies", "method": "get" }
+          , "FavoriteUpdate" : { "resource": "account/:id/favorite", "method": "post" }
+          , "RatedMovies" : { "resource": "account/:id/rated_movies", "method": "get" }
+          , "MovieWatchlist" : { "resource": "account/:id/movie_watchlist", "method": "get" }
+          , "MovieWatchlistUpdate" : { "resource": "account/:id/movie_watchlist", "method": "post" }
+        }
+      , "misc" : {
+            "LatestMovies"  : { "resource": "movie/latest", "method": "get" }
+          , "UpcomingMovies" : { "resource": "movie/upcoming", "method": "get" }
+          , "NowPlayingMovies" : { "resource": "movie/now_playing", "method": "get" }
+          , "PopularMovies" : { "resource": "movie/popular", "method": "get" } 
+          , "TopRatedMovies" : { "resource": "movie/top_rated", "method": "get" }
+          , "ChangedMovies" : { "resource": "movie/changes", "method": "get" }
+          , "ChangedPeople" : { "resource": "person/changes", "method": "get" }
+          , "TopRatedTvs" : { "resource": "tv/top_rated", "method": "get" }
+          , "PopularTvs" : { "resource": "tv/popular", "method": "get" }
+      }
+    }
+}

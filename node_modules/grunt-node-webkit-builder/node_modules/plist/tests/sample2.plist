@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OptionsLabel</key>
+	<string>Product</string>
+	<key>PopupMenu</key>
+	<array>
+		<dict>
+			<key>Key</key>
+			<string>iPhone</string>
+			<key>Title</key>
+			<string>iPhone</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>iPad</string>
+			<key>Title</key>
+			<string>iPad</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+      <string>
+        <![CDATA[
+        #import &lt;Cocoa/Cocoa.h&gt;
+
+#import &lt;MacRuby/MacRuby.h&gt;
+
+int main(int argc, char *argv[])
+{
+  return macruby_main("rb_main.rb", argc, argv);
+}
+]]>
+</string>
+		</dict>
+	</array>
+	<key>TemplateSelection</key>
+	<dict>
+		<key>iPhone</key>
+		<string>Tab Bar iPhone Application</string>
+		<key>iPad</key>
+		<string>Tab Bar iPad Application</string>
+	</dict>
+</dict>
+</plist>

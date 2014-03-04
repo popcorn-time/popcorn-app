@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Application Version</key><string>9.0.3</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>6F81D37F95101437</string>
+	<key>Tracks</key>
+	<dict>
+		<key>96</key>
+		<dict>
+			<key>Track ID</key><integer>96</integer>
+			<key>Name</key><string>EXP</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>2317095</integer>
+			<key>Total Time</key><integer>115617</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T04:42:36Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2010-02-22T23:30:15Z</date>
+			<key>Persistent ID</key><string>E4A63A7D3E89DBDF</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/01%20EXP.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>98</key>
+		<dict>
+			<key>Track ID</key><integer>98</integer>
+			<key>Name</key><string>Up From The Skies</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3552687</integer>
+			<key>Total Time</key><integer>177397</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T14:22:57Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3349908136</integer>
+			<key>Play Date UTC</key><date>2010-02-25T09:02:16Z</date>
+			<key>Persistent ID</key><string>91D3875329AE6FAE</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/02%20Up%20From%20The%20Skies.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>100</key>
+		<dict>
+			<key>Track ID</key><integer>100</integer>
+			<key>Name</key><string>Spanish Castle Magic</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3718303</integer>
+			<key>Total Time</key><integer>185678</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T04:36:55Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3349701378</integer>
+			<key>Play Date UTC</key><date>2010-02-22T23:36:18Z</date>
+			<key>Persistent ID</key><string>85E821CD210991D4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/03%20Spanish%20Castle%20Magic.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>102</key>
+		<dict>
+			<key>Track ID</key><integer>102</integer>
+			<key>Name</key><string>Wait Until Tomorrow</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3644116</integer>
+			<key>Total Time</key><integer>181968</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T14:22:31Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3349701560</integer>
+			<key>Play Date UTC</key><date>2010-02-22T23:39:20Z</date>
+			<key>Persistent ID</key><string>E08451DAFE2C4CDB</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/04%20Wait%20Until%20Tomorrow.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>104</key>
+		<dict>
+			<key>Track ID</key><integer>104</integer>
+			<key>Name</key><string>Ain't No Telling</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>2197454</integer>
+			<key>Total Time</key><integer>109635</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T04:42:49Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3349701670</integer>
+			<key>Play Date UTC</key><date>2010-02-22T23:41:10Z</date>
+			<key>Persistent ID</key><string>532B79B4E0A7FEDB</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/05%20Ain't%20No%20Telling.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>106</key>
+		<dict>
+			<key>Track ID</key><integer>106</integer>
+			<key>Name</key><string>Little Wing</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>2952393</integer>
+			<key>Total Time</key><integer>147382</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:06:03Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3349908296</integer>
+			<key>Play Date UTC</key><date>2010-02-25T09:04:56Z</date>
+			<key>Persistent ID</key><string>77D07266F04B6994</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/06%20Little%20Wing.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>108</key>
+		<dict>
+			<key>Track ID</key><integer>108</integer>
+			<key>Name</key><string>If 6 Was 9</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6674842</integer>
+			<key>Total Time</key><integer>333505</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T06:39:09Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Persistent ID</key><string>3E7764A9FF51A43E</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/07%20If%206%20Was%209.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>110</key>
+		<dict>
+			<key>Track ID</key><integer>110</integer>
+			<key>Name</key><string>You Got Me Floatin'</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3354679</integer>
+			<key>Total Time</key><integer>167497</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:53:19Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Persistent ID</key><string>77F9E16E1A27D117</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/08%20You%20Got%20Me%20Floatin'.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>112</key>
+		<dict>
+			<key>Track ID</key><integer>112</integer>
+			<key>Name</key><string>Castles Made Of Sand</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3346842</integer>
+			<key>Total Time</key><integer>167105</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:59:58Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348245334</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:08:54Z</date>
+			<key>Persistent ID</key><string>CC85AD893315D8F3</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/09%20Castles%20Made%20Of%20Sand.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>114</key>
+		<dict>
+			<key>Track ID</key><integer>114</integer>
+			<key>Name</key><string>She's So Fine</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Noel Redding</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3186450</integer>
+			<key>Total Time</key><integer>159085</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:06:13Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Persistent ID</key><string>40F80094B78C21A9</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/10%20She's%20So%20Fine.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>116</key>
+		<dict>
+			<key>Track ID</key><integer>116</integer>
+			<key>Name</key><string>One Rainy Wish</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4453912</integer>
+			<key>Total Time</key><integer>222458</integer>
+			<key>Track Number</key><integer>11</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T04:34:42Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3349908789</integer>
+			<key>Play Date UTC</key><date>2010-02-25T09:13:09Z</date>
+			<key>Persistent ID</key><string>1EF98FE4F90860E3</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/11%20One%20Rainy%20Wish.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>118</key>
+		<dict>
+			<key>Track ID</key><integer>118</integer>
+			<key>Name</key><string>Little Miss Lover</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>2883430</integer>
+			<key>Total Time</key><integer>143934</integer>
+			<key>Track Number</key><integer>12</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T04:40:43Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:30Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3349700454</integer>
+			<key>Play Date UTC</key><date>2010-02-22T23:20:54Z</date>
+			<key>Persistent ID</key><string>979BB1910DF12FA4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/12%20Little%20Miss%20Lover.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>120</key>
+		<dict>
+			<key>Track ID</key><integer>120</integer>
+			<key>Name</key><string>Bold As Love</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Axis: Bold As Love</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5048458</integer>
+			<key>Total Time</key><integer>252186</integer>
+			<key>Track Number</key><integer>13</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T03:15:02Z</date>
+			<key>Date Added</key><date>2010-02-06T03:05:31Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3349700706</integer>
+			<key>Play Date UTC</key><date>2010-02-22T23:25:06Z</date>
+			<key>Persistent ID</key><string>ABB6C4EB0AD99BE4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Axis_%20Bold%20As%20Love/13%20Bold%20As%20Love.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>122</key>
+		<dict>
+			<key>Track ID</key><integer>122</integer>
+			<key>Name</key><string>The Wind Cries Mary</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4041927</integer>
+			<key>Total Time</key><integer>202083</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-27T02:55:57Z</date>
+			<key>Date Added</key><date>2010-02-06T03:10:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348245637</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:13:57Z</date>
+			<key>Sort Name</key><string>Wind Cries Mary</string>
+			<key>Persistent ID</key><string>80197A45473F89EC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/03%20The%20Wind%20Cries%20Mary.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>124</key>
+		<dict>
+			<key>Track ID</key><integer>124</integer>
+			<key>Name</key><string>Purple Haze</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3443729</integer>
+			<key>Total Time</key><integer>172173</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-27T02:56:23Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>06456C5D35DB482D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/01%20Purple%20Haze.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>126</key>
+		<dict>
+			<key>Track ID</key><integer>126</integer>
+			<key>Name</key><string>Fire</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3311006</integer>
+			<key>Total Time</key><integer>165537</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T07:00:16Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>C16EBCC5CAEBE9D4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/02%20Fire.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>128</key>
+		<dict>
+			<key>Track ID</key><integer>128</integer>
+			<key>Name</key><string>Can You See Me</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3058151</integer>
+			<key>Total Time</key><integer>152894</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>1966</integer>
+			<key>Date Modified</key><date>2010-01-25T19:29:01Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348245962</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:19:22Z</date>
+			<key>Persistent ID</key><string>CD3CFEF2544357DF</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/04%20Can%20You%20See%20Me.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>130</key>
+		<dict>
+			<key>Track ID</key><integer>130</integer>
+			<key>Name</key><string>51st Anniversary</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3910267</integer>
+			<key>Total Time</key><integer>195500</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-27T02:57:16Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348246157</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:22:37Z</date>
+			<key>Persistent ID</key><string>B256307FB73DFD2B</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/05%2051st%20Anniversary.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>132</key>
+		<dict>
+			<key>Track ID</key><integer>132</integer>
+			<key>Name</key><string>Hey Joe</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4198128</integer>
+			<key>Total Time</key><integer>209893</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Year</key><integer>1966</integer>
+			<key>Date Modified</key><date>2010-01-27T02:58:39Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348246367</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:26:07Z</date>
+			<key>Persistent ID</key><string>EFE7766FA7E1B8F7</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/06%20Hey%20Joe.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>134</key>
+		<dict>
+			<key>Track ID</key><integer>134</integer>
+			<key>Name</key><string>Stone Free</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4325608</integer>
+			<key>Total Time</key><integer>216267</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Year</key><integer>1966</integer>
+			<key>Date Modified</key><date>2010-01-26T16:48:43Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348246583</integer>
+			<key>Play Date UTC</key><date>2010-02-06T03:29:43Z</date>
+			<key>Persistent ID</key><string>B0A50C38343929B5</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/07%20Stone%20Free.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>136</key>
+		<dict>
+			<key>Track ID</key><integer>136</integer>
+			<key>Name</key><string>The Stars That Play With Laugh</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5151112</integer>
+			<key>Total Time</key><integer>257541</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-27T02:54:02Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Sort Name</key><string>Stars That Play With Laugh</string>
+			<key>Persistent ID</key><string>891984D14152F8B4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/08%20The%20Stars%20That%20Play%20With%20Laugh.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>138</key>
+		<dict>
+			<key>Track ID</key><integer>138</integer>
+			<key>Name</key><string>Manic Depression</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4457794</integer>
+			<key>Total Time</key><integer>222876</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-25T04:58:22Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>2C5DA25ED3188C12</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/09%20Manic%20Depression.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>140</key>
+		<dict>
+			<key>Track ID</key><integer>140</integer>
+			<key>Name</key><string>Highway Chile</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4258216</integer>
+			<key>Total Time</key><integer>212897</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-27T02:58:37Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:01Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>23C0537D7A558987</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/10%20Highway%20Chile.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>142</key>
+		<dict>
+			<key>Track ID</key><integer>142</integer>
+			<key>Name</key><string>Burning Of The Midnight Lamp</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4364811</integer>
+			<key>Total Time</key><integer>218226</integer>
+			<key>Track Number</key><integer>11</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T16:36:15Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:02Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>655489D0C55F6B6F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/11%20Burning%20Of%20The%20Midnight%20Lamp.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>144</key>
+		<dict>
+			<key>Track ID</key><integer>144</integer>
+			<key>Name</key><string>Foxy Lady</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>SMASH HITS</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4032514</integer>
+			<key>Total Time</key><integer>201613</integer>
+			<key>Track Number</key><integer>12</integer>
+			<key>Year</key><integer>1966</integer>
+			<key>Date Modified</key><date>2010-01-27T02:57:08Z</date>
+			<key>Date Added</key><date>2010-02-06T03:14:02Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>A5449F6016FF8603</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/SMASH%20HITS/12%20Foxy%20Lady.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>194</key>
+		<dict>
+			<key>Track ID</key><integer>194</integer>
+			<key>Name</key><string>Foxy Lady</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3998135</integer>
+			<key>Total Time</key><integer>199888</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:24:49Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3348665607</integer>
+			<key>Play Date UTC</key><date>2010-02-10T23:53:27Z</date>
+			<key>Persistent ID</key><string>7E8EE581B46E9C72</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/01%20Foxy%20Lady.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>196</key>
+		<dict>
+			<key>Track ID</key><integer>196</integer>
+			<key>Name</key><string>Manic Depresion</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4450581</integer>
+			<key>Total Time</key><integer>222511</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:19:06Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3348665830</integer>
+			<key>Play Date UTC</key><date>2010-02-10T23:57:10Z</date>
+			<key>Persistent ID</key><string>B5761B106C80D283</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/02%20Manic%20Depresion.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>198</key>
+		<dict>
+			<key>Track ID</key><integer>198</integer>
+			<key>Name</key><string>Red House</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4483691</integer>
+			<key>Total Time</key><integer>223947</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:12:52Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3348488681</integer>
+			<key>Play Date UTC</key><date>2010-02-08T22:44:41Z</date>
+			<key>Persistent ID</key><string>EC7FEFA14DBBB959</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/03%20Red%20House.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>200</key>
+		<dict>
+			<key>Track ID</key><integer>200</integer>
+			<key>Name</key><string>Can You See Me</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3057209</integer>
+			<key>Total Time</key><integer>152842</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-25T07:23:09Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3348488833</integer>
+			<key>Play Date UTC</key><date>2010-02-08T22:47:13Z</date>
+			<key>Persistent ID</key><string>410549558954A8A3</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/04%20Can%20You%20See%20Me.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>202</key>
+		<dict>
+			<key>Track ID</key><integer>202</integer>
+			<key>Name</key><string>Love Or Confusion</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3867530</integer>
+			<key>Total Time</key><integer>193358</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T01:16:40Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348486108</integer>
+			<key>Play Date UTC</key><date>2010-02-08T22:01:48Z</date>
+			<key>Persistent ID</key><string>A98A811BB24C6DDB</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/05%20Love%20Or%20Confusion.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>204</key>
+		<dict>
+			<key>Track ID</key><integer>204</integer>
+			<key>Name</key><string>I Don't Like Today</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4703972</integer>
+			<key>Total Time</key><integer>235180</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:12:25Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348486344</integer>
+			<key>Play Date UTC</key><date>2010-02-08T22:05:44Z</date>
+			<key>Persistent ID</key><string>BBFE0155E2F879AE</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/06%20I%20Don't%20Like%20Today.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>206</key>
+		<dict>
+			<key>Track ID</key><integer>206</integer>
+			<key>Name</key><string>May This Be Love</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3822599</integer>
+			<key>Total Time</key><integer>191111</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T01:15:51Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3348666177</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:02:57Z</date>
+			<key>Persistent ID</key><string>78223889FB353BDC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/07%20May%20This%20Be%20Love.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>208</key>
+		<dict>
+			<key>Track ID</key><integer>208</integer>
+			<key>Name</key><string>Fire</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3300127</integer>
+			<key>Total Time</key><integer>164989</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:19:03Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348666342</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:05:42Z</date>
+			<key>Persistent ID</key><string>5B469154D5C9EF15</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/08%20Fire.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>210</key>
+		<dict>
+			<key>Track ID</key><integer>210</integer>
+			<key>Name</key><string>Third Stone From The Sun</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>8086499</integer>
+			<key>Total Time</key><integer>404088</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:46:24Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Persistent ID</key><string>A4BE1B2AF07ACFA7</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/09%20Third%20Stone%20From%20The%20Sun.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>212</key>
+		<dict>
+			<key>Track ID</key><integer>212</integer>
+			<key>Name</key><string>Remember</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3372442</integer>
+			<key>Total Time</key><integer>168385</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T10:18:49Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3348666822</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:13:42Z</date>
+			<key>Persistent ID</key><string>0A0880195A74A800</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/10%20Remember.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>214</key>
+		<dict>
+			<key>Track ID</key><integer>214</integer>
+			<key>Name</key><string>Are You Experienced</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5094188</integer>
+			<key>Total Time</key><integer>254693</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:50:18Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348668074</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:34:34Z</date>
+			<key>Persistent ID</key><string>481A059078D4EFDF</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/Are%20You%20Experienced.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>216</key>
+		<dict>
+			<key>Track ID</key><integer>216</integer>
+			<key>Name</key><string>Hey Joe</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Composer</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4207838</integer>
+			<key>Total Time</key><integer>210155</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-24T04:32:51Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:23Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>EAC-Lame3.92-Extreme</string>
+			<key>Play Count</key><integer>2</integer>
+			<key>Play Date</key><integer>3348665407</integer>
+			<key>Play Date UTC</key><date>2010-02-10T23:50:07Z</date>
+			<key>Persistent ID</key><string>D8CA36FCF4A8BBA3</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/01%20Hey%20Joe.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>218</key>
+		<dict>
+			<key>Track ID</key><integer>218</integer>
+			<key>Name</key><string>Stone Free</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4327746</integer>
+			<key>Total Time</key><integer>216372</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-24T04:27:53Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348667436</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:23:56Z</date>
+			<key>Persistent ID</key><string>237FA7D9D9AD6E7F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/Stone%20Free.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>220</key>
+		<dict>
+			<key>Track ID</key><integer>220</integer>
+			<key>Name</key><string>Purple Haze</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3431224</integer>
+			<key>Total Time</key><integer>171546</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-25T07:20:51Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348667607</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:26:47Z</date>
+			<key>Persistent ID</key><string>D2960E190F8D85B1</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/Purple%20Haze.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>222</key>
+		<dict>
+			<key>Track ID</key><integer>222</integer>
+			<key>Name</key><string>51ST Anniversary</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3925989</integer>
+			<key>Total Time</key><integer>196284</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-25T23:59:37Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>4</integer>
+			<key>Play Date</key><integer>3355116022</integer>
+			<key>Play Date UTC</key><date>2010-04-26T15:40:22Z</date>
+			<key>Persistent ID</key><string>0ECCDE0449BB37BA</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/51ST%20Anniversary.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>224</key>
+		<dict>
+			<key>Track ID</key><integer>224</integer>
+			<key>Name</key><string>The Wind Cries Mary</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4016375</integer>
+			<key>Total Time</key><integer>200803</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-26T09:20:34Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3355115826</integer>
+			<key>Play Date UTC</key><date>2010-04-26T15:37:06Z</date>
+			<key>Sort Name</key><string>Wind Cries Mary</string>
+			<key>Persistent ID</key><string>C843C532021E12D8</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/The%20Wind%20Cries%20Mary.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>226</key>
+		<dict>
+			<key>Track ID</key><integer>226</integer>
+			<key>Name</key><string>Hightway Chile</string>
+			<key>Artist</key><string>Jimi Hendrix</string>
+			<key>Album Artist</key><string>Jimi Hendrix</string>
+			<key>Album</key><string>Are You Experienced?</string>
+			<key>Genre</key><string>Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4250950</integer>
+			<key>Total Time</key><integer>212532</integer>
+			<key>Year</key><integer>1967</integer>
+			<key>Date Modified</key><date>2010-01-24T04:31:03Z</date>
+			<key>Date Added</key><date>2010-02-08T21:41:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3348667820</integer>
+			<key>Play Date UTC</key><date>2010-02-11T00:30:20Z</date>
+			<key>Persistent ID</key><string>0571292CC8452E1E</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/nrajlich/Music/iTunes/iTunes%20Media/Music/Jimi%20Hendrix/Are%20You%20Experienced_/Hightway%20Chile.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Name</key><string>Library</string>
+			<key>Master</key><true/>
+			<key>Playlist ID</key><integer>230</integer>
+			<key>Playlist Persistent ID</key><string>A69C1BD116F1FECB</string>
+			<key>Visible</key><false/>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>214</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>226</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>220</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>218</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>224</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>222</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>194</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>216</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>196</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>198</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>200</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>202</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>204</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>206</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>208</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>210</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>212</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>96</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>108</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>110</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>114</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>124</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>126</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>122</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>128</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>130</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>132</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>134</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>136</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>138</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>140</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>142</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>144</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key><string>Music</string>
+			<key>Playlist ID</key><integer>360</integer>
+			<key>Playlist Persistent ID</key><string>CBEA1F13379F04CD</string>
+			<key>Distinguished Kind</key><integer>4</integer>
+			<key>Music</key><true/>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAQIbEAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAQIbEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAIAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAACAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAPAIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAEQAAAAAACAgAAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAAAA
+			AAEAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+			</data>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>214</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>226</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>220</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>218</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>224</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>222</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>194</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>216</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>196</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>198</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>200</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>202</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>204</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>206</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>208</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>210</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>212</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>96</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>108</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>110</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>114</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>124</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>126</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>122</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>128</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>130</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>132</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>134</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>136</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>138</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>140</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>142</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>144</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key><string>Movies</string>
+			<key>Playlist ID</key><integer>430</integer>
+			<key>Playlist Persistent ID</key><string>619F42A5429501E0</string>
+			<key>Distinguished Kind</key><integer>2</integer>
+			<key>Movies</key><true/>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAgAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAggAYAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>TV Shows</string>
+			<key>Playlist ID</key><integer>433</integer>
+			<key>Playlist Persistent ID</key><string>2A3B4D9E7DF7E1DC</string>
+			<key>Distinguished Kind</key><integer>3</integer>
+			<key>TV Shows</key><true/>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAgAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAggEQAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Podcasts</string>
+			<key>Playlist ID</key><integer>349</integer>
+			<key>Playlist Persistent ID</key><string>5893FA607639E850</string>
+			<key>Distinguished Kind</key><integer>10</integer>
+			<key>Podcasts</key><true/>
+			<key>All Items</key><true/>
+		</dict>
+		<dict>
+			<key>Name</key><string>iTunes DJ</string>
+			<key>Playlist ID</key><integer>346</integer>
+			<key>Playlist Persistent ID</key><string>60C45B0A657E0FC9</string>
+			<key>Distinguished Kind</key><integer>22</integer>
+			<key>Party Shuffle</key><true/>
+			<key>All Items</key><true/>
+		</dict>
+		<dict>
+			<key>Name</key><string>90’s Music</string>
+			<key>Playlist ID</key><integer>300</integer>
+			<key>Playlist Persistent ID</key><string>F6C03EFBF4BEB1F4</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgFNMc3QAAQAB
+			AAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAB
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAABAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAIAAAAAAAAAAA
+			AAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Classical Music</string>
+			<key>Playlist ID</key><integer>343</integer>
+			<key>Playlist Persistent ID</key><string>9501F232E8586901</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAU0xzdAABAAEAAAACAAAAAQAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAABEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAg
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnpTTHN0AAEAAQAAAAcAAAAB
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAACAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAABIAQwBsAGEAcwBzAGkAYwBhAGwAAAAIAQAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABLAGwAYQBzAHMAaQBlAGsAAAAI
+			AQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgBD
+			AGwAYQBzAHMAaQBxAHUAZQAAAAgBAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAOAEsAbABhAHMAcwBpAGsAAAAIAQAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABDAGwAYQBzAHMAaQBjAGEAAAAI
+			AQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjCv
+			MOkwtzDDMK8AAAAIAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAADgBDAGwA4QBzAGkAYwBh
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Music Videos</string>
+			<key>Playlist ID</key><integer>340</integer>
+			<key>Playlist Persistent ID</key><string>8E2AFE4E1C2ABB13</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAACAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>My Top Rated</string>
+			<key>Playlist ID</key><integer>303</integer>
+			<key>Playlist Persistent ID</key><string>CCC0C1B6CCEA8937</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAADwAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Recently Added</string>
+			<key>Playlist ID</key><integer>337</integer>
+			<key>Playlist Persistent ID</key><string>3440763CBB97D6F6</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABELa4tri2uLa7//////////gAAAAAACTqA
+			La4tri2uLa4AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AgAAAQAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAB
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Recently Played</string>
+			<key>Playlist ID</key><integer>334</integer>
+			<key>Playlist Persistent ID</key><string>9C418444F8C06D46</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAAIAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABELa4tri2uLa7//////////gAAAAAACTqA
+			La4tri2uLa4AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AgAAAQAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAB
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+		</dict>
+		<dict>
+			<key>Name</key><string>Top 25 Most Played</string>
+			<key>Playlist ID</key><integer>306</integer>
+			<key>Playlist Persistent ID</key><string>B8A41A971A08EFE9</string>
+			<key>All Items</key><true/>
+			<key>Smart Info</key>
+			<data>
+			AQEBAwAAABkAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkCAAABAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAAEAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>224</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>222</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>196</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>206</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>194</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>216</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>198</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>200</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>212</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>214</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>226</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>220</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>218</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>202</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>204</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>208</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
