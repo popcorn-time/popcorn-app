@@ -2,25 +2,25 @@
     "quit": "Sair",
     "cancel": "Cancelar",
     "beforeQuit": "Você tem certeza que deseja sair?",
-    "loading": "Por Favor Aguarde...",
-    "loadingVideo": "Bufferizando vídeo, por favor aguarde",
-    "searchLoading": "Procurando...",
+    "loading": "Por favor, aguarde...",
+    "loadingVideo": "Bufferizando vídeo, por favor aguarde.",
+    "searchLoading": "Buscando...",
     "noResults": "Nenhum resultado encontrado.",
 
-    "search": "Procurar",
+    "search": "Buscar",
     "movies": "Filmes",
 
     "subtitledIn": "Legendas em",
     "quality": "Qualidade",
-    "watchItNow": "Assistir Agora",
+    "watchItNow": "Assistir agora",
     "durationUnit": "min",
 
     "connecting": "Conectando...",
-    "startingDownload": "Começando Download...",
+    "startingDownload": "Iniciando o download...",
     "downloading": "Baixando...",
 
-    "UpgradeVersion": "Update Popcorn Time",
-    "UpgradeVersionDescription": " was just released. You should get it now!",
+    "UpgradeVersion": "Atualize o Popcorn Time",
+    "UpgradeVersionDescription": " foi lançada. Você deveria baixá-la agora!",
     
     "genres": {
         "all": "Popular",
@@ -34,7 +34,7 @@
         "drama": "Drama",
         "family": "Família",
         "fantasy": "Fantasia",
-        "film-noir": "Noir",
+        "film-noir": "Film noir",
         "history": "História",
         "horror": "Terror",
         "music": "Música",
@@ -46,6 +46,6 @@
         "sport": "Esporte",
         "thriller": "Thriller",
         "war": "Guerra",
-        "western": "Western"
+        "western": "Faroeste"
     }
 }
