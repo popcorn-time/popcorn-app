@@ -1,0 +1,7 @@
+.git*
+.DS_Store
+testlocales/
+test/
+locales/
+i18n-cov.js
+coverage.html
