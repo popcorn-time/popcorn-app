@@ -31,8 +31,8 @@ App.loader = function (hasToShow, copy) {
     }
 
     $el[hasToShow === false ? 'addClass' : 'removeClass']('hidden');
-    
-    if( ! hasToShow ) { 
+
+    if( ! hasToShow ) {
       window.initialLoading = false;
 
       // Wait a second before removing the progressbar clas
@@ -73,11 +73,26 @@ window.spawnCallback = function (url, subs) {
         }
     });
 
+    videojs.YellowColorButton = videojs.Button.extend({
+        /** @constructor */
+        init: function(player, options){
+            videojs.Button.call(this, player, options);
+            this.on('click', this.onClick);
+        }
+    });
+
     videojs.BiggerSubtitleButton.prototype.onClick = function() {
         var $subs = $('#video_player.video-js .vjs-text-track-display');
         var font_size = parseInt($subs.css('font-size'));
         font_size = font_size + 3;
         $subs.css('font-size', font_size+'px');
+    };
+
+    videojs.YellowColorButton.prototype.onClick = function() {
+        var $subs = $('#video_player.video-js .vjs-subtitles');
+        if($subs.css('color')) {
+          $subs.css('color', '#ffcc66');
+        }
     };
 
     var createBiggerSubtitleButton = function() {
@@ -91,11 +106,29 @@ window.spawnCallback = function (url, subs) {
         return videojs.Component.prototype.createEl(null, props);
     }
 
+    var createYellowColorButton = function() {
+        var props = {
+            className: 'vjs_biggersub_button vjs-control',
+            innerHTML: '<div class="vjs-control-content"><span class="vjs-control-text">change color</span></div>',
+            role: 'button',
+            'aria-live': 'polite', // let the screen reader user know that the text of the button may change
+            tabIndex: 0
+        };
+        return videojs.Component.prototype.createEl(null, props);
+    }
+
     var biggerSubtitle;
     videojs.plugin('biggerSubtitle', function() {
         var options = { 'el' : createBiggerSubtitleButton() };
         biggerSubtitle = new videojs.BiggerSubtitleButton(this, options);
         this.controlBar.el().appendChild(biggerSubtitle.el());
+    });
+
+    var yellowColor;
+    videojs.plugin('yellowColor', function() {
+        var options = { 'el' : createYellowColorButton() };
+        yellowColor = new videojs.YellowColorButton(this, options);
+        this.controlBar.el().appendChild(yellowColor.el());
     });
 
     videojs.SmallerSubtitleButton = videojs.Button.extend({
@@ -144,7 +177,7 @@ window.spawnCallback = function (url, subs) {
     });
 
     // Init video.
-    var video = videojs('video_player', { plugins: { biggerSubtitle : {}, smallerSubtitle : {} }});
+    var video = videojs('video_player', { plugins: { biggerSubtitle : {}, smallerSubtitle : {}, yellowColor: {} }});
 
     // Enter full-screen
     $('.vjs-fullscreen-control').on('click', function () {
@@ -159,7 +192,7 @@ window.spawnCallback = function (url, subs) {
     // Exit full-screen
     // BUG: window loses focus so can't use ESC unless the window is clicked first
     $(document).on('keydown', function (e) {
-      if (e.keyCode == 27) { 
+      if (e.keyCode == 27) {
         win.leaveKioskMode();
       }
     });
@@ -176,9 +209,9 @@ window.spawnCallback = function (url, subs) {
     });
 
     video.player().on('pause', function () {  });
-    video.player().on('play', function () { 
+    video.player().on('play', function () {
       // Trigger a resize so the subtitles are adjusted
-      $(window).trigger('resize'); 
+      $(window).trigger('resize');
     });
     // There was an issue with the video
     video.player().on('error', function (error) {
@@ -201,7 +234,7 @@ jQuery(function ($) {
 
     $('#video-container').css('font-size', font_size+'px');
 
-    // And adjust the subtitle position so they always match the bottom of the video 
+    // And adjust the subtitle position so they always match the bottom of the video
     var $video = $('#video-container video');
     var $subs = $('#video-container .vjs-text-track-display');
 
@@ -237,7 +270,7 @@ jQuery(function ($) {
           win.maximize();
       }
     }
-    
+
   });
 
   $('.btn-os.min').on('click', function () {
@@ -247,7 +280,7 @@ jQuery(function ($) {
   $('.btn-os.close').on('click', function () {
     win.close();
   });
-  
+
   $('.btn-os.fullscreen').on('click', function () {
     win.toggleFullscreen();
     $('.btn-os.fullscreen').toggleClass('active');
