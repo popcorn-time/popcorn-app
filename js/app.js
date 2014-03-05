@@ -99,6 +99,8 @@ detectLanguage('en');
 if (!isDebug) {
     console.log = function () {};
 } else {
+	// Add "[Debug Mode]" on app title
+	$('#app-title').append(" ");
     // Developer Menu building
     var menubar = new gui.Menu({ type: 'menubar' }),
         developerSubmenu = new gui.Menu(),
