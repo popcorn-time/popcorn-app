@@ -34,44 +34,92 @@ var
     i18n = require("i18n");
 
 
+// Get available languages
+var getLocales = function(dir) {
+    var files = fs.readdirSync(dir), locales = [];
+   	
+    for(var i in files){
+        if (!files.hasOwnProperty(i)) continue;
+        var name = files[i];
+        if(name.indexOf('.json', name.length - 5) !== -1)
+        {
+            locales.push(name.replace('.json', ''));
+        }
+    }
+   	return locales;
+};
+
+// The option on settings panel to maintain window on top. 
+// it doesn't work very well. need improvement.
+if (Settings.get('app_alwaysOnFocus') == '1') {
+ 	$('#alwaysOnFocus').attr('checked','checked');
+  	$(window).on('blur', function()
+  	{
+  		win.focus();
+  	});
+};
+
+// The option on settings panel to start app on full screen
+if (Settings.get('app_fullscreenOnStart') == '1') {
+ 	$('#fullscreenOnStart').attr('checked','checked');
+  	win.toggleFullscreen();
+  	$('.btn-os.fullscreen').toggleClass('active');
+};
+
+if (Settings.get('app_closingPrompt') == '1') {
+ 	$('#closingPrompt').attr('checked','checked');
+};
+
+
 i18n.configure({
     defaultLocale: 'en',
-    locales: ['en', 'de', 'es', 'fr', 'ja', 'nl', 'pt-br', 'pt', 'ro', 'sv', 'tr'],
+    locales: getLocales('./language'),
     directory: './language'
 });
+
 
 // Create the Temp Folder
 if( ! fs.existsSync(tmpFolder) ) { fs.mkdirSync(tmpFolder); }
 
 // Detect the language and update the global Language file
 var detectLanguage = function(preferredLanguage) {
+	// Check if has a config for app language and if it's valid
+	if(Settings.get('app_language') && getLocales('./language').indexOf(Settings.get('app_language') != -1))
+	{
+		i18n.setLocale(Settings.get('app_language'));
+	}
+	else
+	{
+    	var fs = require('fs');
+    	// The full OS language (with localization, like "en-uk")
+    	var pureLanguage = navigator.language.toLowerCase();
+    	// The global language name (without localization, like "en")
+    	var baseLanguage = navigator.language.toLowerCase().slice(0,2);
+	
+	    if( fs.existsSync('./language/' + pureLanguage + '.json') ) {
+        	i18n.setLocale(pureLanguage);
+        	Settings.set('app_language', pureLanguage);
+    	}
+    	else if( fs.existsSync('./language/' + baseLanguage + '.json') ) {
+        	i18n.setLocale(baseLanguage);
+        	Settings.set('app_language', baseLanguage);
+    	} else {
+        	i18n.setLocale(preferredLanguage);
+        	Settings.set('app_language', preferredLanguage);
+    	}
 
-    var fs = require('fs');
-    // The full OS language (with localization, like "en-uk")
-    var pureLanguage = navigator.language.toLowerCase();
-    // The global language name (without localization, like "en")
-    var baseLanguage = navigator.language.toLowerCase().slice(0,2);
+    	// This is a hack to translate non-templated UI elements. Fuck it.
+    	$('[data-translate]').each(function(){
+        	var $el = $(this);
+        	var key = $el.data('translate');
 
-    if( fs.existsSync('./language/' + pureLanguage + '.json') ) {
-        i18n.setLocale(pureLanguage);
-    }
-    else if( fs.existsSync('./language/' + baseLanguage + '.json') ) {
-        i18n.setLocale(baseLanguage);
-    } else {
-        i18n.setLocale(preferredLanguage);
-    }
-
-    // This is a hack to translate non-templated UI elements. Fuck it.
-    $('[data-translate]').each(function(){
-        var $el = $(this);
-        var key = $el.data('translate');
-
-		if( $el.is('input') ) {
-			$el.attr('placeholder', i18n.__(key));
-		} else {
-			$el.text(i18n.__(key));
-		}
-	});
+			if( $el.is('input') ) {
+				$el.attr('placeholder', i18n.__(key));
+			} else {
+				$el.text(i18n.__(key));
+			}
+		});
+	}
 
     populateCategories();
 };
@@ -93,14 +141,29 @@ var populateCategories = function() {
 
 detectLanguage('en');
 
+// add available langauage options to Settings Panel
+var populateLangsList = function(currentLanguage) {
+	var loc = getLocales('./language');
+  	for(var lang in loc)
+  	{
+  		$("#lang-select").append('<option value="'+loc[lang]+ '"'
+  		+ (currentLanguage == loc[lang] ? 'selected="selected"' : '')
+  		+ '>' + loc[lang].toUpperCase()
+  		+ '</option>');
+  	}
+};
+populateLangsList(Settings.get('app_language'));
 
-
+var reloadApp = function () {
+	 // the win.reloadIgnoringCache() only works on 'main' page
+	 window.location = 'app://host/index.html';
+};
 // Not debugging, hide all messages!
 if (!isDebug) {
     console.log = function () {};
 } else {
 	// Add "[Debug Mode]" on app title
-	$('#app-title').append(" [DEBUG MODE]");
+	$('#app-title').append(" <span class='dbg'>[DEBUG]</span>");
     // Developer Menu building
     var menubar = new gui.Menu({ type: 'menubar' }),
         developerSubmenu = new gui.Menu(),
@@ -117,13 +180,12 @@ if (!isDebug) {
     menubar.append(developerItem);
     developerSubmenu.append(debugItem);
     win.menu = menubar;
-
     // Developer Shortcuts
-    document.addEventListener('keydown', function(event){
+    document.addEventListener('keyup', function(event){ // for reload keyup is safer than keydown
         // F12 Opens DevTools
         if( event.keyCode == 123 ) { win.showDevTools(); }
         // F11 Reloads
-        if( event.keyCode == 122 ) { win.reloadIgnoringCache(); }
+        if( event.keyCode == 122 ) { reloadApp(); }
     });
 }
 
@@ -237,7 +299,7 @@ var checkForUpdates = function() {
             }
         });
 
-    })
+    });
 };
 
 checkForUpdates();

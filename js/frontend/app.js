@@ -239,19 +239,48 @@ jQuery(function ($) {
     }
     
   });
-
   $('.btn-os.min').on('click', function () {
     win.minimize();
   });
 
   $('.btn-os.close').on('click', function () {
-    win.close();
+  	if (Settings.get('app_closingPrompt') == '1') {
+  		if (confirm('Are you sure you want to quit? =( ')) 
+  			win.close();
+   	}
+   	else
+   		win.close(true);
   });
   
   $('.btn-os.fullscreen').on('click', function () {
     win.toggleFullscreen();
     $('.btn-os.fullscreen').toggleClass('active');
 
+  });
+  $('.btn-os.settings').on('click', function () {
+  	if($('.settings-panel').hasClass('hidden'))
+  		$('.settings-panel').removeClass('hidden');
+  	else
+  		$('.settings-panel').addClass('hidden');
+  });
+  
+  $('#lang-select').on('change', function(){
+  	Settings.set('app_language', $('#lang-select option:selected').val());
+  	alert('Your settings will be applied on next startup');
+  });
+  
+  $('#alwaysOnFocus').on('change', function(){
+  	Settings.set('app_alwaysOnFocus', ($('#alwaysOnFocus').is(':checked') ? '1' : '0'));
+  	alert('Your settings will be applied on next startup');
+  });
+  
+  $('#fullscreenOnStart').on('change', function(){
+  	Settings.set('app_fullscreenOnStart', ($('#fullscreenOnStart').is(':checked') ? '1' : '0'));
+  	alert('Your settings will be applied on next startup');
+  });
+  
+  $('#closingPrompt').on('change', function(){
+  	Settings.set('app_closingPrompt', ($('#closingPrompt').is(':checked') ? '1' : '0'));
   });
 
   $('.popcorn-load .btn-close').click(function(event){
@@ -261,7 +290,12 @@ jQuery(function ($) {
   });
 
   $('.popcorn-quit .quit').click(function(event){
-    win.close(true);
+  	if (Settings.get('app_closingPrompt') == '1') {
+  		if (confirm('Are you sure you want to quit? =( ')) 
+    		win.close(true);
+    }
+    else
+    	win.close(true);
   });
 
   $('.popcorn-quit .cancel').click(function(event){
