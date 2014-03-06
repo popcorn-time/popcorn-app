@@ -441,7 +441,8 @@ sidebar {
 
     .movies-nav {
       li {
-        @include transition(all .3s ease);
+        @include transition(all 0.3s ease);
+        @include opacity(0.8);
         display: inline-block;
         vertical-align: top;
         width: 20px;
@@ -451,6 +452,7 @@ sidebar {
         z-index: 10000;
 
         &:hover {
+          @include opacity(1);
           background: #7BAFED;
           width: 40px;
         }
