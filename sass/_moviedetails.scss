@@ -444,13 +444,16 @@ sidebar {
         @include transition(all .3s ease);
         display: inline-block;
         vertical-align: top;
-        width: 25px;
+        width: 20px;
         height: 35px;
-        background: rgba(0, 0, 0, 0.9);
+        background: #7aa3d6;
         cursor: pointer;
         z-index: 10000;
 
-        &:hover { background: #7aa3d6; }
+        &:hover {
+          background: #7BAFED;
+          width: 40px;
+        }
 
         &.movie-prev,
         &.movie-next {
