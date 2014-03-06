@@ -1650,27 +1650,96 @@ sidebar .play .movie-detail .side-content a.play-button {
 sidebar .play .movie-detail .side-content a.play-button:hover {
   background-image: linear-gradient(to bottom, #4387de 0%, #175ab0 100%);
 }
+/* line 390, ../sass/_moviedetails.scss */
+sidebar .play .movies-nav li {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  vertical-align: top;
+  width: 25px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  z-index: 10000;
+}
+/* line 400, ../sass/_moviedetails.scss */
+sidebar .play .movies-nav li:hover {
+  background: #7aa3d6;
+}
+/* line 403, ../sass/_moviedetails.scss */
+sidebar .play .movies-nav li.movie-prev, sidebar .play .movies-nav li.movie-next {
+  position: absolute;
+  margin-top: -17px;
+  text-align: center;
+  line-height: 35px;
+  top: 50%;
+  font-size: 18px;
+}
+/* line 412, ../sass/_moviedetails.scss */
+sidebar .play .movies-nav li.movie-prev {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  -ms-border-radius: 0 2px 2px 0;
+  -o-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  left: 0;
+}
+/* line 417, ../sass/_moviedetails.scss */
+sidebar .play .movies-nav li.movie-next {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  right: 0;
+}
 
+<<<<<<< HEAD
 .sidebar-open li.movie {
   opacity: 0.25;
 }
 .sidebar-open li.movie.active {
   opacity: 1;
 }
+=======
+/* line 428, ../sass/_moviedetails.scss */
+.sidebar-open li.movie {
+  opacity: 0.25;
+}
+/* line 431, ../sass/_moviedetails.scss */
+.sidebar-open li.movie.active {
+  opacity: 1;
+}
+/* line 434, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .sidebar-open li.movie.active a {
   box-shadow: 0 0 0 3px #3498db;
   border-radius: 3px;
 }
+<<<<<<< HEAD
+=======
+/* line 438, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .sidebar-open li.movie.active a i {
   opacity: 0 !important;
 }
 
+<<<<<<< HEAD
+=======
+/* line 444, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .subtitles button {
   background: transparent;
   border: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+/* line 451, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown {
   position: relative;
   display: inline-block;
@@ -1680,16 +1749,28 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
   margin-right: 20px;
   margin-top: -8px;
 }
+<<<<<<< HEAD
+=======
+/* line 461, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown.active .dropdown-text {
   background-color: white;
   z-index: 2;
   border-radius: 3px 3px 0 0;
 }
+<<<<<<< HEAD
+=======
+/* line 467, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown.active .dropdown-content {
   opacity: 1;
   visibility: visible;
 }
 
+<<<<<<< HEAD
+=======
+/* line 474, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-text {
   cursor: pointer;
   position: absolute;
@@ -1699,6 +1780,10 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
   color: #333;
   text-shadow: 0 1px #fff;
 }
+<<<<<<< HEAD
+=======
+/* line 483, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-text:after {
   position: absolute;
   right: -10px;
@@ -1711,6 +1796,10 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
   border-color: #FFF transparent transparent transparent;
 }
 
+<<<<<<< HEAD
+=======
+/* line 496, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-toggle {
   font-size: 0;
   z-index: 1;
@@ -1725,10 +1814,18 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
   height: 37px;
   width: 60px;
 }
+<<<<<<< HEAD
+=======
+/* line 510, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-toggle:focus {
   outline: 0;
 }
 
+<<<<<<< HEAD
+=======
+/* line 513, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-content {
   list-style-type: none;
   position: absolute;
@@ -1742,12 +1839,20 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
   width: 40px;
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+/* line 526, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-content a {
   display: block;
   padding: 4px;
   color: #333;
   text-shadow: 0 1px #fff;
 }
+<<<<<<< HEAD
+=======
+/* line 532, ../sass/_moviedetails.scss */
+>>>>>>> 6057398... Add navigation template
 .dropdown-content a:hover {
   background: #E1E1E1;
 }

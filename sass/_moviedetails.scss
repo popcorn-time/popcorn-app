@@ -438,6 +438,41 @@ sidebar {
         }
       }
     }
+
+    .movies-nav {
+      li {
+        @include transition(all .3s ease);
+        display: inline-block;
+        vertical-align: top;
+        width: 25px;
+        height: 35px;
+        background: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+        z-index: 10000;
+
+        &:hover { background: #7aa3d6; }
+
+        &.movie-prev,
+        &.movie-next {
+          position: absolute;
+          margin-top: -17px;
+          text-align: center;
+          line-height: 35px;
+          top: 50%;
+          font-size: 18px;
+        }
+
+        &.movie-prev {
+          @include border-radius(0 2px 2px 0);
+          left: 0;
+        }
+
+        &.movie-next {
+          @include border-radius(2px 0 0 2px);
+          right: 0;
+        }
+      }
+    }
   }
 }
 
