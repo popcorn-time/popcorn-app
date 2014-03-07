@@ -447,14 +447,14 @@ sidebar {
         vertical-align: top;
         width: 20px;
         height: 35px;
-        background: #7aa3d6;
+        background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
         cursor: pointer;
         z-index: 10000;
 
         &:hover {
           @include opacity(1);
-          background: #7BAFED;
           width: 40px;
+          &:hover { background-image: linear-gradient(to bottom, #4387de 0%, #175ab0 100%); }
         }
 
         &.movie-prev,
