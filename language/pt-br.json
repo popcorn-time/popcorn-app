@@ -2,7 +2,7 @@
     "quit": "Sair",
     "cancel": "Cancelar",
     "beforeQuit": "Você tem certeza que deseja sair?",
-    "loading": "Por Favor Aguarde...",
+    "loading": "Por favor, aguarde...",
     "loadingVideo": "Carregando vídeo, por favor aguarde.",
     "searchLoading": "Procurando...",
     "noResults": "Nenhum resultado encontrado.",
@@ -27,6 +27,13 @@
     "legalDisclaimerAccept": "Eu compreendo",
     "legalDisclaimerCancel": "Sair",
     
+    "selectLanguage": "Selecione um idioma:",
+	"fullscreenOnStart": "Iniciar em tela cheia",
+	"closingPrompt": "Perguntar antes de fechar",
+	"alwaysOnFocus": "Manter a o Popcorn Time sempre na frente",
+	"effectOnNextStartup": "As alterações terão efeito na próxima inicialização.",
+	"quitConfirmation": "Tem certeza que quer sair? =( ",
+
     "genres": {
         "all": "Todos",
         "action": "Ação",

@@ -33,10 +33,30 @@ var
     // i18n module (translations)
     i18n = require("i18n");
 
+// The option on settings panel to maintain window on top. 
+// it doesn't work very well. need improvement.
+if (Settings.get('app_alwaysOnFocus') == '1') {
+ 	$('#alwaysOnFocus').attr('checked','checked');
+  	$(window).on('blur', function()
+  	{
+  		win.focus();
+  	});
+};
+
+// The option on settings panel to start app on full screen
+if (Settings.get('app_fullscreenOnStart') == '1') {
+ 	$('#fullscreenOnStart').attr('checked','checked');
+  	win.toggleFullscreen();
+  	$('.btn-os.fullscreen').toggleClass('active');
+};
+
+if (Settings.get('app_closingPrompt') == '1') {
+ 	$('#closingPrompt').attr('checked','checked');
+};
+
 
 i18n.configure({
     defaultLocale: 'en',
-    locales: ['en', 'de', 'es', 'fr', 'ja', 'nl', 'pt-br', 'pt', 'ro', 'sv', 'tr','it'],
     directory: './language'
 });
 
@@ -45,34 +65,42 @@ if( ! fs.existsSync(tmpFolder) ) { fs.mkdirSync(tmpFolder); }
 
 // Detect the language and update the global Language file
 var detectLanguage = function(preferredLanguage) {
-
-    var fs = require('fs');
-    // The full OS language (with localization, like "en-uk")
-    var pureLanguage = navigator.language.toLowerCase();
-    // The global language name (without localization, like "en")
-    var baseLanguage = navigator.language.toLowerCase().slice(0,2);
-
-    if( fs.existsSync('./language/' + pureLanguage + '.json') ) {
-        i18n.setLocale(pureLanguage);
-    }
-    else if( fs.existsSync('./language/' + baseLanguage + '.json') ) {
-        i18n.setLocale(baseLanguage);
-    } else {
-        i18n.setLocale(preferredLanguage);
-    }
-
+	
+	// Check if has a config for app language and if it's valid
+	if(i18n.isValidLocale(Settings.get('app_language')))
+	{
+		i18n.setLocale(Settings.get('app_language'));
+	}
+	else
+	{
+    	var fs = require('fs');
+    	// The full OS language (with localization, like "en-uk")
+    	var pureLanguage = navigator.language.toLowerCase();
+    	// The global language name (without localization, like "en")
+    	var baseLanguage = navigator.language.toLowerCase().slice(0,2);
+	
+	    if( fs.existsSync('./language/' + pureLanguage + '.json') ) {
+        	i18n.setLocale(pureLanguage);
+    	}
+    	else if( fs.existsSync('./language/' + baseLanguage + '.json') ) {
+        	i18n.setLocale(baseLanguage);
+    	} else {
+        	i18n.setLocale(preferredLanguage);
+    	}
+    	
+    	Settings.set('app_language', I18n.getLocale());
+	}
+	
     // This is a hack to translate non-templated UI elements. Fuck it.
     $('[data-translate]').each(function(){
-        var $el = $(this);
-        var key = $el.data('translate');
-
+       	var $el = $(this);
+       	var key = $el.data('translate');
 		if( $el.is('input') ) {
 			$el.attr('placeholder', i18n.__(key));
 		} else {
 			$el.text(i18n.__(key));
 		}
 	});
-
     populateCategories();
 };
 
@@ -93,12 +121,29 @@ var populateCategories = function() {
 
 detectLanguage('en');
 
+// add available language options to Settings Panel
+var populateLangsList = function(currentLanguage) {
+	i18n.getLocales().forEach(function(lang)
+  	{
+  		$("#lang-select").append('<option value="'+lang.toString()+ '"'
+  		+ (currentLanguage == lang.toString() ? 'selected="selected"' : '')
+  		+ '>' + lang.toString().toUpperCase()
+  		+ '</option>');
+  	});
+};
 
+populateLangsList(Settings.get('app_language'));
 
+var reloadApp = function () {
+	 // the win.reloadIgnoringCache() only works on 'main' page
+	 window.location = 'app://host/index.html';
+};
 // Not debugging, hide all messages!
 if (!isDebug) {
     console.log = function () {};
 } else {
+	// Add "[DEBUG]" on app title
+	$('#app-title').append(" <span class='dbg'>[DEBUG]</span>");
     // Developer Menu building
     var menubar = new gui.Menu({ type: 'menubar' }),
         developerSubmenu = new gui.Menu(),
@@ -115,13 +160,12 @@ if (!isDebug) {
     menubar.append(developerItem);
     developerSubmenu.append(debugItem);
     win.menu = menubar;
-
     // Developer Shortcuts
-    document.addEventListener('keydown', function(event){
+    document.addEventListener('keyup', function(event){ // for reload keyup is safer than keydown
         // F12 Opens DevTools
         if( event.keyCode == 123 ) { win.showDevTools(); }
         // F11 Reloads
-        if( event.keyCode == 122 ) { win.reloadIgnoringCache(); }
+        if( event.keyCode == 122 ) { reloadApp(); }
     });
 }
 
@@ -235,7 +279,7 @@ var checkForUpdates = function() {
             }
         });
 
-    })
+    });
 };
 
 checkForUpdates();

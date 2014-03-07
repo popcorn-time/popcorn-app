@@ -148,7 +148,7 @@ window.spawnCallback = function (url, subs) {
 
     // Enter full-screen
     $('.vjs-fullscreen-control').on('click', function () {
-      if(win.isFullscreen) {
+      if( win.isFullscreen ) {
         win.leaveFullscreen();
       } else {
         win.enterFullscreen();
@@ -197,7 +197,7 @@ jQuery(function ($) {
     // Baseline: WindowHeight:600px -> FontSize:20px
     var font_size = Math.ceil($(window).height() * 0.0333333);
     var min_font_size = 18;
-    font_size = font_size < min_font_size ? min_font_size : font_size
+    font_size = font_size < min_font_size ? min_font_size : font_size;
 
     $('#video-container').css('font-size', font_size+'px');
 
@@ -239,18 +239,48 @@ jQuery(function ($) {
     }
     
   });
-
   $('.btn-os.min').on('click', function () {
     win.minimize();
   });
 
   $('.btn-os.close').on('click', function () {
-    win.close();
+  	if (Settings.get('app_closingPrompt') == '1') {
+  		if (confirm(i18n.__('quitConfirmation'))) 
+  			win.close();
+   	}
+   	else
+   		win.close(true);
   });
   
   $('.btn-os.fullscreen').on('click', function () {
     win.toggleFullscreen();
     $('.btn-os.fullscreen').toggleClass('active');
+
+  });
+  $('.btn-os.settings').on('click', function () {
+  	if($('.settings-panel').hasClass('hidden'))
+  		$('.settings-panel').removeClass('hidden');
+  	else
+  		$('.settings-panel').addClass('hidden');
+  });
+  
+  $('#lang-select').on('change', function(){
+  	Settings.set('app_language', $('#lang-select option:selected').val());
+  	alert(i18n.__('effectOnNextStartup'));
+  });
+  
+  $('#alwaysOnFocus').on('change', function(){
+  	Settings.set('app_alwaysOnFocus', ($('#alwaysOnFocus').is(':checked') ? '1' : '0'));
+  	alert(i18n.__('effectOnNextStartup'));
+  });
+  
+  $('#fullscreenOnStart').on('change', function(){
+  	Settings.set('app_fullscreenOnStart', ($('#fullscreenOnStart').is(':checked') ? '1' : '0'));
+  	alert(i18n.__('effectOnNextStartup'));
+  });
+  
+  $('#closingPrompt').on('change', function(){
+  	Settings.set('app_closingPrompt', ($('#closingPrompt').is(':checked') ? '1' : '0'));
   });
 
   $('.popcorn-load .btn-close').click(function(event){
@@ -260,7 +290,12 @@ jQuery(function ($) {
   });
 
   $('.popcorn-quit .quit').click(function(event){
-    win.close(true);
+  	if (Settings.get('app_closingPrompt') == '1') {
+  		if (confirm(i18n.__('quitConfirmation')))
+    		win.close(true);
+    }
+    else
+    	win.close(true);
   });
 
   $('.popcorn-quit .cancel').click(function(event){
