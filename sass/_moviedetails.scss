@@ -63,13 +63,12 @@ sidebar {
 
   .poster {
     display: block;
-    margin: 10% 10% 2% 10%;
 
     // This is a hack to keep the poster holder in the same ratio as the poster (1,4973)
     // By using padding-bottom with a fixed width we can create a container that always keeps that ratio.
-    width: 80%;
-    padding-bottom: 80% * 1.4973;
-
+    width: 100%;
+    padding-bottom: 100% * 1.5;
+    
     overflow: hidden;
     border-radius: 4px;
     background: #000;
@@ -173,6 +172,8 @@ sidebar {
             left: 0;
             height: 50px;
             width: 100%;
+            margin-left:1px;
+            text-shadow: 0 0 2px #000;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
 
             .quality-off {
@@ -292,7 +293,7 @@ sidebar {
         position: relative;
         padding-left: 2%;
         padding-right: 6%;
-        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
 
@@ -305,6 +306,7 @@ sidebar {
             font-size: 34px;
             margin-bottom: 10px;
             color: #f5f7fa;
+            padding-right: 30px;
           }
 
           .movie-quick-info {
@@ -409,6 +411,7 @@ sidebar {
                 &.flag-spanish { background-image: url(../images/spanish.png); }
                 &.flag-turkish { background-image: url(../images/turkish.png); }
                 &.flag-brazilian { background-image: url(../images/brazilian.png); }
+                &.flag-italian { background-image: url(../images/italian.png); }
               }
             }
           }
