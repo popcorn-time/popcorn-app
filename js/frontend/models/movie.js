@@ -7,10 +7,11 @@ App.Model.Movie = Backbone.Model.extend({
       model.set('loaded',   false);
       model.set('image',    model.get('coverImage'));
       model.set('bigImage', model.get('coverImage'));
+      model.set('backdrop', null);
       model.set('title',    model.get('title'));
       model.set('synopsis', '');
-      model.set('vote_average', model.get('vote_average'));
-      model.set('runtime', model.get('runtime'));
+      model.set('voteAverage', null);
+      model.set('runtime', null);
 
       model.view = new App.View.MovieListItem({
           model: model
@@ -25,9 +26,10 @@ App.Model.Movie = Backbone.Model.extend({
             model.set('loaded',   true);
             model.set('image',    data.image);
             model.set('bigImage', data.image);
+            model.set('backdrop', data.backdrop);
             model.set('title',    data.title);
             model.set('synopsis', data.overview);
-            model.set('vote_average', data.vote_average);
+            model.set('voteAverage', data.voteAverage);
             model.set('runtime', data.runtime);
 
             model.view = new App.View.MovieListItem({

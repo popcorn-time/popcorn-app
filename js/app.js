@@ -17,66 +17,66 @@ var
 
     // browser window object
     win = gui.Window.get(),
-    
+
     // os object
     os = require('os'),
-    
+
     // path object
     path = require('path'),
-    
-    // fs object    
+
+    // fs object
     fs = require('fs'),
 
     // Localization support
     Language = require('./language/' + 'en' + '.json'),
-    
+
+    // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time');
 
 
-// Create the Temp Folder    
+// Create the Temp Folder
 if( ! fs.existsSync(tmpFolder) ) { fs.mkdirSync(tmpFolder); }
-
 
 // Detect the language and update the global Language file
 var detectLanguage = function(preferred) {
 
-	var fs = require('fs');
-	var bestLanguage = navigator.language.slice(0,2);
+    var fs = require('fs');
+    var bestLanguage = navigator.language.slice(0,2);
 
-	if( fs.existsSync('./language/' + bestLanguage + '.json') ) {
-		Language = require('./language/' + bestLanguage + '.json');
-	} else {
-		Language = require('./language/' + preferred + '.json');
-	}
+    if( fs.existsSync('./language/' + bestLanguage + '.json') ) {
+        Language = require('./language/' + bestLanguage + '.json');
+    } else {
+        Language = require('./language/' + preferred + '.json');
+    }
 
-	// This is a hack to translate non-templated UI elements. Fuck it.
-	$('[data-translate]').each(function(){
-		var $el = $(this);
-		var key = $el.data('translate');
+    // This is a hack to translate non-templated UI elements. Fuck it.
+    $('[data-translate]').each(function(){
+        var $el = $(this);
+        var key = $el.data('translate');
 
-		if( $el.is('input') ) {
-			$el.attr('placeholder', Language[key]);
-		} else {
-			$el.text(Language[key]);
-		}
-	});
+        if( $el.is('input') ) {
+            $el.attr('placeholder', Language[key]);
+        } else {
+            $el.text(Language[key]);
+        }
+    });
 
-	populateCategories();
+    populateCategories();
 };
 
 
 // Populate the Category list (This should be a template, though)
 var populateCategories = function() {
-	var category_html = '';
-	var defaultCategory = 'all';
+    var category_html = '';
+    var defaultCategory = 'all';
 
-	for( key in Language.genres ) {
-		category_html += '<li'+ (defaultCategory == key ? ' class="active" ' : '') +'>'+
-				           '<a href="#" data-genre="'+key+'">'+Language.genres[key]+'</a>'+
-				         '</li>';
-	}
+    for( key in Language.genres ) {
+        category_html += '<li'+ (defaultCategory == key ? ' class="active" ' : '') +'>'+
+                           '<a href="#" data-genre="'+key+'">'+Language.genres[key]+'</a>'+
+                         '</li>';
+    }
 
-	jQuery('#catalog-select .categories').html(category_html);
+    jQuery('#catalog-select .categories').html(category_html);
 };
 
 detectLanguage('en');
@@ -105,12 +105,12 @@ if (!isDebug) {
     win.menu = menubar;
 
     // Developer Shortcuts
-	document.addEventListener('keydown', function(event){
-		// F12 Opens DevTools
-		if( event.keyCode == 123 ) { win.showDevTools(); }
-		// F11 Reloads
-		if( event.keyCode == 122 ) { win.reloadIgnoringCache(); }
-	});
+    document.addEventListener('keydown', function(event){
+        // F12 Opens DevTools
+        if( event.keyCode == 123 ) { win.showDevTools(); }
+        // F11 Reloads
+        if( event.keyCode == 122 ) { win.reloadIgnoringCache(); }
+    });
 }
 
 
@@ -118,28 +118,111 @@ if (!isDebug) {
 win.title = 'Popcorn Time';
 
 
-// Prompting before quitting
-win.on('close', function() {
-    if (confirm(Language.beforeQuit)) {
-        this.close(true);
+// Focus the window when the app opens
+win.focus();
+
+
+document.addEventListener('keydown', function(event){
+    var $el = $('.popcorn-quit');
+    if(!$el.hasClass('hidden')) {  
+        // Esc
+        if( event.keyCode == 27 ) { $el.addClass('hidden'); }
+    }
+    if (event.keyCode === 27 && $('body').is('.loading')) {
+        /*alert("escape pressed from sidebar");*/
+        App.loader(false);
+        $(document).trigger('videoExit');
+    }
+    if (event.keyCode == 32 && $("#video_player").is(".vjs-playing")) {
+        $("#video_player")[0].player.pause();
+    }
+    if (event.keyCode == 32 && $("#video_player").is(".vjs-paused")) {
+        $("#video_player")[0].player.play();
     }
 });
-
 
 // Cancel all new windows (Middle clicks / New Tab)
 win.on('new-win-policy', function (frame, url, policy) {
     policy.ignore();
 });
 
+
 // Prevent dropping files into the window
 window.addEventListener("dragover",function(e){
-  	e = e || event;
-  	e.preventDefault();
+    e = e || event;
+    e.preventDefault();
 },false);
 window.addEventListener("drop",function(e){
-  	e = e || event;
-  	e.preventDefault();
+    e = e || event;
+    e.preventDefault();
 },false);
+
+
+// Check if the user has a working internet connection (uses Google as reference)
+var checkInternetConnection = function(callback) {
+    var http = require('http');
+    var hasInternetConnection = false;
+
+    http.get(Settings.get('connectionCheckUrl'), function(res){
+        if( res.statusCode == 200 || res.statusCode == 302 || res.statusCode == 301 ) {
+            hasInternetConnection = true;
+        }
+        typeof callback == 'function' ? callback(hasInternetConnection) : null;
+    });
+};
+
+
+// Detect the operating system of the user
+var getOperatingSystem = function() {
+    var os = require('os');
+    var platform = os.platform();
+
+    if( platform == 'win32' || platform == 'win64' ) {
+        return 'windows';
+    }
+    if( platform == 'darwin' ) {
+        return 'mac';
+    }
+    if( platform == 'linux' ) {
+        return 'linux';
+    }
+    return null;
+};
+
+
+// Check if there's a newer version and shows a prompt if that's the case
+var checkForUpdates = function() {
+    var http = require('http');
+
+    var currentOs = getOperatingSystem();
+    // We may want to change this in case the detection fails
+    if( ! currentOs ){ return; }
+
+    http.get(Settings.get('updateNotificationUrl'), function(res){
+        var data = '';
+        res.on('data', function(chunk){ data += chunk; });
+
+        res.on('end', function(){
+            try {
+                var updateInfo = JSON.parse(data);
+            } catch(e){ return; }
+
+            if( ! updateInfo ){ return; }
+
+            if( updateInfo[currentOs].version > Settings.get('version') ) {
+                // Check if there's a newer version and show the update notification
+                $('#notification').html(
+                    'Popcorn Time '+ updateInfo[currentOs].versionName + Language.UpgradeVersionDescription +
+                    '<a class="btn" href="#" onclick="gui.Shell.openExternal(\'' + updateInfo[currentOs].downloadUrl + '\');"> '+ Language.UpgradeVersion + '</a>'
+                );
+                $('body').addClass('has-notification');
+            }
+        });
+
+    })
+};
+
+checkForUpdates();
 
 
 // Taken from peerflix `app.js`
@@ -148,7 +231,7 @@ var videoPeerflix = null;
 var playTorrent = window.playTorrent = function (torrent, subs, callback, progressCallback) {
 
     videoPeerflix ? $(document).trigger('videoExit') : null;
-    
+
     // Create a unique file to cache the video (with a microtimestamp) to prevent read conflicts
     var tmpFilename = ( torrent.toLowerCase().split('/').pop().split('.torrent').shift() ).slice(0,100);
     tmpFilename = tmpFilename.replace(/([^a-zA-Z0-9-_])/g, '_')+'-'+ (new Date()*1) +'.mp4';
@@ -206,14 +289,17 @@ var playTorrent = window.playTorrent = function (torrent, subs, callback, progre
             $(document).on('videoExit', function() {
                 if (loadedTimeout) { clearTimeout(loadedTimeout); }
 
+                // Keep the sidebar open
+                $("body").addClass("sidebar-open").removeClass("loading");
+
                 // Stop processes
                 flix.clearCache();
                 flix.destroy();
                 videoPeerflix = null;
-                
+
                 // Unbind the event handler
                 $(document).off('videoExit');
-                
+
                 delete flix;
             });
         });
@@ -232,5 +318,5 @@ $('body').tooltip({
  */
 
 process.on('uncaughtException', function(err) {
-  console.log(err);
+    console.log(err);
 });

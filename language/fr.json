@@ -1,5 +1,7 @@
 {
-    "beforeQuit": "Êtes-vous sûr(e) de vouloir quitter ?",
+    "quit": "Quitter",
+    "cancel": "Annuler",
+    "beforeQuit": "Êtes-vous sûr de vouloir quitter ?",
     "loading": "Patientez...",
     "loadingVideo": "Chargement de la vidéo, merci de patienter...",
     "searchLoading": "Recherche...",
@@ -11,10 +13,14 @@
     "subtitledIn": "Sous-titres",
     "quality": "Qualité",
     "watchItNow": "Regarder",
+    "durationUnit": "min",
 
     "connecting": "Connexion...",
     "startingDownload": "Démarrage du téléchargement...",
     "downloading": "Téléchargement...",
+
+    "UpgradeVersion": "Mettre à jour Popcorn Time",
+    "UpgradeVersionDescription": " a été mis à jour. Vous devriez le télécharger maintenant !",
 
     "genres": {
         "all": "Populaire",
