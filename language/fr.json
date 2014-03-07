@@ -27,6 +27,13 @@
     "legalDisclaimerAccept": "Je comprends",
     "legalDisclaimerCancel": "Quitter",
 
+    "selectLanguage": "Selectionner une langue :",
+    "fullscreenOnStart": "Plein écran au démarrage",
+    "closingPrompt": "Confirmation avant de quitter",
+    "alwaysOnFocus": "Laisser Popcorn Time toujours devant",
+    "effectOnNextStartup": "Les changements prendront effet au prochain démarrage.",
+    "quitConfirmation": "Êtes-vous sur de vouloir quitter ? =( ",
+
     "genres": {
         "all": "Populaire",
         "action": "Action",
