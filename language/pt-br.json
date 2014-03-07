@@ -21,18 +21,18 @@
 
     "UpgradeVersion": "Atualizar Popcorn Time",
     "UpgradeVersionDescription": " acaba de ser lançado. Atualize agora!",
-    
+
     "legalDisclaimer": "Popcorn Time baixa e compartilha arquivos usando torrents, isso pode não ser legal em seu país.",
     "legalDisclaimerResponsible": "Não nos responsabilizamos por eventuais problemas, então esteja ciente de nossos Termos e Condições antes de utilizar o app.",
     "legalDisclaimerAccept": "Eu compreendo",
     "legalDisclaimerCancel": "Sair",
-    
+
     "selectLanguage": "Selecione um idioma:",
-	"fullscreenOnStart": "Iniciar em tela cheia",
-	"closingPrompt": "Perguntar antes de fechar",
-	"alwaysOnFocus": "Manter a o Popcorn Time sempre na frente",
-	"effectOnNextStartup": "As alterações terão efeito na próxima inicialização.",
-	"quitConfirmation": "Tem certeza que quer sair? =( ",
+    "fullscreenOnStart": "Iniciar em tela cheia",
+    "closingPrompt": "Perguntar antes de fechar",
+    "alwaysOnFocus": "Manter a o Popcorn Time sempre na frente",
+    "effectOnNextStartup": "As alterações terão efeito na próxima inicialização.",
+    "quitConfirmation": "Tem certeza que quer sair? =( ",
 
     "genres": {
         "all": "Todos",

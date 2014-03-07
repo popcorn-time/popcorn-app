@@ -31,8 +31,8 @@ App.loader = function (hasToShow, copy) {
     }
 
     $el[hasToShow === false ? 'addClass' : 'removeClass']('hidden');
-    
-    if( ! hasToShow ) { 
+
+    if( ! hasToShow ) {
       window.initialLoading = false;
 
       // Wait a second before removing the progressbar clas
@@ -159,7 +159,7 @@ window.spawnCallback = function (url, subs) {
     // Exit full-screen
     // BUG: window loses focus so can't use ESC unless the window is clicked first
     $(document).on('keydown', function (e) {
-      if (e.keyCode == 27) { 
+      if (e.keyCode == 27) {
         win.leaveFullscreen();
       }
     });
@@ -176,9 +176,9 @@ window.spawnCallback = function (url, subs) {
     });
 
     video.player().on('pause', function () {  });
-    video.player().on('play', function () { 
+    video.player().on('play', function () {
       // Trigger a resize so the subtitles are adjusted
-      $(window).trigger('resize'); 
+      $(window).trigger('resize');
     });
     // There was an issue with the video
     video.player().on('error', function (error) {
@@ -201,7 +201,7 @@ jQuery(function ($) {
 
     $('#video-container').css('font-size', font_size+'px');
 
-    // And adjust the subtitle position so they always match the bottom of the video 
+    // And adjust the subtitle position so they always match the bottom of the video
     var $video = $('#video-container video');
     var $subs = $('#video-container .vjs-text-track-display');
 
@@ -237,50 +237,50 @@ jQuery(function ($) {
           win.maximize();
       }
     }
-    
+
   });
   $('.btn-os.min').on('click', function () {
     win.minimize();
   });
 
   $('.btn-os.close').on('click', function () {
-  	if (Settings.get('app_closingPrompt') == '1') {
-  		if (confirm(i18n.__('quitConfirmation'))) 
-  			win.close();
-   	}
-   	else
-   		win.close(true);
+      if (Settings.get('app_closingPrompt') == '1') {
+          if (confirm(i18n.__('quitConfirmation')))
+              win.close();
+       }
+       else
+           win.close(true);
   });
-  
+
   $('.btn-os.fullscreen').on('click', function () {
     win.toggleFullscreen();
     $('.btn-os.fullscreen').toggleClass('active');
 
   });
   $('.btn-os.settings').on('click', function () {
-  	if($('.settings-panel').hasClass('hidden'))
-  		$('.settings-panel').removeClass('hidden');
-  	else
-  		$('.settings-panel').addClass('hidden');
+      if($('.settings-panel').hasClass('hidden'))
+          $('.settings-panel').removeClass('hidden');
+      else
+          $('.settings-panel').addClass('hidden');
   });
-  
+
   $('#lang-select').on('change', function(){
-  	Settings.set('app_language', $('#lang-select option:selected').val());
-  	alert(i18n.__('effectOnNextStartup'));
+      Settings.set('app_language', $('#lang-select option:selected').val());
+      alert(i18n.__('effectOnNextStartup'));
   });
-  
+
   $('#alwaysOnFocus').on('change', function(){
-  	Settings.set('app_alwaysOnFocus', ($('#alwaysOnFocus').is(':checked') ? '1' : '0'));
-  	alert(i18n.__('effectOnNextStartup'));
+      Settings.set('app_alwaysOnFocus', ($('#alwaysOnFocus').is(':checked') ? '1' : '0'));
+      alert(i18n.__('effectOnNextStartup'));
   });
-  
+
   $('#fullscreenOnStart').on('change', function(){
-  	Settings.set('app_fullscreenOnStart', ($('#fullscreenOnStart').is(':checked') ? '1' : '0'));
-  	alert(i18n.__('effectOnNextStartup'));
+      Settings.set('app_fullscreenOnStart', ($('#fullscreenOnStart').is(':checked') ? '1' : '0'));
+      alert(i18n.__('effectOnNextStartup'));
   });
-  
+
   $('#closingPrompt').on('change', function(){
-  	Settings.set('app_closingPrompt', ($('#closingPrompt').is(':checked') ? '1' : '0'));
+      Settings.set('app_closingPrompt', ($('#closingPrompt').is(':checked') ? '1' : '0'));
   });
 
   $('.popcorn-load .btn-close').click(function(event){
@@ -290,12 +290,12 @@ jQuery(function ($) {
   });
 
   $('.popcorn-quit .quit').click(function(event){
-  	if (Settings.get('app_closingPrompt') == '1') {
-  		if (confirm(i18n.__('quitConfirmation')))
-    		win.close(true);
+      if (Settings.get('app_closingPrompt') == '1') {
+          if (confirm(i18n.__('quitConfirmation')))
+            win.close(true);
     }
     else
-    	win.close(true);
+        win.close(true);
   });
 
   $('.popcorn-quit .cancel').click(function(event){
