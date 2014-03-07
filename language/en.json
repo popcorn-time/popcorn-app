@@ -26,6 +26,13 @@
     "legalDisclaimerResponsible": "We are not responsible for any problems that may arise, so make sure you understand our Terms and Conditions before using the app.",
     "legalDisclaimerAccept": "I understand",
     "legalDisclaimerCancel": "Leave",
+    
+    "selectLanguage": "Select a language:",
+	"fullscreenOnStart": "Fullscreen on start",
+	"closingPrompt": "Confirm before closing",
+	"alwaysOnFocus": "Keep Popcorn Time window always on top",
+	"effectOnNextStartup": "This changes will take effect on next startup.",
+	"quitConfirmation": "Are you sure you want to quit? =( ",
 
     "genres": {
         "all": "Popular",

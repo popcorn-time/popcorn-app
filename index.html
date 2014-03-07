@@ -13,10 +13,12 @@
         <button class="btn-os min"></button>
         <button class="btn-os max"></button>
       </nav>
+      
       <nav class="btn-set right">
+      	<button class="btn-os settings"></button>
         <button class="btn-os fullscreen"></button>
       </nav>
-      <h1>Popcorn Time</h1>
+      <h1 id="app-title">Popcorn Time</h1>
     </header>
   
     <div id="notification"></div>
@@ -35,8 +37,6 @@
 
     <section class="container">
       <sidebar class="hidden"></sidebar>
-
-      
     </section>
 
     <script id="sidebar-tpl" type="text/x-template">
@@ -133,11 +133,33 @@
         <span class="text" data-translate="legalDisclaimerResponsible"></span>
         <br/>
         <a class="btn confirmation quit" data-translate="legalDisclaimerCancel"></a>
-        <a class="btn confirmation continue" data-translate="legalDisclaimerAccept"></a>
+		<a class="btn confirmation continue" data-translate="legalDisclaimerAccept"></a>
       </div>
     </div>
     
-
+   <div class="settings-panel hidden">
+   	  <div class="bg"> </div>
+      <div class="wrapper">
+      	<div class="panel">
+      			
+      		<input id="fullscreenOnStart" type="checkbox">
+			<label for="fullscreenOnStart" data-translate="fullscreenOnStart"></label>
+			<br>
+			<input id="closingPrompt" type="checkbox">
+			<label for="closingPrompt" data-translate="closingPrompt"></label>
+			<br>
+			<input id="alwaysOnFocus" type="checkbox">
+			<label for="alwaysOnFocus" data-translate="alwaysOnFocus"></label>
+				
+			<span data-translate="selectLanguage"> </span>
+			<div class="select-lang">
+				<select id="lang-select">
+  				</select>
+			</div>
+      	</div>
+      </div>
+    </div>
+    
     <script src="js/vendor/jquery-2.1.0.min.js"></script>
     <script src="js/vendor/underscore.js"></script>
     <script src="js/vendor/backbone-1.1.0.js"></script>
@@ -161,5 +183,6 @@
     <script src="js/frontend/controllers/search.js"></script>
     <script src="js/frontend/controllers/filter.js"></script>
     <script src="js/frontend/router.js"></script>
+    
   </body>
 </html>
