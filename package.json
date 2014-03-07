@@ -2,6 +2,9 @@
   "name": "Popcorn-Time",
   "main": "app://host/index.html",
   "version": "0.1.1",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
   "window": {
     "title": "Popcorn Time",
     "icon": "images/icon.png",
@@ -31,6 +34,8 @@
     "grunt-node-webkit-builder": "~0.1.16",
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.7.1"
+    "grunt-contrib-compass": "~0.7.1",
+    "mocha": "~1.17.1",
+    "enumerate-properties": "1.0.0"
   }
 }
