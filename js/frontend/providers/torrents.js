@@ -43,6 +43,15 @@ App.getTorrentsCollection = function (options) {
                 if( typeof torrents['720p'] != 'undefined' ){ quality = '720p'; torrent = torrents['720p']; }
 
                 for( var k in movie.subtitles ) {
+
+                    //Change for regionalization: PT-Br and PT-Pt
+                    var link = movie.subtitles[k].url;
+                    var linkData = (link.substr(link.lastIndexOf('/') + 1)).split('-');
+                    var language = linkData[linkData.length-3];
+                    if (language == "portuguese" && linkData[linkData.length-4] == 'brazilian'){
+                        movie.subtitles[k].language = linkData[linkData.length-4];
+                    }
+
                     if( supportedLanguages.indexOf(movie.subtitles[k].language) < 0 ){ continue; }
                     if( typeof subtitles[movie.subtitles[k].language] == 'undefined' ) {
                         subtitles[movie.subtitles[k].language] = movie.subtitles[k].url;
