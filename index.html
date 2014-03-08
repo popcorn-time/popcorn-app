@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <script>window.__startTime = (new Date()*1);</script>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="js/vendor/video-js/video-js.css">
   </head>
@@ -19,7 +18,7 @@
       </nav>
       <h1>Popcorn Time</h1>
     </header>
-  
+
     <div id="notification"></div>
 
     <div id="catalog-select">
@@ -30,7 +29,7 @@
 
       <h4 data-translate="movies">Movies</h4>
       <ul class="categories">
-        
+
       </ul>
     </div>
 
@@ -81,11 +80,24 @@
                 </li>
                 <li>
                   <% if (this.model.get('runtime')) { %>
-                    <span class="duration"><%= runtime %> <%= i18n.__('durationUnit') %></span>
+                    <span class="duration">
+                      <%= ((runtime)-(runtime%60))/60 %>
+                      <% if(runtime>=120) { %>
+                          <%= i18n.__('durationUnitHPlural') %>
+                      <% } else { %>
+                          <%= i18n.__('durationUnitH')  %>
+                      <% } %>
+                      <%= runtime%60 %>
+                      <% if(runtime%60>1) { %>
+                          <%= i18n.__('durationUnitMPlural') %>
+                      <% } else { %>
+                          <%= i18n.__('durationUnitM')  %>
+                      <% } %>
+                    </span>
                   <% } %>
                 </li>
               </ul>
-                              
+
               <i data-placement="left" data-toggle="tooltip" title="<%= health %> health" class="health <%= health %> fa fa-flash"></i>
 
               <% var p_rating = (this.model.get('voteAverage') / 9) * 5 %>
@@ -101,7 +113,7 @@
                 <% if (!this.model.get('voteAverage')) { %>
                   <ul class="empty_votes">
                     <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i> 
+                    <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
@@ -145,7 +157,7 @@
     </div>
 
     <div id="video-container"></div>
-    
+
     <div class="popcorn-disclaimer hidden">
       <div class="wrapper">
         <span class="text" data-translate="legalDisclaimer"></span>
@@ -155,7 +167,7 @@
         <a class="btn confirmation continue" data-translate="legalDisclaimerAccept"></a>
       </div>
     </div>
-    
+
 
     <script src="js/vendor/jquery-2.1.0.min.js"></script>
     <script src="js/vendor/underscore.js"></script>
@@ -180,7 +192,5 @@
     <script src="js/frontend/controllers/search.js"></script>
     <script src="js/frontend/controllers/filter.js"></script>
     <script src="js/frontend/router.js"></script>
-
-    <script>userTracking.timing('Initial Load', 'Ready', ((new Date()*1) - __startTime), Settings.get('version') ).send();</script>
   </body>
 </html>
