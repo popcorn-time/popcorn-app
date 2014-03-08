@@ -1,0 +1,7 @@
+{
+	"Hello": "Hallo",
+	"Result: %d cat": {
+		"one": "Ergebnis: %d Katze",
+		"other": "Ergebnis: %d Katzen"
+	}
+}

@@ -93,8 +93,8 @@ App.View.Sidebar = Backbone.View.extend({
                                         // If you're wondering "What the fuck is this shit?", there's a bug with the charset detector when using portuguese or romanian. It's actually ISO-8859-1.
                                         decompressedData = iconv.encode( iconv.decode(decompressedData, 'iso-8859-1'), targetEncodingCharset );
                                     } 
-                                    else if( charset.encoding == 'windows-1251' || charset.encoding == 'windows-1252' ) {
-                                        // It's the charset detector fucking up again, now with Spanish, Portuguese and Romanian
+                                    else if( charset.encoding == 'windows-1251' || charset.encoding == 'windows-1252' || charset.encoding == 'windows-1255' ) {
+                                        // It's the charset detector fucking up again, now with Spanish, Portuguese, French (1255) and Romanian
                                         if( subOutputFile.indexOf('romanian.srt') > 0 ) {
                                             // And if it's romanian, it's iso-8859-2
                                             decompressedData = iconv.encode( iconv.decode(decompressedData, 'iso-8859-2'), targetEncodingCharset );
@@ -135,20 +135,20 @@ App.View.Sidebar = Backbone.View.extend({
                 $('.popcorn-load').find('.progress').css('width', percent+'%');
 
                 // Update the loader status
-                var bufferStatus = Language['connecting'];
+                var bufferStatus = i18n.__('connecting');
                 if( videoPeerflix.peers.length > 0 ) {
-                    bufferStatus = Language['startingDownload'];
+                    bufferStatus = i18n.__('startingDownload');
                     if( videoPeerflix.downloaded > 0 ) {
-                        bufferStatus = Language['downloading'];
+                        bufferStatus = i18n.__('downloading');
                     }
                 }
                 $('.popcorn-load .progressinfo').text(bufferStatus);
             }
         );
         $('.popcorn-load').addClass('withProgressBar').addClass('cancellable').find('.progress').css('width', 0.0+'%');
-        $('.popcorn-load .progressinfo').text( Language['connecting'] );
-        
-        App.loader(true, Language.loadingVideo);
+        $('.popcorn-load .progressinfo').text( i18n.__('connecting') );
+
+        App.loader(true, i18n.__('loadingVideo'));
         $('body').removeClass().addClass('loading');
     },
 

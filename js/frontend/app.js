@@ -27,7 +27,7 @@ App.loader = function (hasToShow, copy) {
     }
 
     if (hasToShow === true) {
-        $el.find('.text').html(copy ? copy : Language.loading);
+        $el.find('.text').html(copy ? copy : i18n.__('loading'));
     }
 
     $el[hasToShow === false ? 'addClass' : 'removeClass']('hidden');
@@ -44,14 +44,14 @@ App.loader = function (hasToShow, copy) {
 };
 // Show by default
 window.initialLoading = true;
-App.loader(true, Language.loading);
+App.loader(true, i18n.__('loading'));
 
 
 // Handler for Video opening
 window.spawnCallback = function (url, subs) {
     var subtracks = '';
     for( lang in subs ) {
-      subtracks += '<track kind="subtitles" src="app://host/' + subs[lang] + '" srclang="es" label="' + Languages[lang] + '" charset="utf-8" />';
+      subtracks += '<track kind="subtitles" src="app://host/' + subs[lang] + '" srclang="es" label="' + i18n.__(lang) + '" charset="utf-8" />';
     }
 
     var player =
@@ -140,7 +140,7 @@ window.spawnCallback = function (url, subs) {
 
     // Double Click to toggle Fullscreen
     $('#video-container video').dblclick(function(event){
-      win.toggleKioskMode();
+      $('.vjs-fullscreen-control').trigger('click');
     });
 
     // Init video.
@@ -148,14 +148,19 @@ window.spawnCallback = function (url, subs) {
 
     // Enter full-screen
     $('.vjs-fullscreen-control').on('click', function () {
-      win.toggleKioskMode();
+      if(win.isFullscreen) {
+        win.leaveFullscreen();
+      } else {
+        win.enterFullscreen();
+        win.focus();
+      }
     });
 
     // Exit full-screen
     // BUG: window loses focus so can't use ESC unless the window is clicked first
     $(document).on('keydown', function (e) {
       if (e.keyCode == 27) { 
-        win.leaveKioskMode();
+        win.leaveFullscreen();
       }
     });
 
@@ -163,7 +168,7 @@ window.spawnCallback = function (url, subs) {
 
     // Close player
     $('#video_player_close').on('click', function () {
-      win.leaveKioskMode();
+      win.leaveFullscreen();
       $('#video-container').hide();
       video.dispose();
       $('body').removeClass();
@@ -246,7 +251,6 @@ jQuery(function ($) {
   $('.btn-os.fullscreen').on('click', function () {
     win.toggleFullscreen();
     $('.btn-os.fullscreen').toggleClass('active');
-
   });
 
   $('.popcorn-load .btn-close').click(function(event){
@@ -278,24 +282,26 @@ jQuery(function ($) {
     } else {
       App.Router.navigate('filter/' + genre, { trigger: true });
     }
-    
-    $("#category-list").append(pagination);
-
-    App.sidebar.hide();
     evt.preventDefault();
   });
 
   //Pagination buttons
   $( document ).on( "click", ".pagination a", function(event) {
     var page = $(this).attr('data-page');
-    var genre = $("#catalog-select ul li.active a").attr("data-genre");;
+    var genre = $("#catalog-select ul li.active a").attr("data-genre");
     App.Router.navigate('filter/' + genre + '/' + page, { trigger: true });
-    $("#category-list").append(pagination);
     $(".pagination li").removeClass('active');
     $(".pagination li").eq(page-1).addClass('active');
     event.preventDefault();
   });
 
+  // Add route callback to router
+  App.Router.on('route', function () {
+    // Append pagination HTML
+    $("#category-list").append(pagination);
+    // Ensure sidebar is hidden
+    App.sidebar.hide();
+  });
 
   $('.search input').on('keypress', function (evt) {
     var term = $.trim($(this).val());
@@ -308,7 +314,6 @@ jQuery(function ($) {
           App.Router.navigate('index.html', { trigger: true });
         }
         $('#catalog-select ul li.active').removeClass('active');
-        App.sidebar.hide();
       }
   });
 
@@ -342,7 +347,7 @@ jQuery(function ($) {
         var distance = {x: thisPos.x - previousPos.x, y: thisPos.y - previousPos.y};
         previousPos = thisPos;
 
-        if( mouseIsDown && ! win.isKioskMode ){
+        if( mouseIsDown && ! win.isFullscreen ){
           window.moveBy(distance.x, distance.y);
         }
       });
