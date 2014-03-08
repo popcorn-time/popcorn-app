@@ -11,7 +11,12 @@
 	"subtitledIn": "Subtitled in",
 	"quality": "Quality",
 	"watchItNow": "Watch It Now",
-	"durationUnit": "min",
+
+	"durationUnitM": "minute",
+	"durationUnitH": "hour",
+	"durationUnitMPlural": "minutes",
+	"durationUnitHPlural": "hours",
+
 	"connecting": "Connecting...",
 	"startingDownload": "Starting Download...",
 	"downloading": "Downloading...",

@@ -414,6 +414,9 @@ a {
   border-radius: 0;
   display: block;
 }
+#header .btn-set button.fullscreen:hover {
+  color:#0080FF;
+}
 #header .btn-set button.fullscreen::before {
   content: "\e000";
   font-family: VideoJS;

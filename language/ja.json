@@ -13,7 +13,11 @@
     "subtitledIn": "字幕",
     "quality": "「品質」",
     "watchItNow": "今すぐ見る",
-    "durationUnit": "分",
+
+    "durationUnitM": "分",
+    "durationUnitH": "時間",
+    "durationUnitMPlural": "分間",
+    "durationUnitHPlural": "営業時間",
 
     "connecting": "「接続中...",
     "startingDownload": "ダウンロードを開始する...",
@@ -21,12 +25,12 @@
 
     "UpgradeVersion": "ポップコーン時間のアップグレード」",
     "UpgradeVersionDescription": " ちょうど今ダウンロードをリリースされました。",
-    
+
     "legalDisclaimer": "Popcorn Time downloads and seeds movies using torrents, which may not be legal in your country.",
     "legalDisclaimerResponsible": "We are not responsible for any problems that may arise, so make sure you understand our Terms and Conditions before using the app.",
     "legalDisclaimerAccept": "I understand and want to use Popcorn Time",
     "legalDisclaimerCancel": "Close Popcorn Time",
-    
+
     "genres": {
         "all": "人気",
         "action": "「アクション」",
