@@ -123,7 +123,19 @@ App.View.Sidebar = Backbone.View.extend({
             }
         }
 
-        playTorrent(file, subsFiles, 
+
+        $('.popcorn-load').addClass('withProgressBar').addClass('cancellable').find('.progress').css('width', 0.0+'%');
+        $('.popcorn-load .progressinfo').text( i18n.__('connecting') );
+
+        App.loader(true, i18n.__('loadingVideo'));
+        $('body').removeClass().addClass('loading');
+        
+        
+        // Used to keep track of loading status changes
+        var previousStatus = '';
+        var movieModel = this.model;
+
+        playTorrent(file, subsFiles, movieModel,
             function(){}, 
             function(percent){
 
@@ -135,21 +147,24 @@ App.View.Sidebar = Backbone.View.extend({
                 $('.popcorn-load').find('.progress').css('width', percent+'%');
 
                 // Update the loader status
-                var bufferStatus = i18n.__('connecting');
+                var bufferStatus = 'connecting';
                 if( videoPeerflix.peers.length > 0 ) {
-                    bufferStatus = i18n.__('startingDownload');
+                    bufferStatus = 'startingDownload';
                     if( videoPeerflix.downloaded > 0 ) {
-                        bufferStatus = i18n.__('downloading');
+                        bufferStatus = 'downloading';
                     }
                 }
-                $('.popcorn-load .progressinfo').text(bufferStatus);
+                
+                if( bufferStatus != previousStatus ) {
+                    userTracking.event('Video Preloading', bufferStatus, movieModel.get('title')).send();
+                    previousStatus = bufferStatus;
+                }
+                
+                $('.popcorn-load .progressinfo').text( i18n.__(bufferStatus) );
             }
         );
-        $('.popcorn-load').addClass('withProgressBar').addClass('cancellable').find('.progress').css('width', 0.0+'%');
-        $('.popcorn-load .progressinfo').text( i18n.__('connecting') );
-
-        App.loader(true, i18n.__('loadingVideo'));
-        $('body').removeClass().addClass('loading');
+        
+        userTracking.event('Movie Quality', 'Watch on '+this.model.get('quality')+' - '+this.model.get('health').capitalize(), this.model.get('title') ).send();
     },
 
     initialize: function () {
@@ -183,6 +198,8 @@ App.View.Sidebar = Backbone.View.extend({
     show: function () {
         $('body').removeClass().addClass('sidebar-open');
         this.$el.removeClass('hidden');
+
+        userTracking.pageview('/movies/view/'+this.model.get('slug'), this.model.get('title') +' ('+this.model.get('year')+')' ).send();
     },
 
     enableHD: function (evt) {
