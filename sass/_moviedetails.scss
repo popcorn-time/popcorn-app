@@ -8,8 +8,10 @@ sidebar {
   -webkit-transform-style: preserve-3d;
   animation: sidebareffect .5s;
   -webkit-animation: sidebareffect .5s;
+  -webkit-transform: translateZ(0);
 
   &.hidden {
+  	right: -10px;
     animation: sidebareffect2 .5s;
     -webkit-animation: sidebareffect2 .5s;
     -webkit-transform: translate(100%, 0);
@@ -33,7 +35,7 @@ sidebar {
     }
 
     .backdrop-image {
-      @include opacity(0.4);
+      @include opacity(0.2);
       display: block;
       position: absolute;
       top: 0;
@@ -42,7 +44,8 @@ sidebar {
       height:100%;
       background-size: cover;
       z-index: -1;
-      -webkit-filter: /* grayscale(1) */ blur(10px);
+      // Blur is unbearably slow
+      // -webkit-filter: /* grayscale(1) */ blur(10px);
       background-position: center;
     }
 
@@ -175,6 +178,7 @@ sidebar {
             margin-left:1px;
             text-shadow: 0 0 2px #000;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+            -webkit-transform: translateZ(0);
 
             .quality-off {
               margin-left: 10px;
@@ -256,7 +260,7 @@ sidebar {
                 z-index: 0;
 
                 ~ label {
-                  &:nth-of-type(1) { color: #3EED8D; }
+                  &:nth-of-type(1) { color: $popcorn-blue; }
                   &:nth-of-type(2) { color: #FFF; }
                 }
 
@@ -265,7 +269,7 @@ sidebar {
 
               ~ :checked ~ label {
                 &:nth-of-type(1) { color: #FFF; }
-                &:nth-of-type(2) { color: #3EED8D; }
+                &:nth-of-type(2) { color: $popcorn-blue; }
               }
 
               ~ :checked ~ .toggle { left: 13px; }
@@ -274,7 +278,7 @@ sidebar {
 
           .toggle {
             @include transition(left .2s ease);
-            background: #3EED8D;
+            background: $popcorn-blue;
             border-radius: 50%;
             height: 10px;
             left: 0;
@@ -316,7 +320,8 @@ sidebar {
               display: inline-block;
               vertical-align: top;
               font-size: 12px;
-              color: #7aa3d6;
+              color: $popcorn-blue;
+              font-weight: bold;
 
               &::after {
                 content: '\b7\a0';
@@ -418,7 +423,7 @@ sidebar {
         }
 
         a.play-button {
-          background: #286dc4;
+          background: $popcorn-blue;
           background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
           color: #FFF;
           font-weight: bold;
