@@ -11,14 +11,8 @@
 	"subtitledIn": "Sous-titres",
 	"quality": "Qualité",
 	"watchItNow": "Regarder",
-	"durationUnitM": {
-		"one": "%s minute",
-		"other": "%s minutes"
-	},
-	"durationUnitH": {
-		"one": "%s heure",
-		"other": "%s heures"
-	},
+	"durationUnitM": "min",
+	"durationUnitH": "h",
 	"connecting": "Connexion...",
 	"startingDownload": "Démarrage du téléchargement...",
 	"downloading": "Téléchargement...",

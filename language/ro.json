@@ -13,14 +13,8 @@
     "subtitledIn": "Subtitrat în",
     "quality": "Calitate",
     "watchItNow": "Vizionează acum",
-    "durationUnitM": {
-        "one": "%s minut",
-        "other": "%s minute"
-    },
-    "durationUnitH": {
-        "one": "%s timp",
-        "other": "%s ore"
-    },
+    "durationUnitM": "min",
+    "durationUnitH": "t",
 
     "connecting": "Se conectează...",
     "startingDownload": "Începe descărcarea...",

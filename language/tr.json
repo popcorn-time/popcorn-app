@@ -13,14 +13,8 @@
     "subtitledIn": "Altyazılı",
     "quality": "Kalite",
     "watchItNow": "Hemen izle",
-    "durationUnitM": {
-        "one": "%s dakika",
-        "other": "%s dakika"
-    },
-    "durationUnitH": {
-        "one": "%s zaman",
-        "other": "%s saat"
-    },
+    "durationUnitM": "dk",
+    "durationUnitH": "s",
 
     "connecting": "Bağlanılıyor...",
     "startingDownload": "Yükleme başlıyor...",

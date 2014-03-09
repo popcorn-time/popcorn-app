@@ -11,14 +11,8 @@
 	"subtitledIn": "Subtitled in",
 	"quality": "Quality",
 	"watchItNow": "Watch It Now",
-	"durationUnitM": {
-	    "one": "%s minute",
-	    "other": "%s minutes"
-	},
-	"durationUnitH": {
-	    "one": "%s hour",
-	    "other": "%s hours"
-	},
+	"durationUnitM": "min",
+	"durationUnitH": "h",
 	"connecting": "Connecting...",
 	"startingDownload": "Starting Download...",
 	"downloading": "Downloading...",

@@ -13,14 +13,8 @@
     "subtitledIn": "字幕",
     "quality": "「品質」",
     "watchItNow": "今すぐ見る",
-    "durationUnitM": {
-        "one": "%s 分",
-        "other": "%s 分"
-    },
-    "durationUnitH": {
-        "one": "%s 時間",
-        "other": "%s 営業時間"
-    },
+    "durationUnitM": "分",
+    "durationUnitH": "時",
 
     "connecting": "「接続中...",
     "startingDownload": "ダウンロードを開始する...",

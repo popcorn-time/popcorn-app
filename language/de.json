@@ -14,14 +14,8 @@
     "quality": "Qualität",
     "watchItNow": "Jetzt anschauen",
     "durationUnit": "min",
-    "durationUnitM": {
-        "one": "%s Minute",
-        "other": "%s Minuten"
-    },
-    "durationUnitH": {
-        "one": "%s Zeit",
-        "other": "%s Zeiten"
-    },
+    "durationUnitM": "Min.",
+    "durationUnitH": "Std.",
     "connecting": "Verbinden...",
     "startingDownload": "Download starten...",
     "downloading": "Downloaden...",

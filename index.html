@@ -82,8 +82,10 @@
                 <li>
                   <% if (this.model.get('runtime')) { %>
                     <span class="duration">
-                      <%= i18n.__n("durationUnitH", "durationUnitHs", ((runtime)-(runtime%60))/60) %>
-                      <%= i18n.__n("durationUnitM", "durationUnitMs", runtime%60) %>
+                      <%= ((runtime)-(runtime%60))/60 %>
+                      <%= i18n.__('durationUnitH') %>
+                      <%= runtime%60 %>
+                      <%= i18n.__('durationUnitM') %>
                     </span>
                   <% } %>
                 </li>

@@ -11,14 +11,8 @@
 	"subtitledIn": "자막",
 	"quality": "화질",
 	"watchItNow": "바로보기",
-	"durationUnitM": {
-	    "one": "%s 분",
-	    "other": "%s 분"
-	},
-	"durationUnitH": {
-	    "one": "%s 시간",
-	    "other": "%s 시간"
-	},
+	"durationUnitM": "분",
+	"durationUnitH": "시간",
 	"connecting": "연결중...",
 	"startingDownload": "다운로드 시작...",
 	"downloading": "다운로드 중...",

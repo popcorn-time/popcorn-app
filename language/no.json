@@ -11,14 +11,8 @@
 	"subtitledIn": "Undertekster finnes på",
 	"quality": "Kvalitet",
 	"watchItNow": "Spill",
-	"durationUnitM": {
-	    "one": "%s minutt",
-	    "other": "%s minutter"
-	},
-	"durationUnitH": {
-	    "one": "%s tid",
-	    "other": "%s timer"
-	},
+	"durationUnitM": "min",
+	"durationUnitH": "t",
 	"connecting": "Tilkobler...",
 	"startingDownload": "Starter nedlastning..",
 	"downloading": "Laster ned...",

@@ -13,14 +13,8 @@
     "subtitledIn": "Undertexter finns på",
     "quality": "Kvalitet",
     "watchItNow": "Spela",
-    "durationUnitM": {
-        "one": "%s minut",
-        "other": "%s minuter"
-    },
-    "durationUnitH": {
-        "one": "%s tid",
-        "other": "%s timmar"
-    },
+    "durationUnitM": "min",
+    "durationUnitH": "t",
 
     "connecting": "Ansluter...",
     "startingDownload": "Börjar hämtning...",

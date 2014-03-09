@@ -13,14 +13,8 @@
     "subtitledIn": "Legendas em",
     "quality": "Qualidade",
     "watchItNow": "Assistir Agora",
-    "durationUnitM": {
-        "one": "%s minuto",
-        "other": "%s minutos"
-    },
-    "durationUnitH": {
-        "one": "%s hora",
-        "other": "%s horas"
-    },
+    "durationUnitM": "min",
+    "durationUnitH": "h",
 
     "connecting": "Conectando...",
     "startingDownload": "Começando Download...",

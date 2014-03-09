@@ -13,14 +13,8 @@
     "subtitledIn": "Ondertiteld in",
     "quality": "Kwaliteit",
     "watchItNow": "Kijk nu",
-    "durationUnitM": {
-        "one": "%s minuut",
-        "other": "%s minuten"
-    },
-    "durationUnitH": {
-        "one": "%s tijd",
-        "other": "%s uur"
-    },
+    "durationUnitM": "min",
+    "durationUnitH": "t",
 
     "connecting": "Verbinden...",
     "startingDownload": "Start Download...",
