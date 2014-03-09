@@ -232,7 +232,7 @@ body {
 }
 
 body.tv-mode-enable {
-  font-size: 30px;
+  font-size: 31px;
 }
 
 @media (max-width: 1440px) {
@@ -605,7 +605,7 @@ a {
 
 body.has-notification .container {
   height: calc(100% - 45px - 45px);
-  margin: 90px 0 0 180px;
+  margin: 90px 0 0 11.25em;
 }
 body.has-notification #catalog-select {
   top: 90px;
