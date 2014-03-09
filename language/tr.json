@@ -13,7 +13,14 @@
     "subtitledIn": "Altyazılı",
     "quality": "Kalite",
     "watchItNow": "Hemen izle",
-    "durationUnit": "min",
+    "durationUnitM": {
+        "one": "%s dakika",
+        "other": "%s dakika"
+    },
+    "durationUnitH": {
+        "one": "%s zaman",
+        "other": "%s saat"
+    },
 
     "connecting": "Bağlanılıyor...",
     "startingDownload": "Yükleme başlıyor...",
@@ -21,12 +28,12 @@
 
     "UpgradeVersion": "Popcorn Time'ı Güncelle",
     "UpgradeVersionDescription": " yeni sürüm gedi. Şimdi sahip olmalısın!",
-    
+
     "legalDisclaimer": "Popcorn Time ülkende yasal olmayan dosyaları torrentden indirebilir ve paylaşabilir.",
     "legalDisclaimerResponsible": "Herhangi bir problemde sorumluluk kullanıcıdadır, bu yüzden uygulamayı kullanmadan önce Terms and Conditions'ı okuduğunuzdan emin olunuz",
     "legalDisclaimerAccept": "Anladım ve Popcorn Time'ı kullanmak istiyorum.",
     "legalDisclaimerCancel": "Popcorn Time'ı Kapat",
-    
+
     "genres": {
         "all": "Popüler",
         "action": "Aksiyon",
