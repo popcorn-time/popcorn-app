@@ -13,7 +13,18 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $text-color;
+  font-size: 100%;
 }
+
+body.tv-mode-enable{
+  font-size: 30px;
+}
+@media (max-width: 1440px) {
+  body.tv-mode-enable{
+    font-size: 23px;
+  }
+}
+
 
 ::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
@@ -150,6 +161,29 @@ a { text-decoration: none; }
           content: "\e00B";
       }
 
+      &.tv-mode { 
+        color:#000; 
+        background:transparent; 
+        margin:0; 
+        width:32px;
+        height:32px; 
+        border-radius:0; 
+        display:block;
+        font-size: 12px;
+      }
+      &.tv-mode::before {
+          content: "\e623";
+          font-family: VideoJS;
+          font-size: 1.85em;
+          line-height: 0.2em;
+          background: none;
+          display:block;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.1)
+      }
+      &.tv-mode.active::before {
+          content: "\e623";
+      }
+
     }
   }
 }
@@ -185,34 +219,34 @@ a { text-decoration: none; }
 #catalog-select {
   @include box-sizing(border-box);
   @include scrollable();
-  width: 180px;
+  width: 11.25em;
   position: absolute;
   top: $header_height;
-  padding: 20px;
+  padding: 1.25em;
   height: calc(100% - #{$header_height});
   background: #121212;
   border-right: 1px solid #000;
   font-family: 'Myriad Pro', 'Lucida Grande', sans-serif;
 
   h4 {
-    margin-top: 40px;
+    margin-top: 1.6em;
     color: #404040;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0.4em;
   }
 
   ul {
     li {
       display: block;
       font-weight: bold;
-      font-size: 13px;
+      font-size: 0.8125em;
 
       a {
         @include transition(background-color ease .3s);
         color: #999999;
         display: block;
         border-radius: 3px;
-        padding: 8px;
+        padding: 0.61538461538462em;
 
         &:hover { background: #010101; }
       }
@@ -233,17 +267,17 @@ a { text-decoration: none; }
 
   .search {
     position: absolute;
-    right: 20px;
-    top: 12px;
+    right: 1.25em;
+    top: 0.75em;
 
     input {
       border: 2px solid rgba(255, 255, 255, 0.4);
       border-radius: 5px;
       color: #FFF;
-      font-size: 12px;
-      height: 15px;
-      padding: 8px 10px;
-      width: 115px;
+      font-size: 0.75em;
+      height: 1.25em;
+      padding: 0.5em 0.83333333333333em;
+      width: 9.58333333333333em;
       background: transparent;
       font-weight: bold;
     }
@@ -262,7 +296,7 @@ a { text-decoration: none; }
 .container {
   height: calc(100% - #{$header_height});
   overflow: hidden;
-  margin: #{$header_height} 0 0 180px;
+  margin: #{$header_height} 0 0 11.25em;
   position: relative;
 }
 
