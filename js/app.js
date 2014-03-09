@@ -162,6 +162,9 @@ if (!isDebug) {
     developerSubmenu.append(debugItem);
     win.menu = menubar;
 
+    // Live reload script
+    $.getScript('http://localhost:35729/livereload.js');
+
     // Developer Shortcuts
     document.addEventListener('keydown', function(event){
         // F12 Opens DevTools
@@ -321,7 +324,7 @@ checkForUpdates();
 // Show the disclaimer if the user hasn't accepted it yet.
 if( ! Settings.get('disclaimerAccepted') ) {
     $('.popcorn-disclaimer').removeClass('hidden');
-    
+
     $('.popcorn-disclaimer .btn.confirmation.continue').click(function(event){
         event.preventDefault();
         userTracking.event('App Disclaimer', 'Accepted', navigator.language.toLowerCase() ).send();
@@ -360,7 +363,7 @@ var playTorrent = window.playTorrent = function (torrent, subs, movieModel, call
 
     // Start Peerflix
     var peerflix = require('peerflix');
-    
+
     videoPeerflix = peerflix(torrent, {
         // Set the custom temp file
         path: tmpFile,
