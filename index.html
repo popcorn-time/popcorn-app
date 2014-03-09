@@ -86,7 +86,7 @@
                 </li>
               </ul>
                               
-              <i data-placement="left" data-toggle="tooltip" title="<%= health %> health" class="health <%= health %> fa fa-flash"></i>
+              <i data-placement="left" data-toggle="tooltip" title=" <%=  i18n.__('status')[health] %>" class="health <%= health %> fa fa-flash"></i>
 
               <% var p_rating = (this.model.get('voteAverage') / 9) * 5 %>
               <div class="rating" data-rating="<%= voteAverage %>">
