@@ -264,7 +264,7 @@ if( (typeof __isNewInstall != 'undefined' && __isNewInstall == true) ||
   // General Device Stats
   userTracking.event('Device Stats', 'Version', Settings.get('version') + (isDebug ? '-debug' : '') ).send();
   userTracking.event('Device Stats', 'Type', getOperatingSystem().capitalize()).send();
-  userTracking.event('Device Stats', 'Operating System', os.type() + os.release()).send();
+  userTracking.event('Device Stats', 'Operating System', os.type() +' '+ os.release()).send();
   userTracking.event('Device Stats', 'CPU', os.cpus()[0].model +' @ '+ (os.cpus()[0].speed/1000).toFixed(1) +'GHz' +' x '+ os.cpus().length ).send();
   userTracking.event('Device Stats', 'RAM', Math.round(os.totalmem() / 1024 / 1024 / 1024)+'GB' ).send();
   userTracking.event('Device Stats', 'Uptime', Math.round(os.uptime() / 60 / 60)+'hs' ).send();
@@ -326,12 +326,22 @@ if( ! Settings.get('disclaimerAccepted') ) {
     
     $('.popcorn-disclaimer .btn.confirmation.continue').click(function(event){
         event.preventDefault();
+        userTracking.event('App Disclaimer', 'Accepted', navigator.language.toLowerCase() ).send();
         Settings.set('disclaimerAccepted', 1);
         $('.popcorn-disclaimer').addClass('hidden');
     });
     $('.popcorn-disclaimer .btn.confirmation.quit').click(function(event){
         event.preventDefault();
-        gui.App.quit();
+
+        // We need to give the tracker some time to send the event
+        // Also, prevent multiple clicks
+        if( $('.popcorn-disclaimer').hasClass('quitting') ){ return; }
+        $('.popcorn-disclaimer').addClass('quitting');
+
+        userTracking.event('App Disclaimer', 'Quit', navigator.language.toLowerCase() ).send();
+        setTimeout(function(){
+            gui.App.quit();
+        }, 2000);
     });
 }
 
