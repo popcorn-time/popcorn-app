@@ -31,13 +31,17 @@ var
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
 
     // i18n module (translations)
-    i18n = require("i18n");
+    i18n = require("i18n"),
 
+    languageFolder = './language';
 
 i18n.configure({
     defaultLocale: 'en',
-    locales: ['en', 'de', 'es', 'fr', 'ja', 'nl', 'pt-br', 'pt', 'ro', 'sv', 'tr'],
-    directory: './language'
+    locales: fs.readdirSync(languageFolder).reduce(function(p,c){
+                p.push(c.replace('.json', ''));
+                return p;
+            }, []),
+    directory: languageFolder
 });
 
 // Create the Temp Folder
@@ -243,7 +247,7 @@ checkForUpdates();
 // Show the disclaimer if the user hasn't accepted it yet.
 if( ! Settings.get('disclaimerAccepted') ) {
     $('.popcorn-disclaimer').removeClass('hidden');
-    
+
     $('.popcorn-disclaimer .btn.confirmation.continue').click(function(event){
         event.preventDefault();
         Settings.set('disclaimerAccepted', 1);
@@ -273,7 +277,7 @@ var playTorrent = window.playTorrent = function (torrent, subs, callback, progre
 
     // Start Peerflix
     var peerflix = require('peerflix');
-    
+
     videoPeerflix = peerflix(torrent, {
         // Set the custom temp file
         path: tmpFile,
