@@ -826,6 +826,7 @@ body.has-notification #notification {
   margin: 0 0 10px 0;
   border-radius: 3px;
   background: url(../images/posterholder.png) no-repeat 50% 50%;
+  background-size: cover;
   -webkit-transform: translateZ(0);
 }
 .movie-list li img {
