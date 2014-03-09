@@ -230,7 +230,7 @@ App.View.Sidebar = Backbone.View.extend({
     },
 
     show: function () {
-        $('body').removeClass().addClass('sidebar-open');
+        $('body').addClass('sidebar-open');
         this.$el.removeClass('hidden');
 
         userTracking.pageview('/movies/view/'+this.model.get('slug'), this.model.get('niceTitle') ).send();
