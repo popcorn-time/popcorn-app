@@ -55,5 +55,11 @@
     "romanian": "Romanca",
     "turkish": "Türkçe",
     "dutch": "Hollandaca",
-    "italian": "italyanca"
+    "italian": "italyanca",
+    "status": { 
+        "bad":"Kötü",
+        "medium":"Ortalama",
+        "excellent":"Çok iyi",
+        "good":"İyi"
+    }
 }
