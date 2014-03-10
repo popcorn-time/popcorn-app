@@ -45,8 +45,7 @@ App.View.MovieList = Backbone.View.extend({
 
         var movieList = this;
 
-        $.each(this.collection.models, function () {
-
+        $.each(this.collection.models, function (index) {
             // Only append not yet appended elements
             this.view.render();
             var $movie = this.view.$el;
@@ -57,6 +56,7 @@ App.View.MovieList = Backbone.View.extend({
                 $currentEl = $movie;
 
                 setTimeout(function () {
+                    $movie.attr('data-movie-index', index);
                     $movie.addClass('loaded');
                 }, 50);
             }

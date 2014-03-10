@@ -189,6 +189,14 @@ App.View.Sidebar = Backbone.View.extend({
         this.show();
     },
 
+    prevMovie: function () {
+
+    },
+
+    nextMovie: function () {
+
+    },
+
     isVisible: function () {
         return !this.$el.is('.hidden');
     },

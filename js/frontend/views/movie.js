@@ -22,6 +22,23 @@ App.View.MovieListItem = Backbone.View.extend({
             this.$el.parent().find('.active').removeClass('active');
             this.$el.addClass('active');
             App.sidebar.load(this.model);
+
+            var currentMovie = this.$el.attr('data-movie-index');
+            var prevNbr = +currentMovie - +1;
+            var nextNbr = +currentMovie + +1;
+            var prevMovie = this.$el.parent().find('[data-movie-index="' + prevNbr + '"]');
+            var nextMovie = this.$el.parent().find('[data-movie-index="' + nextNbr + '"]');
+
+            // TODO
+            // if (currentMovie > 0 || currentMovie < MovieListItem.length) {}
+
+            $('.movies-nav').find('.movie-prev').on('click', function() {
+                App.sidebar.prevMovie();
+            });
+
+            $('.movies-nav').find('.movie-next').on('click', function() {
+                App.sidebar.nextMovie();
+            });
         }
     },
 
