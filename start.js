@@ -9,7 +9,7 @@ var exeNames = {
 var osName = getOperatingSystem();
 if(osName == 'windows' || osName == 'linux') {
     var exePath = path.join(__dirname, 'node-webkit', osName, exeNames[osName]);
-    var child = child_process.spawn(exePath, [__dirname], {
+    var child = child_process.spawn(exePath, [__dirname, '--debug'], {
         cwd: __dirname,
         detached: true,
         stdio: 'ignore'
