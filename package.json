@@ -20,7 +20,7 @@
     "xmlrpc": "~1.2.0",
     "clivas": "~0.1.4",
     "numeral": "~1.5.3",
-    "moviedb": "~0.1.1",
+    "moviedb": "*",
     "jschardet": "~1.1.0",
     "iconv-lite": "~0.2.11",
     "adm-zip": "~0.4.4",
