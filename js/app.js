@@ -26,6 +26,9 @@ var
 
     // fs object
     fs = require('fs'),
+    
+    // url object
+    url = require('url'),
 
     // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
@@ -189,12 +192,47 @@ document.addEventListener('keydown', function(event){
         $(document).trigger('videoExit');
     }
     if (event.keyCode == 32 && $("#video_player").is(".vjs-playing")) {
+        // Space: pause
         $("#video_player")[0].player.pause();
-    }
-    if (event.keyCode == 32 && $("#video_player").is(".vjs-paused")) {
+    } else if (event.keyCode == 32 && $("#video_player").is(".vjs-paused")) {
+        // Space: play
         $("#video_player")[0].player.play();
     }
+    if (event.keyCode == 37) {
+        // Left arrow: jump backward
+        var currentTime = $("#video_player")[0].player.currentTime();
+        $("#video_player")[0].player.currentTime(currentTime - 10);
+    }
+    if (event.keyCode == 38) {
+        // Up arrow: increase volume (1.0 is all the way up)
+        var currentVolume = $("#video_player")[0].player.volume();
+        $("#video_player")[0].player.volume(currentVolume + 0.1);
+    }
+    if (event.keyCode == 39) {
+        // Right arrow: jump forward
+        var currentTime = $("#video_player")[0].player.currentTime();
+        $("#video_player")[0].player.currentTime(currentTime + 10);
+    }
+    if (event.keyCode == 40) {
+        // Down arrow: decrease volume (0 is off, muted)
+        var currentVolume = $("#video_player")[0].player.volume();
+        $("#video_player")[0].player.volume(currentVolume - 0.1);
+    }
 });
+
+
+document.addEventListener('mousewheel', function(event){
+    if (event.wheelDelta > 0) {
+        // Wheel up: increase volume (1.0 is all the way up)
+        var currentVolume = $("#video_player")[0].player.volume();
+        $("#video_player")[0].player.volume(currentVolume + 0.1);
+    } else {
+        // Wheel down: decrease volume (0 is off, muted)
+        var currentVolume = $("#video_player")[0].player.volume();
+        $("#video_player")[0].player.volume(currentVolume - 0.1);
+    }
+});
+
 
 // Cancel all new windows (Middle clicks / New Tab)
 win.on('new-win-policy', function (frame, url, policy) {
@@ -202,27 +240,23 @@ win.on('new-win-policy', function (frame, url, policy) {
 });
 
 
+var preventDefault = function(e) {
+    e.preventDefault();
+}
 // Prevent dropping files into the window
-window.addEventListener("dragover",function(e){
-    e = e || event;
-    e.preventDefault();
-},false);
-window.addEventListener("drop",function(e){
-    e = e || event;
-    e.preventDefault();
-},false);
+window.addEventListener("dragover", preventDefault, false);
+window.addEventListener("drop", preventDefault, false);
 // Prevent dragging files outside the window
-window.addEventListener("dragstart",function(e){
-    e = e || event;
-    e.preventDefault();
-},false);
+window.addEventListener("dragstart", preventDefault, false);
 
 // Check if the user has a working internet connection (uses Google as reference)
 var checkInternetConnection = function(callback) {
     var http = require('http');
     var hasInternetConnection = false;
 
-    http.get(Settings.get('connectionCheckUrl'), function(res){
+    var opts = url.parse(Settings.get('connectionCheckUrl'));
+    opts.method = 'HEAD';
+    http.get(opts, function(res){
         if( res.statusCode == 200 || res.statusCode == 302 || res.statusCode == 301 ) {
             hasInternetConnection = true;
         }
