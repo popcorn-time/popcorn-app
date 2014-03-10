@@ -293,6 +293,20 @@ var getOperatingSystem = function() {
     return null;
 };
 
+// Set the close/maximize/minimize buttons
+var navLeft = $("nav.btn-set.left");
+if (getOperatingSystem() != 'linux') {
+    // Default
+    navLeft.html('<button class="btn-os close"></button>'
+               + '<button class="btn-os min"></button>'
+               + '<button class="btn-os max"></button>');
+} else {
+    // Max & Min inverted for linux users
+    navLeft.html('<button class="btn-os close"></button>'
+               + '<button class="btn-os max"></button>'
+               + '<button class="btn-os min"></button>');
+}
+
 
 if( typeof __isNewInstall != 'undefined' && __isNewInstall == true )  {
   userTracking.event('App Install', getOperatingSystem().capitalize(), Settings.get('version')).send();
