@@ -2,21 +2,21 @@
     "quit": "Sair",
     "cancel": "Cancelar",
     "beforeQuit": "Você tem certeza que deseja sair?",
-    "loading": "Por Favor Aguarde...",
+    "loading": "Por favor aguarde...",
     "loadingVideo": "Carregando vídeo, por favor aguarde.",
-    "searchLoading": "Procurando...",
+    "searchLoading": "Pesquisando...",
     "noResults": "Nenhum resultado encontrado.",
 
-    "search": "Procurar",
+    "search": "Pesquisar",
     "movies": "Filmes",
 
     "subtitledIn": "Legendas em",
     "quality": "Qualidade",
-    "watchItNow": "Assistir Agora",
+    "watchItNow": "Assistir agora",
     "durationUnit": "min",
 
     "connecting": "Conectando...",
-    "startingDownload": "Começando Download...",
+    "startingDownload": "Começando o download...",
     "downloading": "Baixando...",
 
     "UpgradeVersion": "Atualizar Popcorn Time",
@@ -24,7 +24,7 @@
     
     "legalDisclaimer": "Popcorn Time baixa e compartilha arquivos usando torrents, isso pode não ser legal em seu país.",
     "legalDisclaimerResponsible": "Não nos responsabilizamos por eventuais problemas, então esteja ciente de nossos Termos e Condições antes de utilizar o app.",
-    "legalDisclaimerAccept": "Eu compreendo",
+    "legalDisclaimerAccept": "Eu entendi",
     "legalDisclaimerCancel": "Sair",
     
     "genres": {
