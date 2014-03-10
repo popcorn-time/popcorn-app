@@ -29,6 +29,8 @@ dist/windows/Install Popcorn Time.exe
 dist/mac/Popcorn Time.app/
 dist/mac/Popcorn Time.zip
 
+build/releases
+
 node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/
 node-webkit.app/Contents/Frameworks/crash_inspector
 
