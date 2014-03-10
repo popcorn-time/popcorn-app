@@ -17,6 +17,7 @@ var request = require('request'),
         'brazilian' : 'Português-Br',
         'dutch'     : 'Nederlands',
         'arabic'    : 'العربيه',
+        'swedish'   : 'Svenska'
     };
 
 App.findSubtitle = function (model, cb, isFallback) {
