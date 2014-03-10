@@ -265,7 +265,7 @@ App.View.Sidebar = Backbone.View.extend({
         evt.preventDefault();
         $('.movie-detail').fadeOut();
                 $.ajax({
-                    url: "https://gdata.youtube.com/feeds/api/videos?q=" + this.model.get('title') + " trailer&max-results=1&alt=json",
+                    url: "https://gdata.youtube.com/feeds/api/videos?q=" + this.model.get('title') + " " + this.model.get('year') + " trailer&max-results=1&alt=json",
                     dataType: "text",
                     success: function(data) {
                         var json = $.parseJSON(data);
