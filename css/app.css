@@ -1960,3 +1960,6 @@ body.watching #header, body.watching #notification, body.watching #catalog-selec
   position: absolute;
   right: 10px;
 }
+.trailerExit{
+  cursor: pointer;
+}
