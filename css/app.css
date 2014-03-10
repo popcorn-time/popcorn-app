@@ -1704,23 +1704,13 @@ sidebar .play .movies-nav li.movie-next {
   right: 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .sidebar-open li.movie {
   opacity: 0.25;
 }
 .sidebar-open li.movie.active {
   opacity: 1;
 }
-=======
-/* line 428, ../sass/_moviedetails.scss */
-=======
-/* line 431, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 433, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .sidebar-open li.movie {
   opacity: 0.25;
 }
@@ -1728,66 +1718,24 @@ sidebar .play .movies-nav li.movie-next {
 .sidebar-open li.movie.active {
   opacity: 1;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* line 434, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 437, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 439, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .sidebar-open li.movie.active a {
   box-shadow: 0 0 0 3px #3498db;
   border-radius: 3px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 438, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 441, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 443, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .sidebar-open li.movie.active a i {
   opacity: 0 !important;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 444, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 447, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 449, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .subtitles button {
   background: transparent;
   border: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 451, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 454, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 456, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown {
   position: relative;
   display: inline-block;
@@ -1797,52 +1745,21 @@ sidebar .play .movies-nav li.movie-next {
   margin-right: 20px;
   margin-top: -8px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 461, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 464, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 466, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown.active .dropdown-text {
   background-color: white;
   z-index: 2;
   border-radius: 3px 3px 0 0;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 467, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 470, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 472, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown.active .dropdown-content {
   opacity: 1;
   visibility: visible;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 474, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 477, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 479, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-text {
   cursor: pointer;
   position: absolute;
@@ -1852,18 +1769,8 @@ sidebar .play .movies-nav li.movie-next {
   color: #333;
   text-shadow: 0 1px #fff;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 483, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 486, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 488, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-text:after {
   position: absolute;
   right: -10px;
@@ -1876,18 +1783,7 @@ sidebar .play .movies-nav li.movie-next {
   border-color: #FFF transparent transparent transparent;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 496, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 499, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 501, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-toggle {
   font-size: 0;
   z-index: 1;
@@ -1902,34 +1798,13 @@ sidebar .play .movies-nav li.movie-next {
   height: 37px;
   width: 60px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 510, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 513, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 515, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-toggle:focus {
   outline: 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 513, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 516, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
 /* line 518, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-content {
   list-style-type: none;
   position: absolute;
@@ -1943,36 +1818,16 @@ sidebar .play .movies-nav li.movie-next {
   width: 40px;
   text-align: center;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 526, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 529, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 531, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-content a {
   display: block;
   padding: 4px;
   color: #333;
   text-shadow: 0 1px #fff;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* line 532, ../sass/_moviedetails.scss */
->>>>>>> 6057398... Add navigation template
-=======
-/* line 535, ../sass/_moviedetails.scss */
->>>>>>> 63f1f43... Fix color and animations
-=======
+
 /* line 537, ../sass/_moviedetails.scss */
->>>>>>> bb6fdf8... Add opacity
 .dropdown-content a:hover {
   background: #E1E1E1;
 }
