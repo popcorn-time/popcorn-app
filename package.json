@@ -34,5 +34,8 @@
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compass": "~0.7.1"
+  },
+  "scripts": {
+    "start": "node start.js"
   }
 }
