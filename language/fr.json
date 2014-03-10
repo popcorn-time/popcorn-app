@@ -51,12 +51,16 @@
         "sport": "Sport",
         "thriller": "Thriller",
         "war": "Guerre",
-        "western": "Western"
+        "western": "Western",
     },
     "french": "Français",
     "english": "Anglais",
     "spanish": "Espagnol",
+    "swedish": "Suédois",
     "portuguese": "Portugais",
     "romanian": "Roumain",
-    "turkish": "Turc"
+    "turkish": "Turc",
+    "dutch": "Néerlandais",
+    "italian": "Italien",
+    "arabic": "Arabe",
 }
