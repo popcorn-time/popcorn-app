@@ -128,9 +128,13 @@
             </div>
 
             <% if (this.model.get('torrents')) { %>
-              <a href="" class="p_tooltip play-button"><%= i18n.__('watchItNow') %></a>
+              <a href="" id="play-button" class="p_tooltip play-button"><%= i18n.__('watchItNow') %></a>
+              <a href="" id="showTrailer" class="p_tooptip play-button"><%= i18n.__('showTrailer') %></a>
             <% } %>
           </div>
+        </div>
+        <div class="trailer-box">
+          <div id="trailer"> </div>
         </div>
       </div>
     </script>

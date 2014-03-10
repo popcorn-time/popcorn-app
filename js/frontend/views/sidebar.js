@@ -5,11 +5,13 @@ App.View.Sidebar = Backbone.View.extend({
 
     events: {
         'click .closer':           'hide',
-        'click .play-button':      'play',
+        'click #play-button':      'play',
         'click .subtitles button': 'selectSubtitle',
         'click .dropdown-toggle':  'toggleDropdown',
         'click #switch-on':        'enableHD',
-        'click #switch-off':       'disableHD'
+        'click #switch-off':       'disableHD',
+        'click #showTrailer':      'showTrailer',
+        'click .trailerExit':      'exitTrailer'
     },
 
     keyHide: function (e) {
@@ -18,6 +20,7 @@ App.View.Sidebar = Backbone.View.extend({
             $('body').removeClass('sidebar-open');
             $('.movie.active').removeClass('active');
             $('sidebar').addClass('hidden');
+            $('#trailer').remove();
         }
     },
 
@@ -256,5 +259,27 @@ App.View.Sidebar = Backbone.View.extend({
             this.model.set('torrent', torrents['720p']);
             this.model.set('quality', '720p');
         }
+    },
+
+    showTrailer: function (evt){
+        evt.preventDefault();
+        $('.movie-detail').fadeOut();
+                $.ajax({
+                    url: "https://gdata.youtube.com/feeds/api/videos?q=" + this.model.get('title') + " " + this.model.get('year') + " trailer&max-results=1&alt=json",
+                    dataType: "text",
+                    success: function(data) {
+                        var json = $.parseJSON(data);
+                        var getid = json.feed.entry[0].link[0].href.split("&");
+                        var id = getid[0].split('=');
+                        $('#trailer').html('<iframe width="720" height="405" src="http://www.youtube.com/embed/' + id[1] + '" frameborder="0" allowfullscreen=""></iframe>');
+                        $("#trailer").append('<div class="trailerExit"><img src="/images/close.svg" width="50"></div>');
+                    }
+                });
+    },
+
+    exitTrailer: function (evt){
+         $('#trailer').remove();
+         $(".trailer-box").append('<div id="trailer"> </div>');
+         $(".movie-detail").fadeIn();
     }
 });

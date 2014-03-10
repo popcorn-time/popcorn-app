@@ -1191,6 +1191,15 @@ body.has-notification #notification {
   -webkit-transform: translateY(-50%);
 }
 
+.trailer-box {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
 sidebar {
   right: 0;
   position: absolute;
