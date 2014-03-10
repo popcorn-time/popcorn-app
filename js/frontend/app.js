@@ -75,7 +75,7 @@ window.spawnCallback = function (url, subs, movieModel) {
       '<a href="javascript:;" id="video_player_close" class="btn-close"><img src="/images/close.svg" width="50" /></a>';
 
     if (!document.createElement('video').canPlayType('video/mp4')) {
-      return alert('Weird, but it seems the application is broken and you can\'t play this video.');
+      return alert(i18n.__('cannotPlayVideoMsg'));
     }
 
     videojs.BiggerSubtitleButton = videojs.Button.extend({

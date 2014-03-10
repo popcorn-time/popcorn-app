@@ -3,6 +3,7 @@
 	"cancel": "Cancel",
 	"beforeQuit": "Are you sure you want to quit?",
 	"loading": "Please wait...",
+	"cannotPlayVideoMsg" : "Weird, but it seems the application is broken and you cannot play this video.",
 	"loadingVideo": "Buffering video, please wait",
 	"searchLoading": "Searching...",
 	"noResults": "No results found for your query.",
