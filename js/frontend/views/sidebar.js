@@ -265,11 +265,13 @@ App.View.Sidebar = Backbone.View.extend({
         evt.preventDefault();
         $('.movie-detail').fadeOut();
                 $.ajax({
-                    url: "http://trailersapi.com/trailers.json?movie=" + this.model.get('title') + "&width=720",
+                    url: "https://gdata.youtube.com/feeds/api/videos?q=" + this.model.get('title') + " trailer&max-results=1&alt=json",
                     dataType: "text",
                     success: function(data) {
                         var json = $.parseJSON(data);
-                        $('#trailer').html(json[0].code);
+                        var getid = json.feed.entry[0].link[0].href.split("&");
+                        var id = getid[0].split('=');
+                        $('#trailer').html('<iframe width="720" height="405" src="http://www.youtube.com/embed/' + id[1] + '" frameborder="0" allowfullscreen=""></iframe>');
                         $("#trailer").append('<div class="trailerExit"><img src="/images/close.svg" width="50"></div>');
                     }
                 });
