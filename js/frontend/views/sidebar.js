@@ -5,11 +5,13 @@ App.View.Sidebar = Backbone.View.extend({
 
     events: {
         'click .closer':           'hide',
-        'click .play-button':      'play',
+        'click #play-button':      'play',
         'click .subtitles button': 'selectSubtitle',
         'click .dropdown-toggle':  'toggleDropdown',
         'click #switch-on':        'enableHD',
-        'click #switch-off':       'disableHD'
+        'click #switch-off':       'disableHD',
+        'click #showTrailer':      'showTrailer',
+        'click .trailerExit':      'exitTrailer'
     },
 
     keyHide: function (e) {
@@ -18,6 +20,7 @@ App.View.Sidebar = Backbone.View.extend({
             $('body').removeClass('sidebar-open');
             $('.movie.active').removeClass('active');
             $('sidebar').addClass('hidden');
+            $('#trailer').remove();
         }
     },
 
@@ -256,5 +259,25 @@ App.View.Sidebar = Backbone.View.extend({
             this.model.set('torrent', torrents['720p']);
             this.model.set('quality', '720p');
         }
+    },
+
+    showTrailer: function (evt){
+        evt.preventDefault();
+        $('.movie-detail').fadeOut();
+                $.ajax({
+                    url: "http://trailersapi.com/trailers.json?movie=" + this.model.get('title') + "&width=720",
+                    dataType: "text",
+                    success: function(data) {
+                        var json = $.parseJSON(data);
+                        $('#trailer').html(json[0].code);
+                        $("#trailer").append('<div class="trailerExit"><img src="/images/close.svg" width="50"></div>');
+                    }
+                });
+    },
+
+    exitTrailer: function (evt){
+         $('#trailer').remove();
+         $(".trailer-box").append('<div id="trailer"> </div>');
+         $(".movie-detail").fadeIn();
     }
 });
