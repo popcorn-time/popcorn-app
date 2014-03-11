@@ -114,9 +114,15 @@
             <p><%= synopsis %></p>
 
             <div class="subtitles-list">
-              <h4><%= i18n.__('subtitledIn') %></h4>
-
-              <ul>
+              <% keys = _.keys(subtitles); %>
+			        <% l = keys.length; %>
+			
+			        <% if(l == 0){ %>
+				        <h4>No subtitles found</h4>
+			        <% }else{ %>
+                <h4><%= i18n.__('subtitledIn') %></h4>
+                
+                <ul>
                 <% if (typeof subtitles !== 'undefined') { %>
                   <li>
                     <% for (var i = 0, keys = _.keys(subtitles), l = keys.length; i < l; ++i) { %>
@@ -125,6 +131,7 @@
                   </li>
                 <% } %>
               </ul>
+            <% } %> 
             </div>
 
             <% if (this.model.get('torrents')) { %>
