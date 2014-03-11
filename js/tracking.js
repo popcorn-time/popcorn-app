@@ -1,4 +1,6 @@
-// Tracking
+// (No) Tracking
+
+/*
 var getTrackingId = function(){
 
     var clientId = Settings.get('trackingId');
@@ -28,11 +30,13 @@ var getTrackingId = function(){
 var ua = require('universal-analytics');
 
 
-if( getTrackingId() == null ) {
-    // Don't report anything if we don't have a trackingId
-    var dummyMethod = function(){ return {send:function(){}}; };
-    var userTracking = window.userTracking = {event:dummyMethod, pageview:dummyMethod, timing:dummyMethod, exception:dummyMethod, transaction:dummyMethod};
-}
+//if( getTrackingId() == null ) {
+*/
+// Don't report anything if we don't have a trackingId
+var dummyMethod = function(){ return {send:function(){}}; };
+var userTracking = window.userTracking = {event:dummyMethod, pageview:dummyMethod, timing:dummyMethod, exception:dummyMethod, transaction:dummyMethod};
+
+/*}
 else {
     var userTracking = window.userTracking = ua('UA-48789649-1', getTrackingId());
 }
@@ -108,3 +112,5 @@ if( (typeof __isNewInstall != 'undefined' && __isNewInstall == true) ||
   // User Language
   userTracking.event('Device Stats', 'Language', navigator.language.toLowerCase() ).send();
 }
+
+*/
