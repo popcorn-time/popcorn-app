@@ -4123,7 +4123,7 @@ vjs.PlayToggle.prototype.buildCSSClass = function(){
 };
 
 // OnClick - Toggle between play and pause
-vjs.PlayToggle.prototype.onClick = function(){
+vjs.PlayToggle.prototype.onMouseUp = function(){
   if (this.player_.paused()) {
     this.player_.play();
   } else {
@@ -5013,7 +5013,7 @@ vjs.MediaTechController.prototype.removeControlsListeners = function(){
 /**
  * Handle a click on the media element. By default will play/pause the media.
  */
-vjs.MediaTechController.prototype.onClick = function(event){
+vjs.MediaTechController.prototype.onMouseUp = function(event){
   // We're using mousedown to detect clicks thanks to Flash, but mousedown
   // will also be triggered with right-clicks, so we need to prevent that
   if (event.button !== 0) return;
