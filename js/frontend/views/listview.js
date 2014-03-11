@@ -63,7 +63,7 @@ App.View.MovieList = Backbone.View.extend({
 
             // Check for IMDB id and also image loaded (required for view)
             // We can also check if the subtitles loaded with this.get('subtitlesLoaded')
-            if (this.get('infoLoaded') && ! $movie.hasClass('fullyLoaded')) {
+            if (! $movie.hasClass('fullyLoaded')) {
 
                 $movie.addClass('fullyLoaded');
 
@@ -92,12 +92,16 @@ App.View.MovieList = Backbone.View.extend({
                     if (currentPosition >= (totalSize - scrollBuffer)){
                         movieList.constructor.busy = true;
                         page++;
+                        
                         if (movieList.options.genre){
                             App.Router.navigate('filter/' + movieList.options.genre + '/' + page, { trigger: true });
                         }
-                        else {
+                        else if (movieList.options.keywords) {
                             // uncomment this line when the API start accepting the page param to paginate ;)
                             //App.Router.navigate('search/' + movieList.options.keywords + '/' + page, { trigger: true });
+                        }
+                        else {
+                            App.Router.navigate('index'+page+'.html', { trigger: true});
                         }
                     }
                 }
