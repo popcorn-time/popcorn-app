@@ -266,6 +266,19 @@ a { text-decoration: none; }
   position: relative;
 }
 
+// Container go to top button
+#goto-top {
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 10px;
+  right: 23px;
+  z-index: 5;
+  font-size: 35px;
+  color: #181817;
+  text-shadow: 0px 1px 2px #fff;
+}
+
 
 // Notifications displace the UI a bit
 body.has-notification {
