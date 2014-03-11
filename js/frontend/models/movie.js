@@ -90,5 +90,4 @@ App.Model.Movie = Backbone.Model.extend({
         }
       }
     }
-
 });
