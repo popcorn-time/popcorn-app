@@ -114,12 +114,12 @@
             <p><%= synopsis %></p>
 
             <div class="subtitles-list">
-              <% keys = _.keys(subtitles); %>
-			        <% l = keys.length; %>
+             <% keys = _.keys(subtitles); %>
+	      <% l = keys.length; %>
 			
-			        <% if(l == 0){ %>
-				        <h4>No subtitles found</h4>
-			        <% }else{ %>
+	      <% if(l == 0){ %>
+	      	<h4>No subtitles found</h4>
+	      <% }else{ %>
                 <h4><%= i18n.__('subtitledIn') %></h4>
                 
                 <ul>
