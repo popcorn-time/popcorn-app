@@ -1,5 +1,0 @@
-@IF EXIST "%~dp0\node.exe" (
-  "%~dp0\node.exe"  "%~dp0\..\win-spawn\bin\win-spawn" %*
-) ELSE (
-  node  "%~dp0\..\win-spawn\bin\win-spawn" %*
-)
