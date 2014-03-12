@@ -110,7 +110,8 @@
               </div>
             </div>
 
-            <p><%= synopsis %></p>
+            <p id="original-synopsis"><%= synopsis %></p>
+            <a href="" class="translate"> <%= i18n.__('Synopsis') %> </a>
 
             <div class="subtitles-list">
               <h4><%= i18n.__('subtitledIn') %></h4>
@@ -133,7 +134,8 @@
           </div>
         </div>
         <div class="trailer-box">
-          <div id="trailer"> </div>
+          <div id="trailer">
+          </div>
         </div>
       </div>
     </script>
