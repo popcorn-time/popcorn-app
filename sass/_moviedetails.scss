@@ -121,8 +121,8 @@ sidebar {
         position: absolute;
         top: 0;
         left: 0;
-        height: 30px;
-        width: 30px;
+        height: 2.5em;
+        width: 2.5em;
         z-index: 300;
         cursor: pointer;
 
@@ -135,6 +135,11 @@ sidebar {
           top: 8px;
           opacity: 0.5;
           text-shadow: 0 0 5px #000;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+
         }
       }
 
@@ -168,25 +173,25 @@ sidebar {
         .movie-config {
           h4 {
             font-weight: bold;
-            font-size: 14px;
-            margin-left: 10px;
-            margin-top: 8px;
+            font-size: 0.875em;
+            margin-left: 0.71428571428571em;
+            margin-top: 0.57142857142857em;
           }
 
           .quality-cont {
             position: absolute;
             bottom: 0;
             left: 0;
-            height: 50px;
+            height: 3.125em;
             width: 100%;
-            margin-left:1px;
+            margin-left: 0.0625em;
             text-shadow: 0 0 2px #000;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
             -webkit-transform: translateZ(0);
 
             .quality-off {
-              margin-left: 10px;
-              font-size: 12px;
+              margin-left: 0.83333333333333em;
+              font-size: 0.75em;
             }
           }
 
@@ -196,7 +201,7 @@ sidebar {
               font-weight: bold;
               color: #FFF;
               float: right;
-              font-size: 15px;
+              font-size: 0.9375em;
             }
 
             span.good { color: #27ae60; }
@@ -220,43 +225,43 @@ sidebar {
             background: transparent;
             border-radius: 32px;
             display: block;
-            height: 12px;
+            height: 0.75em;
             position: absolute;
-            width: 25px;
+            width: 1.5625em;
             border: 2px solid #FFF;
-            left: 48px;
-            top: 28px;
+            left: 3em;
+            top: 1.75em;
             cursor: pointer;
 
             label {
               @include transition(color .2s ease);
               color: #fff;
-              font-size: 12px;
+              font-size: 0.75em;
               font-weight: bold;
               text-transform: uppercase;
-              width: 20px;
+              width: 1.66666666666667em;
               cursor: pointer;
 
               &:nth-of-type(1) {
-                left: -38px;
+                left: -3.16666666666667em;
                 position: absolute;
                 text-align: right;
               }
 
               &:nth-of-type(2) {
                 position: absolute;
-                right: -30px;
+                right: -2.5em;
                 text-align: left;
               }
             }
 
             input {
-              height: 12px;
+              height: 0.75em;
               left: 0;
               opacity: 0;
               position: absolute;
               top: 0;
-              width: 60px;
+              width: 3.75em;
               z-index: 2;
               cursor: pointer;
 
@@ -268,7 +273,7 @@ sidebar {
                   &:nth-of-type(2) { color: #FFF; }
                 }
 
-                ~ .toggle { left: 2px; }
+                ~ .toggle { left: 0.125em; }
               }
 
               ~ :checked ~ label {
@@ -276,7 +281,7 @@ sidebar {
                 &:nth-of-type(2) { color: $popcorn-blue; }
               }
 
-              ~ :checked ~ .toggle { left: 13px; }
+              ~ :checked ~ .toggle { left: 0.8125em; }
             }
           }
 
@@ -284,11 +289,11 @@ sidebar {
             @include transition(left .2s ease);
             background: $popcorn-blue;
             border-radius: 50%;
-            height: 10px;
+            height: 0.625em;
             left: 0;
             position: absolute;
-            top: 1px;
-            width: 10px;
+            top: 0.0625em;
+            width: 0.625em;
             z-index: 1;
           }
         }
@@ -311,19 +316,19 @@ sidebar {
 
           h2 {
             font-weight: 200;
-            font-size: 34px;
-            margin-bottom: 10px;
+            font-size: 2.125em;
+            margin-bottom: 0.29411764705882em;
             color: #f5f7fa;
-            padding-right: 30px;
+            padding-right: 0.88235294117647em;
           }
 
           .movie-quick-info {
-            margin-bottom: 5px;
+            margin-bottom: 0.3125em;
 
             li {
               display: inline-block;
               vertical-align: top;
-              font-size: 12px;
+              font-size: 0.75em;
               color: $popcorn-blue;
               font-weight: bold;
 
@@ -337,14 +342,14 @@ sidebar {
           }
 
           .health {
-            font-size: 24px;
-            width: 20px;
-            height: 20px;
+            font-size: 1.5em;
+            width: 0.83333333333333em;
+            height: 0.83333333333333em;
             text-align: center;
-            line-height: 20px;
+            line-height: 0.83333333333333em;
             cursor: pointer;
             position: absolute;
-            top: 10px;
+            top: 0.41666666666667em;
             right: 0;
 
             &.bad {
@@ -372,29 +377,29 @@ sidebar {
         .rating {
           display: inline-block;
           position: relative;
-          font-size: 14px;
-          margin: 0 10px 0 0;
+          font-size: 0.875em;
+          margin: 0 0.71428571428571em 0 0;
 
           ul { color: #f5f7fa; }
         }
 
         p {
-          margin-top: 10px;
+          margin-top: 0.71428571428571em;
           color: #babdc2;
-          font-size: 14px;
-          line-height: 24px;
+          font-size: 0.875em;
+          line-height: 1.71428571428571em;
         }
 
         .subtitles-list {
-          margin-top: 10px;
-          margin-bottom: 10px;
+          margin-top: 0.625em;
+          margin-bottom: 0.625em;
 
           h4 {
-            font-size: 12px;
+            font-size: 0.75em;
             color: #f5f7fa;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 5px;
+            margin-right: 0.41666666666667em;
           }
 
           ul {
@@ -406,9 +411,10 @@ sidebar {
               vertical-align: top;
 
               span {
-                width: 22px;
-                height: 16px;
+                width: 1.375em;
+                height: 1em;
                 display: inline-block;
+                background-size: contain;
               }
 
               .flag {
@@ -432,10 +438,10 @@ sidebar {
           color: #FFF;
           font-weight: bold;
           text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-          padding: 14px 26px;
+          padding: 0.875em 1.625em;
           border-radius: 2px;
           display: inline-block;
-          margin-top: 10px;
+          margin-top: 0.625em;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
           &:hover { background-image: linear-gradient(to bottom, #4387de 0%, #175ab0 100%); }

@@ -3,11 +3,11 @@
   margin-bottom: 15px;
 
   li {
-    height: 195px;
-    width: 132px;
+    width: 8.3125em;
+    height: 12.25em;
     padding: 0;
     display: inline-block;
-    margin: 12px;
+    margin: 0.75em;
     border-radius: 3px;
     position: relative;
     background: #000;
@@ -21,12 +21,12 @@
       display: block;
       position: absolute;
       bottom: 0;
-      line-height: 195px;
+      line-height: 3.21666666666667em;
       right: 0;
       top: 0;
       left: 0;
       text-align: center;
-      font-size: 60px;
+      font-size: 3.75em;
       opacity: 0;
       width: 101%; // "fixes" 1px line on hover
       height: 101%; // "fixes" 1px line on hover
@@ -34,8 +34,8 @@
     }
     
     .cover {
-      width: 133px;
-      height: 196px;
+      width: 8.3125em;
+      height: 12.25em;
       overflow: hidden;
       display: block;
       margin: 0 0 10px 0;
@@ -78,22 +78,22 @@
 
     a {
       display: block;
-      height: 196px;
-      width: 133px;
+      width: 8.3125em;
+      height: 12.25em;
     }
 
     strong {
       color: #FFF;
       display: block;
       font-weight: bold;
-      font-size: 14px;
-      overflow: hidden;
+      font-size: 0.875em;
+      overflow: visible;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
     small {
-      font-size: 12px;
+      font-size: 0.75em;
       color: #666;
     }
 
