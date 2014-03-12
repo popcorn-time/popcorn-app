@@ -11,6 +11,7 @@
     "height": 600,
     "min_width": 962,
     "min_height": 600,
+    "always-on-top": true,
     "resizable": true
   },
   "dependencies": {
