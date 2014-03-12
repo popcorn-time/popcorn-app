@@ -3,12 +3,31 @@ App.View.Page = Backbone.View.extend({
 
     initialize: function () {
         this.render();
+        this.attachScrollEvent();
     },
 
     render: function () {
         $('.'+this.className).remove();
         this.$el.appendTo('section.container');
         $('<ul class="movie-list"></ul>').appendTo(this.$el);
+    },
+
+    attachScrollEvent: function() {
+        $elBody = $('body'),
+        $movieList = $('#movie-list'),
+        $categoryList = $('#category-list');
+
+        $elBody.unbind().on('click', '#goto-top', function() {
+            if ( $movieList.is(':visible') ) {
+                $movieList.animate({
+                    scrollTop: 0
+                });
+            } else if ( $categoryList.is(':visible') ) {
+                $categoryList.animate({
+                    scrollTop: 0
+                });
+            }
+        });
     },
 
     show: function () {

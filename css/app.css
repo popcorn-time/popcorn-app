@@ -581,6 +581,18 @@ a {
   position: relative;
 }
 
+#goto-top {
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 10px;
+  right: 23px;
+  z-index: 5;
+  font-size: 35px;
+  color: #181817;
+  text-shadow: 0px 1px 2px #fff;
+}
+
 body.has-notification .container {
   height: calc(100% - 45px - 45px);
   margin: 90px 0 0 180px;
