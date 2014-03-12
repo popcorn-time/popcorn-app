@@ -370,7 +370,7 @@ a {
 #header .btn-set {
   position: absolute;
   left: 15px;
-  top: 17px;
+  top: 15px;
 }
 #header .btn-set.right {
   right: 7px;
@@ -392,10 +392,10 @@ a {
   color: transparent;
   display: inline-block;
   font-size: 10px;
-  height: 12px;
+  height: 14px;
   padding: 0;
   text-align: center;
-  width: 12px;
+  width: 14px;
 }
 #header .btn-set button.debug {
   background: #fff;
