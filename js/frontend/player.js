@@ -95,7 +95,7 @@ window.SubtitleLanguages = {
   'brazilian' : 'Português-Br',
   'dutch'     : 'Nederlands',
   'german'    : 'Deutsch',
-  'basque'    : 'Euskara',
+  'basque'    : 'Euskara'
 };
 
 
