@@ -52,5 +52,7 @@
         "thriller": "Suspense",
         "war": "Guerra",
         "western": "Faroeste"
-    }
+    },
+    "showTrailer": "Assistir trailer",
+  	"Synopsis": "Traduzir sinopse (Automatico)"
 }
