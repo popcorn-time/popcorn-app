@@ -11,8 +11,7 @@ App.View.Sidebar = Backbone.View.extend({
         'click #switch-on':        'enableHD',
         'click #switch-off':       'disableHD',
         'click #showTrailer':      'showTrailer',
-        'click .trailerExit':      'exitTrailer',
-        'click .translate':        'translate'
+        'click .trailerExit':      'exitTrailer'
     },
 
     keyHide: function (e) {
@@ -282,18 +281,5 @@ App.View.Sidebar = Backbone.View.extend({
          $('#trailer').remove();
          $(".trailer-box").append('<div id="trailer"> </div>');
          $(".movie-detail").fadeIn();
-    },
-
-    translate: function (evt){
-        evt.preventDefault();
-        $.ajax({
-            url: "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20140311T033034Z.e324d3baebafaa77.3a2721c5cc74f0bbd53202309fcfdd1f0300e754&text=" + this.model.get('synopsis') + "&lang=en-" + navigator.language.toLowerCase().slice(0,2),
-            dataType: "text",
-            success: function(data) {
-                var translate = $.parseJSON(data);
-                $('#original-synopsis').html(translate.text[0]);
-                $('.translate').html('Translated by the Yandex.Translate service');
-            }
-        });
     }
 });
