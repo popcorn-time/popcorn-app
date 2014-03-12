@@ -1,5 +1,5 @@
 App.Controller.Search = function (searchTerm, page) {
-    // Check if page doesn't exists
+    // Check if page doesn't exist
     if (App.Page.Search === null || typeof App.Page.Search === 'undefined') {
         // Create page
         App.Page.Search = new App.View.Page({
