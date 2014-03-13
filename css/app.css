@@ -1740,6 +1740,9 @@ sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-hunga
 sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-bulgarian {
   background-image: url(../images/bulgarian.png);
 }
+sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-arabic {
+  background-image: url(../images/arabic.png);
+}
 sidebar .play .movie-detail .side-content a.play-button {
   background: #286dc4;
   background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
