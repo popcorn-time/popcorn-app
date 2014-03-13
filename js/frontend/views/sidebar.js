@@ -46,7 +46,7 @@ App.View.Sidebar = Backbone.View.extend({
         $('.popcorn-load .progressinfo').text( i18n.__('connecting') );
 
         App.loader(true, i18n.__('loadingVideo'));
-        $('body').removeClass().addClass('loading');
+        $('body').addClass('loading');
         
         
         // Used to keep track of loading status changes
@@ -147,7 +147,7 @@ App.View.Sidebar = Backbone.View.extend({
     },
 
     show: function () {
-        $('body').removeClass().addClass('sidebar-open');
+        $('body').addClass('sidebar-open');
         this.$el.removeClass('hidden');
 
         this.backdropCache = new Image();

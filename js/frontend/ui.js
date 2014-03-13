@@ -62,6 +62,14 @@ jQuery(function ($) {
     $('.btn-os.fullscreen').toggleClass('active');
   });
 
+  //TV Mode button
+  $('.btn-os.tv-mode').on('click', function () {
+    win.toggleFullscreen();
+
+    $('body').toggleClass('tv-mode-enable');
+    $('.btn-os.tv-mode').toggleClass('active');
+  });
+
 
   // The app loading close button
   $('.popcorn-load .btn-close').click(function(event){
