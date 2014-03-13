@@ -42,6 +42,11 @@ module.exports = function(grunt) {
             flatten: true
           },
           {
+            src: 'libraries/linux32/libffmpegsumo.so',
+            dest: 'build/releases/Popcorn-Time/linux32/Popcorn-Time/libffmpegsumo.so',
+            flatten: true
+          },
+          {
             src: 'libraries/linux64/libffmpegsumo.so',
             dest: 'build/releases/Popcorn-Time/linux64/Popcorn-Time/libffmpegsumo.so',
             flatten: true
@@ -62,6 +67,7 @@ module.exports = function(grunt) {
 
 
 };
+<<<<<<< HEAD
 
 var parseBuildPlatforms = function(argumentPlatform) {
   // this will make it build no platform when the platform option is specified
@@ -83,3 +89,5 @@ var parseBuildPlatforms = function(argumentPlatform) {
 
   return buildPlatforms;
 }
+=======
+>>>>>>> ref #54, attempting to add support for linux32
