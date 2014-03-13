@@ -1,8 +1,4 @@
 App.View.MovieList = Backbone.View.extend({
-    tagName: 'ul',
-
-    className: 'movie-list',
-
     constructor: function (options) {
         this.configure(options || {});
         Backbone.View.prototype.constructor.apply(this, arguments);
@@ -16,8 +12,8 @@ App.View.MovieList = Backbone.View.extend({
     },
 
     initialize: function (options) {
-        // Delete old items
-        this.$el.children().detach();
+        // Bind element on existing list
+        this.$el = $('.movie-list').first();
 
         this.collection = App.getTorrentsCollection(options);
 
@@ -45,7 +41,7 @@ App.View.MovieList = Backbone.View.extend({
 
         var movieList = this;
 
-        $.each(this.collection.models, function () {
+        $.each(this.collection.models, function (index) {
 
             // Only append not yet appended elements
             this.view.render();
@@ -78,8 +74,11 @@ App.View.MovieList = Backbone.View.extend({
 
         });
 
-        var page           = 1;
         var $scrollElement = movieList.$el.parent();
+        if (!$scrollElement.data('page') || $scrollElement.data('section') != movieList.options.genre){
+            $scrollElement.data('page', 1);
+            $scrollElement.data('section', movieList.options.genre);
+        }
         if (!this.options.paginationDisabled){
             $scrollElement.scroll(function(){
                 if (!movieList.constructor.busy){
@@ -91,23 +90,30 @@ App.View.MovieList = Backbone.View.extend({
                     }
                     if (currentPosition >= (totalSize - scrollBuffer)){
                         movieList.constructor.busy = true;
+                        var page    = parseInt($scrollElement.data('page'));
+                        var section = $scrollElement.data('section');
                         page++;
-                        
-                        if (movieList.options.genre){
-                            App.Router.navigate('filter/' + movieList.options.genre + '/' + page, { trigger: true });
+                        $scrollElement.data('page', page);
+
+                        if (section){
+                            App.Router.navigate('filter/' + section + '/' + page, { trigger: true });
                         }
                         else if (movieList.options.keywords) {
+                            section = 'search';
                             // uncomment this line when the API start accepting the page param to paginate ;)
-                            //App.Router.navigate('search/' + movieList.options.keywords + '/' + page, { trigger: true });
+                            //App.Router.navigate('search/' + encodeURIComponent(movieList.options.keywords) + '/' + page, { trigger: true });
                         }
                         else {
-                            App.Router.navigate('index'+page+'.html', { trigger: true});
+                            section = 'index';
+                            App.Router.navigate(section + page + '.html', { trigger: true });
                         }
+
+                        console.log(section + ' page ' + page);
                     }
                 }
             });
         }
     }
 },{
-  busy: false
+    busy: false
 });

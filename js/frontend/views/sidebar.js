@@ -37,7 +37,7 @@ App.View.Sidebar = Backbone.View.extend({
 
     play: function (evt) {
         evt.preventDefault();
-        if( videoPeerflix != null ){ return; } 
+        if( videoStreamer != null ){ return; } 
 
         var file = this.model.get('torrent'),
             subs = this.model.get('subtitles');
@@ -66,9 +66,9 @@ App.View.Sidebar = Backbone.View.extend({
 
                 // Update the loader status
                 var bufferStatus = 'connecting';
-                if( videoPeerflix.peers.length > 0 ) {
+                if( videoStreamer.peers.length > 0 ) {
                     bufferStatus = 'startingDownload';
-                    if( videoPeerflix.downloaded > 0 ) {
+                    if( videoStreamer.downloaded > 0 ) {
                         bufferStatus = 'downloading';
                     }
                 }
@@ -124,8 +124,10 @@ App.View.Sidebar = Backbone.View.extend({
           "romanian": "ro",
           "spanish": "es",
           "turkish": "tr",
-          "german": "de"
-        }
+          "german": "de",
+          "hungarian": "hu",
+          "finnish": "fi",
+          "bulgarian": "bg"        }
 
         var noSubForUser = true;
         for (as in avaliableSubs) {
@@ -141,15 +143,18 @@ App.View.Sidebar = Backbone.View.extend({
 
       $('.movie.active').removeClass('active');
       this.$el.addClass('hidden');
+      if( typeof this.backdropCache != 'undefined' ) {
+        this.backdropCache.src = null;
+      }
     },
 
     show: function () {
         $('body').removeClass().addClass('sidebar-open');
         this.$el.removeClass('hidden');
 
-        var backdropCache = new Image();
-        backdropCache.src = this.model.get('backdrop');
-        backdropCache.onload = function () {
+        this.backdropCache = new Image();
+        this.backdropCache.src = this.model.get('backdrop');
+        this.backdropCache.onload = function () {
             $(".backdrop-image").addClass("loaded")
         };
 
