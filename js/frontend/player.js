@@ -97,6 +97,7 @@ window.SubtitleLanguages = {
   'german'    : 'Deutsch',
   'hungarian' : 'Magyar',
   'finnish'   : 'Suomi',
+  'arabic'    : 'العربية',
   'bulgarian' : 'Български'};
 
 
