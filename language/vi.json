@@ -17,9 +17,9 @@
   "downloading": "Đang download...",
   "UpgradeVersion": "Cập nhật Popcorn Time",
   "UpgradeVersionDescription": "Popcorn Time %s vừa ra mắt. Bạn nên tải nó ngay!",
-  "legalDisclaimer": "Popcorn Time download và "seed" phim sử dụng torrent, điều này có thể bất hợp pháp ở quốc gia của bạn.",
+  "legalDisclaimer": "Popcorn Time download và \"seed\" phim sử dụng torrent, điều này có thể bất hợp pháp ở quốc gia của bạn.",
   "legalDisclaimerResponsible": "Chúng tôi không chịu trách nghiệm cho bất kỳ phát sinh nào, do đó hãy chắc bạn đã đọc Điều khoản và Điều kiện của chúng tôi trước khi sử dụng ứng dụng.",
-  "legalDisclaimerAccept": Tôi hiểu",
+  "legalDisclaimerAccept": "Tôi hiểu",
   "legalDisclaimerCancel": "Rời khỏi",
   "genres": {
     "all": "Phổ biến",
