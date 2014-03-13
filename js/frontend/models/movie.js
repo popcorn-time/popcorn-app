@@ -1,7 +1,7 @@
 App.Model.Movie = Backbone.Model.extend({
 
     buildBasicView: function () {
-    
+
       var model = this;
 
       // This is mostly used for reporting
@@ -11,7 +11,7 @@ App.Model.Movie = Backbone.Model.extend({
       model.view = new App.View.MovieListItem({
           model: model
       });
-      
+
       model.trigger('rottenloaded');
     },
 
@@ -28,7 +28,7 @@ App.Model.Movie = Backbone.Model.extend({
         var model = this;
 
         App.findMovieInfo(model.get('imdb'), function (data) {
-            
+
             model.set('infoLoaded', true);
             model.set('image',    data.image);
             model.set('bigImage', data.image);
@@ -65,7 +65,24 @@ App.Model.Movie = Backbone.Model.extend({
         this.buildBasicView();
         //this.setRottenInfo();
         //this.setSubtitles();
+        this.getAgeRating();
         this.calculateTorrentHealth();
+    },
+
+    getAgeRating: function() {
+      // Requests the MPAA rating of the movie
+
+      var model = this;
+      var rating_url = 'http://www.omdbapi.com/?i=' + model.get('imdb');
+      var request = require("request");
+
+      request(rating_url, function(error, response, body) {
+        if (!error) {
+          model.set('ageRating', JSON.parse(body).Rated);
+        } else {
+          console.log(error);
+        }
+      });
     },
 
     calculateTorrentHealth: function () {
