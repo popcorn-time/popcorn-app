@@ -94,8 +94,10 @@ window.SubtitleLanguages = {
   'portuguese': 'Português',
   'brazilian' : 'Português-Br',
   'dutch'     : 'Nederlands',
-  'german'    : 'Deutsch'
-};
+  'german'    : 'Deutsch',
+  'hungarian' : 'Magyar',
+  'finnish'   : 'Suomi',
+  'bulgarian' : 'Български'};
 
 
 // Handles the opening of the video player
