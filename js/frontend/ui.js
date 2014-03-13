@@ -37,15 +37,14 @@ jQuery(function ($) {
 
   // Maximize, minimize
   $('.btn-os.max').on('click', function () {
-    if(win.isFullscreen){
+    if(win.isFullscreen) {
       win.toggleFullscreen();
-    }else{
-      if (screen.availHeight <= win.height) {
-        win.unmaximize();
-      }
-      else {
-          win.maximize();
-      }
+      win.unmaximize();
+      $('.btn-os.fullscreen').toggleClass('active');
+    } else if (screen.availHeight <= win.height) {
+      win.unmaximize();
+    } else {
+      win.maximize();
     }
   });
 
