@@ -1,8 +1,8 @@
 // Handles language detection and internationalization
 i18n.configure({
     defaultLocale: 'en',
-    locales: ['ar', 'da', 'de', 'en', 'es', 'eu', 'fr', 'gr', 'he', 'it', 'ja', 'kr',
-              'lt', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk', 'sv', 'tr'],
+    locales: ['ar', 'bg', 'ca', 'da', 'de', 'el', 'en', 'es', 'eu', 'fr', 'he', 'hu', 'it', 'ja', 'kr',
+              'lt', 'lv', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk', 'sv', 'tr', 'uk', 'zh-cn', 'zh-tw'],
     directory: './language'
 });
 
@@ -46,7 +46,7 @@ var populateCategories = function() {
     var category_html = '';
     var defaultCategory = 'all';
 
-    for( key in i18n.__("genres") ) {
+    for(var key in i18n.__("genres") ) {
         category_html += '<li'+ (defaultCategory == key ? ' class="active" ' : '') +'>'+
                            '<a href="#" data-genre="'+key+'">'+ i18n.__("genres")[key] +'</a>'+
                          '</li>';

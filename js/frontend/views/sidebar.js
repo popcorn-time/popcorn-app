@@ -37,7 +37,7 @@ App.View.Sidebar = Backbone.View.extend({
 
     play: function (evt) {
         evt.preventDefault();
-        if( videoPeerflix != null ){ return; } 
+        if( videoStreamer != null ){ return; }
 
         var file = this.model.get('torrent'),
             subs = this.model.get('subtitles');
@@ -47,14 +47,14 @@ App.View.Sidebar = Backbone.View.extend({
 
         App.loader(true, i18n.__('loadingVideo'));
         $('body').removeClass().addClass('loading');
-        
-        
+
+
         // Used to keep track of loading status changes
         var previousStatus = '';
         var movieModel = this.model;
 
         playTorrent(file, subs, movieModel,
-            function(){}, 
+            function(){},
             function(percent){
 
                 // Loading Progress Handler. Percent is 5% + Actual progress, to keep the progressbar moving even when it's at the min-width
@@ -66,22 +66,22 @@ App.View.Sidebar = Backbone.View.extend({
 
                 // Update the loader status
                 var bufferStatus = 'connecting';
-                if( videoPeerflix.peers.length > 0 ) {
+                if( videoStreamer.peers.length > 0 ) {
                     bufferStatus = 'startingDownload';
-                    if( videoPeerflix.downloaded > 0 ) {
+                    if( videoStreamer.downloaded > 0 ) {
                         bufferStatus = 'downloading';
                     }
                 }
-                
+
                 if( bufferStatus != previousStatus ) {
                     userTracking.event('Video Preloading', bufferStatus, movieModel.get('niceTitle')).send();
                     previousStatus = bufferStatus;
                 }
-                
+
                 $('.popcorn-load .progressinfo').text( i18n.__(bufferStatus) );
             }
         );
-        
+
         userTracking.event('Movie Quality', 'Watch on '+this.model.get('quality')+' - '+this.model.get('health').capitalize(), this.model.get('niceTitle') ).send();
     },
 
@@ -114,7 +114,7 @@ App.View.Sidebar = Backbone.View.extend({
       // Maybe we can move this to a better place
       if( $('.movie.active').size() > 0 ) {
         var userLocale = window.navigator.language.substr(0,2);
-        var avaliableSubs = this.model.get('subtitles');
+        var availableSubs = this.model.get('subtitles');
         var languageLookup = {
           "brazilian": "pt",
           "dutch": "nl",
@@ -124,32 +124,37 @@ App.View.Sidebar = Backbone.View.extend({
           "romanian": "ro",
           "spanish": "es",
           "turkish": "tr",
-          "german": "de"
-        }
+          "german": "de",
+          "hungarian": "hu",
+          "finnish": "fi",
+          "bulgarian": "bg"        }
 
         var noSubForUser = true;
-        for (as in avaliableSubs) {
+        for (var as in availableSubs) {
           var subLocale = languageLookup[as];
           if (subLocale == userLocale) {
             noSubForUser = false;
           }
         }
 
-        userTracking.event( 'Movie Closed', this.model.get('niceTitle'), 
+        userTracking.event( 'Movie Closed', this.model.get('niceTitle'),
                             (noSubForUser ? 'No Local Subtitles' : 'With Local Subtitles') +' - '+ this.model.get('health').capitalize() ).send();
       }
 
       $('.movie.active').removeClass('active');
       this.$el.addClass('hidden');
+      if( typeof this.backdropCache != 'undefined' ) {
+        this.backdropCache.src = null;
+      }
     },
 
     show: function () {
         $('body').removeClass().addClass('sidebar-open');
         this.$el.removeClass('hidden');
 
-        var backdropCache = new Image();
-        backdropCache.src = this.model.get('backdrop');
-        backdropCache.onload = function () {
+        this.backdropCache = new Image();
+        this.backdropCache.src = this.model.get('backdrop');
+        this.backdropCache.onload = function () {
             $(".backdrop-image").addClass("loaded")
         };
 

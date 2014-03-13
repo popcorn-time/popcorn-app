@@ -21,8 +21,13 @@ var xmlrpc = require('xmlrpc'),
         'dut': 'Dutch',
         'fre': 'French',
         'ger': 'German',
-        'lit': 'Lithuanian'
-    },
+        'lit': 'Lithuanian',
+        'lat': 'Latvian',
+        'hun': 'Hungarian',
+        'rus': 'Russian',
+        'ukr': 'Ukrainian',
+        'fin': 'Finnish',
+        'bul': 'Bulgarian'    },
 
     token;
 
