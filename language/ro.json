@@ -52,5 +52,16 @@
     "thriller": "Thriller",
     "war": "Război",
     "western": "Western"
-  }
+  },
+  "french": "Franceză",
+  "english": "Engleză",
+  "spanish": "Spaniolă",
+  "swedish": "Suedeză",
+  "portuguese": "Portugheză",
+  "romanian": "Română",
+  "turkish": "Turcă",
+  "dutch": "Olandeză",
+  "italian": "Italiană",
+  "danish": "Daneză",
+  "arabic": "Arabă"
 }
