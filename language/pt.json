@@ -3,7 +3,7 @@
   "cancel": "Cancelar",
   "beforeQuit": "Você tem certeza que deseja sair?",
   "loading": "Por Favor Aguarde...",
-  "loadingVideo": "Bufferizando vídeo, por favor aguarde",
+  "loadingVideo": "Carregar vídeo, por favor aguarde",
   "searchLoading": "Procurando...",
   "noResults": "Nenhum resultado encontrado.",
 
@@ -17,7 +17,7 @@
 
   "connecting": "Conectando...",
   "startingDownload": "Começando Download...",
-  "downloading": "Baixando...",
+  "downloading": "A transferir...",
 
   "UpgradeVersion": "Atualizar Popcorn Time",
   "UpgradeVersionDescription": " acaba de ser lançado. Atualize agora!",
@@ -48,7 +48,7 @@
     "romance": "Romance",
     "sci-fi": "Sci-Fi",
     "short": "Short",
-    "sport": "Esporte",
+    "sport": "Desporto",
     "thriller": "Thriller",
     "war": "Guerra",
     "western": "Western"
