@@ -127,6 +127,7 @@ App.View.Sidebar = Backbone.View.extend({
           "german": "de",
           "hungarian": "hu",
           "finnish": "fi",
+          "arabic": "ar",
           "bulgarian": "bg"        }
 
         var noSubForUser = true;
