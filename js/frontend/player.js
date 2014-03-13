@@ -97,7 +97,8 @@ window.SubtitleLanguages = {
   'german'    : 'Deutsch',
   'hungarian' : 'Magyar',
   'finnish'   : 'Suomi',
-  'bulgarian' : 'Български'};
+  'bulgarian' : 'Български',
+  'swedish'   : 'Svenska' };
 
 
 // Handles the opening of the video player

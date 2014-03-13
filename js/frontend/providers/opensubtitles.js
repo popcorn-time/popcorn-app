@@ -26,7 +26,8 @@ var xmlrpc = require('xmlrpc'),
         'rus': 'Russian',
         'ukr': 'Ukrainian',
         'fin': 'Finnish',
-        'bul': 'Bulgarian'    },
+        'bul': 'Bulgarian',
+        'swe': 'Swedish'    },
 
     token;
 
