@@ -1,5 +1,8 @@
 var
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     // Minimum percentage to open video
     MIN_PERCENTAGE_LOADED = 0.5,
 
@@ -27,12 +30,19 @@ var
     // fs object
     fs = require('fs'),
 
+<<<<<<< HEAD
+=======
+    // url object
+    url = require('url'),
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     // TMP Folder
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
 
     // i18n module (translations)
     i18n = require("i18n");
 
+<<<<<<< HEAD
 
 i18n.configure({
     defaultLocale: 'en',
@@ -113,6 +123,49 @@ if( getTrackingId() == null ) {
 } else {
     var userTracking = window.userTracking = ua('UA-48789649-1', getTrackingId());
 }
+=======
+    isWin = (process.platform === 'win32');
+    isLinux = (process.platform === 'linux');
+    isOSX = (process.platform === 'darwin');
+
+    BUTTON_ORDER = ['close', 'min', 'max'];
+
+    if (isWin)   { BUTTON_ORDER = ['min', 'max', 'close']; }
+    if (isLinux) { BUTTON_ORDER = ['min', 'max', 'close']; }
+    if (isOSX)   { BUTTON_ORDER = ['close', 'min', 'max']; }
+
+// Global App skeleton for backbone
+var App = {
+  Controller: {},
+  View: {},
+  Model: {},
+  Page: {}
+};
+
+
+// render header buttons
+$("#header").html(_.template($('#header-tpl').html(), {buttons: BUTTON_ORDER}));
+
+
+// Create the System Temp Folder. This is used to store temporary data like movie files.
+if( ! fs.existsSync(tmpFolder) ) { fs.mkdir(tmpFolder); }
+
+var wipeTmpFolder = function() {
+    if( typeof tmpFolder != 'string' ){ return; }
+    fs.readdir(tmpFolder, function(err, files){
+        for( var i in files ) {
+            fs.unlink(tmpFolder+'/'+files[i]);
+        }
+    });
+}
+
+// Wipe the tmpFolder when closing the app (this frees up disk space)
+win.on('close', function(){
+    wipeTmpFolder();
+    win.close(true);
+});
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
 
 String.prototype.capitalize = function() {
@@ -120,6 +173,7 @@ String.prototype.capitalize = function() {
 }
 
 
+<<<<<<< HEAD
 // Populate the Category list (This should be a template, though)
 var populateCategories = function() {
     var category_html = '';
@@ -138,6 +192,8 @@ detectLanguage('en');
 
 
 
+=======
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 // Not debugging, hide all messages!
 if (!isDebug) {
     console.log = function () {};
@@ -177,6 +233,7 @@ win.title = 'Popcorn Time';
 win.focus();
 
 
+<<<<<<< HEAD
 document.addEventListener('keydown', function(event){
     var $el = $('.popcorn-quit');
     if(!$el.hasClass('hidden')) {
@@ -196,12 +253,15 @@ document.addEventListener('keydown', function(event){
     }
 });
 
+=======
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 // Cancel all new windows (Middle clicks / New Tab)
 win.on('new-win-policy', function (frame, url, policy) {
     policy.ignore();
 });
 
 
+<<<<<<< HEAD
 // Prevent dropping files into the window
 window.addEventListener("dragover",function(e){
     e = e || event;
@@ -319,27 +379,60 @@ var checkForUpdates = function() {
 };
 
 checkForUpdates();
+=======
+var preventDefault = function(e) {
+    e.preventDefault();
+}
+// Prevent dropping files into the window
+window.addEventListener("dragover", preventDefault, false);
+window.addEventListener("drop", preventDefault, false);
+// Prevent dragging files outside the window
+window.addEventListener("dragstart", preventDefault, false);
+
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
 // Show the disclaimer if the user hasn't accepted it yet.
 if( ! Settings.get('disclaimerAccepted') ) {
     $('.popcorn-disclaimer').removeClass('hidden');
+<<<<<<< HEAD
     
     $('.popcorn-disclaimer .btn.confirmation.continue').click(function(event){
         event.preventDefault();
         userTracking.event('App Disclaimer', 'Accepted' ).send();
+=======
+
+    $('.popcorn-disclaimer .btn.confirmation.continue').click(function(event){
+        event.preventDefault();
+        userTracking.event('App Disclaimer', 'Accepted', navigator.language.toLowerCase() ).send();
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
         Settings.set('disclaimerAccepted', 1);
         $('.popcorn-disclaimer').addClass('hidden');
     });
     $('.popcorn-disclaimer .btn.confirmation.quit').click(function(event){
         event.preventDefault();
+<<<<<<< HEAD
         userTracking.event('App Disclaimer', 'Quit' ).send();
         setTimeout(function(){
             gui.App.quit();
         }, 500);
+=======
+
+        // We need to give the tracker some time to send the event
+        // Also, prevent multiple clicks
+        if( $('.popcorn-disclaimer').hasClass('quitting') ){ return; }
+        $('.popcorn-disclaimer').addClass('quitting');
+
+        userTracking.event('App Disclaimer', 'Quit', navigator.language.toLowerCase() ).send();
+        setTimeout(function(){
+            gui.App.quit();
+        }, 2000);
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     });
 }
 
 
+<<<<<<< HEAD
 // Taken from peerflix `app.js`
 var videoPeerflix = null;
 var playTorrent = window.playTorrent = function (torrent, subs, movieModel, callback, progressCallback) {
@@ -436,3 +529,29 @@ $('body').tooltip({
 process.on('uncaughtException', function(err) {
     console.log(err);
 });
+=======
+/**
+ * Show 404 page on uncaughtException
+ */
+process.on('uncaughtException', function(err) {
+    if (console) {
+        console.log(err);
+    }
+});
+
+
+
+// TODO: I have no idea what this is
+App.throttle = function(handler, time) {
+  var throttle;
+  time = time || 300;
+  return function() {
+    var args = arguments,
+      context = this;
+    clearTimeout(throttle);
+    throttle = setTimeout(function() {
+      handler.apply(context, args);
+    }, time);
+  };
+};
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc

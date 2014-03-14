@@ -1,6 +1,10 @@
 ; Installer Variables
 #define AppName "Popcorn Time"
+<<<<<<< HEAD
 #define AppVersion "Beta 2"
+=======
+#define AppVersion "Beta 2.5"
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 #define AppPublisher "Popcorn Time Team"
 #define AppURL "https://github.com/popcorn-time/popcorn-app"
 #define AppExeName "run.bat"
@@ -55,6 +59,7 @@ OutputDir=.\
 
 
 [Languages]
+<<<<<<< HEAD
 Name: "en"; MessagesFile: ".\languages\English.isl"
 Name: "es"; MessagesFile: ".\languages\Spanish.isl"
 Name: "tk"; MessagesFile: ".\languages\Turkish.isl"
@@ -63,6 +68,39 @@ Name: "ptbr"; MessagesFile: ".\languages\BrazilianPortuguese.isl"
 Name: "nl"; MessagesFile: ".\languages\Dutch.isl"
 Name: "ge"; MessagesFile: ".\languages\German.isl"
 Name: "pt"; MessagesFile: ".\languages\Portuguese.isl"
+=======
+Name: "ar"; MessagesFile: ".\languages\Arabic.isl"
+Name: "eu"; MessagesFile: ".\languages\Basque.isl"
+Name: "ptbr"; MessagesFile: ".\languages\BrazilianPortuguese.isl"
+Name: "ca"; MessagesFile: ".\languages\Catalan.isl"
+; Name: ""; MessagesFile: ".\languages\Corsican.isl"
+Name: "cs"; MessagesFile: ".\languages\Czech.isl"
+Name: "da"; MessagesFile: ".\languages\Danish.isl"
+Name: "nl"; MessagesFile: ".\languages\Dutch.isl"
+Name: "en"; MessagesFile: ".\languages\English.isl"
+Name: "fi"; MessagesFile: ".\languages\Finnish.isl"
+Name: "fr"; MessagesFile: ".\languages\French.isl"
+Name: "ge"; MessagesFile: ".\languages\German.isl"
+Name: "el"; MessagesFile: ".\languages\Greek.isl"
+Name: "he"; MessagesFile: ".\languages\Hebrew.isl"
+Name: "hu"; MessagesFile: ".\languages\Hungarian.isl"
+Name: "it"; MessagesFile: ".\languages\Italian.isl"
+Name: "ja"; MessagesFile: ".\languages\Japanese.isl"
+; Name: ""; MessagesFile: ".\languages\Nepali.isl"
+Name: "no"; MessagesFile: ".\languages\Norwegian.isl"
+Name: "pl"; MessagesFile: ".\languages\Polish.isl"
+Name: "pt"; MessagesFile: ".\languages\Portuguese.isl"
+Name: "ru"; MessagesFile: ".\languages\Russian.isl"
+; Name: "sr"; MessagesFile: ".\languages\SerbianCyrillic.isl"
+; Name: "sr"; MessagesFile: ".\languages\SerbianLatin.isl"
+Name: "sk"; MessagesFile: ".\languages\Slovak.isl"
+; Name: ""; MessagesFile: ".\languages\Slovenian.isl"
+Name: "es"; MessagesFile: ".\languages\Spanish.isl"
+Name: "sv"; MessagesFile: ".\languages\Swedish.isl"
+Name: "zh-tw"; MessagesFile: ".\languages\TraditonalChinese.isl"
+Name: "tk"; MessagesFile: ".\languages\Turkish.isl"
+; Name: ""; MessagesFile: ".\languages\Ukrainian.isl"
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
 
 [Files]
@@ -74,7 +112,10 @@ Source: "..\..\js\*"; DestDir: "{app}\app\js\"; Flags: ignoreversion recursesubd
 Source: "..\..\fonts\*"; DestDir: "{app}\app\fonts\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\..\images\*"; DestDir: "{app}\app\images\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\..\language\*"; DestDir: "{app}\app\language\"; Flags: ignoreversion recursesubdirs createallsubdirs
+<<<<<<< HEAD
 Source: "..\..\tmp\empty"; DestDir: "{app}\app\tmp\"; Flags: ignoreversion recursesubdirs createallsubdirs
+=======
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 Source: "..\..\node_modules\*"; DestDir: "{app}\app\node_modules\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\..\node-webkit\windows\*"; DestDir: "{app}\node-webkit\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

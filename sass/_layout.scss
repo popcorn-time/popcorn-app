@@ -102,6 +102,43 @@ a { text-decoration: none; }
 
     }
 
+<<<<<<< HEAD
+=======
+    // Changes the min/max/close button position depending on OS
+    &.darwin {
+      position: absolute;
+      left: 15px;
+      top: 17px;
+    }
+    &.fs-darwin {
+      right: 7px;
+      left: initial;
+      top: 5px;
+    }
+
+    &.linux {
+      right: 7px;
+      left: initial;
+      top: 15px;
+    }
+    &.fs-linux {
+      position: absolute;
+      left: 15px;
+      top: 5px;
+    }
+
+    &.win32 {
+      right: 7px;
+      left: initial;
+      top: 15px;
+    }
+    &.fs-win32 {
+      position: absolute;
+      left: 15px;
+      top: 5px;
+    }
+    
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     &:hover .btn-os { color: rgba(0, 0, 0, 0.8); }
 
     button {
@@ -298,9 +335,21 @@ body.has-notification {
 
   &.hidden {
     opacity: 0;
+<<<<<<< HEAD
     pointer-events: none;
   }
 
+=======
+    z-index: 0;
+    margin-left: 100%;
+    pointer-events: none;
+  }
+
+  &.hidden .spinner {
+    -webkit-animation: none;
+  }
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   .wrapper {
     @include translateY(-100%);
     font-size: 40px;
@@ -394,6 +443,19 @@ body.has-notification {
     pointer-events: none;
   }
 
+<<<<<<< HEAD
+=======
+  &.quitting {
+    .text, .btn {
+      opacity: 0.0;
+      pointer-events: none;
+    }
+  }
+  .text, .btn {
+    @include transition(opacity 2.0s ease-out);
+  }
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   .wrapper {
     @include translateY(-50%);
     font-size: 30px;

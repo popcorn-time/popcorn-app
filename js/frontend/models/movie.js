@@ -3,6 +3,7 @@ App.Model.Movie = Backbone.Model.extend({
     buildBasicView: function () {
     
       var model = this;
+<<<<<<< HEAD
     
       model.set('infoLoaded', true);
       model.set('subtitlesLoaded', true);
@@ -17,6 +18,11 @@ App.Model.Movie = Backbone.Model.extend({
 
       // This is mostly used for reporting
       model.set('slug',       model.get('title').toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-') +'-'+ model.get('imdb').slice(2) );
+=======
+
+      // This is mostly used for reporting
+      model.set('slug',       model.get('title').toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'_') +'.'+ model.get('imdb').slice(2) );
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
       model.set('niceTitle',  model.get('title') +' ('+model.get('year')+')' );
 
       model.view = new App.View.MovieListItem({
@@ -26,6 +32,17 @@ App.Model.Movie = Backbone.Model.extend({
       model.trigger('rottenloaded');
     },
 
+<<<<<<< HEAD
+=======
+    getShortTitle: function() {
+      if (this.get('title').length > 19) {
+        return this.get('title').substring(0, 13) + "...";
+      }
+
+      return this.get('title');
+    },
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     // DEPRECATED
     setRottenInfo: function () {
         var model = this;
@@ -65,6 +82,7 @@ App.Model.Movie = Backbone.Model.extend({
     },
 
     initialize: function () {
+<<<<<<< HEAD
         // Movie Health
         var seeders = this.get('seeders');
         var leechers = this.get('leechers');
@@ -98,4 +116,43 @@ App.Model.Movie = Backbone.Model.extend({
         //this.setRottenInfo();
         //this.setSubtitles();
     }
+=======
+        this.buildBasicView();
+        //this.setRottenInfo();
+        //this.setSubtitles();
+        this.calculateTorrentHealth();
+    },
+
+    calculateTorrentHealth: function () {
+      // Calculates the "health" of the torrent (how easy it is to stream)
+      var seeders = this.get('seeders');
+      var leechers = this.get('leechers');
+      var ratio = leechers > 0 ? (seeders / leechers) : seeders;
+
+      if (seeders < 100) {
+        this.set('health', 'bad');
+      }
+      else if (seeders > 100 && seeders < 200) {
+        if( ratio > 5 ) {
+          this.set('health', 'good');
+        } else if( ratio > 3 ) {
+          this.set('health', 'medium');
+        } else {
+          this.set('health', 'bad');
+        }
+      }
+      else if (seeders > 200) {
+        if( ratio > 5 ) {
+          this.set('health', 'excellent');
+        } else if( ratio > 3 ) {
+          this.set('health', 'good');
+        } else if( ratio > 2 ) {
+          this.set('health', 'medium');
+        } else {
+          this.set('health', 'bad');
+        }
+      }
+    }
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 });

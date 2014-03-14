@@ -6,7 +6,13 @@ App.View.Page = Backbone.View.extend({
     },
 
     render: function () {
+<<<<<<< HEAD
         this.$el.appendTo('section.container');
+=======
+        $('.'+this.className).remove();
+        this.$el.appendTo('section.container');
+        $('<ul class="movie-list"></ul>').appendTo(this.$el);
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     },
 
     show: function () {

@@ -3912,6 +3912,7 @@ vjs.Player.prototype.userActive = function(bool){
 };
 
 vjs.Player.prototype.listenForUserActivity = function(){
+<<<<<<< HEAD
   var onMouseActivity, onMouseDown, mouseInProgress, onMouseUp,
       activityCheck, inactivityTimeout;
 
@@ -3919,6 +3920,24 @@ vjs.Player.prototype.listenForUserActivity = function(){
 
   onMouseDown = function() {
     onMouseActivity();
+=======
+  var onActivity, onMouseMove, onMouseDown, mouseInProgress, onMouseUp,
+      activityCheck, inactivityTimeout, lastMoveX, lastMoveY;
+
+  onActivity = vjs.bind(this, this.reportUserActivity);
+
+  onMouseMove = function(e) {
+    // Prevent mousemove spamming
+    if(e.screenX != lastMoveX || e.screenY != lastMoveY) {
+      lastMoveX = e.screenX;
+      lastMoveY = e.screenY;
+      onActivity();
+    }
+  };
+
+  onMouseDown = function() {
+    onActivity();
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     // For as long as the they are touching the device or have their mouse down,
     // we consider them active even if they're not moving their finger or mouse.
     // So we want to continue to update that they are active
@@ -3926,30 +3945,51 @@ vjs.Player.prototype.listenForUserActivity = function(){
     // Setting userActivity=true now and setting the interval to the same time
     // as the activityCheck interval (250) should ensure we never miss the
     // next activityCheck
+<<<<<<< HEAD
     mouseInProgress = setInterval(vjs.bind(this, onMouseActivity), 250);
   };
 
   onMouseUp = function(event) {
     onMouseActivity();
+=======
+    mouseInProgress = setInterval(vjs.bind(this, onActivity), 250);
+  };
+
+  onMouseUp = function(event) {
+    onActivity();
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     // Stop the interval that maintains activity if the mouse/touch is down
     clearInterval(mouseInProgress);
   };
 
   // Any mouse movement will be considered user activity
   this.on('mousedown', onMouseDown);
+<<<<<<< HEAD
   this.on('mousemove', onMouseActivity);
+=======
+  this.on('mousemove', onMouseMove);
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   this.on('mouseup', onMouseUp);
 
   // Listen for keyboard navigation
   // Shouldn't need to use inProgress interval because of key repeat
+<<<<<<< HEAD
   this.on('keydown', onMouseActivity);
   this.on('keyup', onMouseActivity);
+=======
+  this.on('keydown', onActivity);
+  this.on('keyup', onActivity);
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
   // Consider any touch events that bubble up to be activity
   // Certain touches on the tech will be blocked from bubbling because they
   // toggle controls
   this.on('touchstart', onMouseDown);
+<<<<<<< HEAD
   this.on('touchmove', onMouseActivity);
+=======
+  this.on('touchmove', onActivity);
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   this.on('touchend', onMouseUp);
   this.on('touchcancel', onMouseUp);
 

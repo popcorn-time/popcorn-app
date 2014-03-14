@@ -1,7 +1,20 @@
 {
   "name": "Popcorn-Time",
+<<<<<<< HEAD
   "main": "app://host/index.html",
   "version": "0.1.1",
+=======
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popcorn-time/popcorn-app.git"
+  },
+  "main": "app://host/index.html",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popcorn-time/popcorn-app"
+  },
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   "window": {
     "title": "Popcorn Time",
     "icon": "images/icon.png",
@@ -14,6 +27,7 @@
     "resizable": true
   },
   "dependencies": {
+<<<<<<< HEAD
     "request": "~2.33.0",
     "peerflix": "~0.1.5",
     "network-address": "0.0.4",
@@ -34,5 +48,33 @@
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compass": "~0.7.1"
+=======
+    "adm-zip" : "git+https://github.com/gpt-modules/adm-zip.git",
+    "cheerio" : "git+https://github.com/gpt-modules/cheerio.git",
+    "clivas" : "git+https://github.com/gpt-modules/clivas.git",
+    "i18n" : "git+https://github.com/gpt-modules/i18n-node.git",
+    "iconv-lite" : "git+https://github.com/gpt-modules/iconv-lite.git",
+    "jschardet" : "git+https://github.com/gpt-modules/jschardet.git",
+    "moviedb" : "git+https://github.com/gpt-modules/moviedb.git",
+    "network-address" : "git+https://github.com/gpt-modules/network-address.git",
+    "node-uuid" : "git+https://github.com/gpt-modules/node-uuid.git",
+    "numeral" : "git+https://github.com/gpt-modules/numeral-js.git",
+    "popcornflix" : "git+https://github.com/popcorn-time/popcornflix.git",
+    "request" : "git+https://github.com/gpt-modules/request.git",
+    "universal-analytics" : "git+https://github.com/gpt-modules/universal-analytics.git",
+    "url" : "git+https://github.com/gpt-modules/url.git",
+    "xmlrpc" : "git+https://github.com/gpt-modules/node-xmlrpc.git",
+    "socket.io": "git+https://github.com/gpt-modules/socket.io.git",
+    "express": "git+https://github.com/gpt-modules/express.git",
+    "ip": "git+https://github.com/gpt-modules/node-ip.git"
+  },
+  "devDependencies": {
+    "grunt": "git+https://github.com/gpt-modules/grunt.git",
+    "grunt-node-webkit-builder": "git+https://github.com/gpt-modules/grunt-node-webkit-builder.git",
+    "grunt-contrib-sass": "git+https://github.com/gpt-modules/grunt-contrib-sass.git",
+    "grunt-contrib-watch": "git+https://github.com/gpt-modules/grunt-contrib-watch.git",
+    "grunt-contrib-compass": "git+https://github.com/gpt-modules/grunt-contrib-compass.git",
+    "grunt-contrib-copy": "git+https://github.com/gpt-modules/grunt-contrib-copy.git"
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   }
 }

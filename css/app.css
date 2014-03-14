@@ -85,6 +85,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+<<<<<<< HEAD
+=======
+@-webkit-keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.2;
+  }
+}
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 body {
   -webkit-user-select: none;
 }
@@ -367,6 +380,39 @@ a {
   left: initial;
   top: 5px;
 }
+<<<<<<< HEAD
+=======
+#header .btn-set.darwin {
+  position: absolute;
+  left: 15px;
+  top: 17px;
+}
+#header .btn-set.fs-darwin {
+  right: 7px;
+  left: initial;
+  top: 5px;
+}
+#header .btn-set.linux {
+  right: 7px;
+  left: initial;
+  top: 15px;
+}
+#header .btn-set.fs-linux {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+#header .btn-set.win32 {
+  right: 7px;
+  left: initial;
+  top: 15px;
+}
+#header .btn-set.fs-win32 {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 #header .btn-set:hover .btn-os {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -601,8 +647,18 @@ body.has-notification #notification {
 }
 .popcorn-load.hidden {
   opacity: 0;
+<<<<<<< HEAD
   pointer-events: none;
 }
+=======
+  z-index: 0;
+  margin-left: 100%;
+  pointer-events: none;
+}
+.popcorn-load.hidden .spinner {
+  -webkit-animation: none;
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 .popcorn-load .wrapper {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
@@ -703,6 +759,19 @@ body.has-notification #notification {
   opacity: 0;
   pointer-events: none;
 }
+<<<<<<< HEAD
+=======
+.popcorn-disclaimer.quitting .text, .popcorn-disclaimer.quitting .btn {
+  opacity: 0.0;
+  pointer-events: none;
+}
+.popcorn-disclaimer .text, .popcorn-disclaimer .btn {
+  -webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 .popcorn-disclaimer .wrapper {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -1305,8 +1374,13 @@ sidebar .play:hover a.play-over {
   display: block;
 }
 sidebar .play .backdrop-image {
+<<<<<<< HEAD
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
+=======
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
   display: block;
   position: absolute;
   top: 0;
@@ -1317,6 +1391,12 @@ sidebar .play .backdrop-image {
   z-index: -1;
   background-position: center;
 }
+<<<<<<< HEAD
+=======
+sidebar .play .loaded {
+  -webkit-animation: backdropFadeIn .5s ease-in forwards;
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 sidebar .play a.play-over {
   position: absolute;
   top: 40%;
@@ -1676,6 +1756,15 @@ sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-brazi
 sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-italian {
   background-image: url(../images/italian.png);
 }
+<<<<<<< HEAD
+=======
+sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-hungarian {
+  background-image: url(../images/hungarian.png);
+}
+sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-bulgarian {
+  background-image: url(../images/bulgarian.png);
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 sidebar .play .movie-detail .side-content a.play-button {
   background: #286dc4;
   background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
@@ -1886,6 +1975,10 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
 }
 #video_player.video-js .vjs-text-track-display {
   font-size: 1em;
+<<<<<<< HEAD
+=======
+  pointer-events: none;
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 }
 #video_player.video-js .vjs-loading-spinner {
   font-size: 1em;
@@ -1899,6 +1992,12 @@ sidebar .play .movie-detail .side-content a.play-button:hover {
 #video_player.video-js .vjs-menu-item {
   color: #000;
 }
+<<<<<<< HEAD
+=======
+#video_player.video-js .vjs-seek-handle {
+  display: none;
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
 body.watching #header, body.watching #notification, body.watching #catalog-select, body.watching .container {
   visibility: hidden;

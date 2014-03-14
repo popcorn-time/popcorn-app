@@ -33,3 +33,18 @@
     -webkit-transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
+=======
+
+@-webkit-keyframes backdropFadeIn {
+  /* line 17, ../sass/animations.scss */
+  from {
+    opacity: 0;
+  }
+  
+  /* line 18, ../sass/animations.scss */
+  to {
+    opacity: 0.2;
+  }
+}
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
