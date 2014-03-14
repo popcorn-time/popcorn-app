@@ -1,6 +1,95 @@
 App.getTorrentsCollection = function (options) {
 
-    var url = 'http://subapi.com/';
+    var start = +new Date(),
+        url = 'http://yts.re/api/list.json?sort=seeds&limit=50';
+
+    if (options.keywords) {
+        url += '&keywords=' + options.keywords;
+    }
+
+    if (options.genre) {
+        url += '&genre=' + options.genre;
+    }
+
+    if (options.page && options.page.match(/\d+/)) {
+        url += '&set=' + options.page;
+    }
+
+    var MovieTorrentCollection = Backbone.Collection.extend({
+        url: url,
+        model: App.Model.Movie,
+        parse: function (data) {
+            var movies = [],
+                memory = {};
+
+            if (data.error || typeof data.MovieList === 'undefined') {
+                return movies;
+            }
+
+            data.MovieList.forEach(function (movie) {
+                // No imdb, no movie.
+                if( typeof movie.ImdbCode != 'string' || movie.ImdbCode.replace('tt', '') == '' ){ return; }
+                
+                var torrents = {};
+                torrents[movie.Quality] = movie.TorrentUrl;
+                
+                // Temporary object
+                var movieModel = {
+                    imdb: movie.ImdbCode.replace('tt', ''),
+                    title: movie.MovieTitleClean,
+                    year: movie.MovieYear,
+                    runtime: 0,
+                    synopsis: "",
+                    voteAverage:parseInt(movie.MovieRating, 10),
+
+                    image: movie.CoverImage,
+                    bigImage: movie.CoverImage,
+                    backdrop: "",
+
+                    quality: movie.Quality,
+                    torrent: movie.TorrentUrl,
+                    torrents: torrents,
+                    videos: {},
+                    subtitles: {},
+                    seeders: movie.TorrentSeeds,
+                    leechers: movie.TorrentPeers
+                };
+
+
+                var stored = memory[movieModel.imdb];
+
+                // Create it on memory map if it doesn't exist.
+                if (typeof stored === 'undefined') {
+                    stored = memory[movieModel.imdb] = movieModel;
+                }
+
+                if (stored.quality !== movieModel.quality && movieModel.quality === '720p') {
+                    stored.torrent = movieModel.torrent;
+                    stored.quality = '720p';
+                }
+
+                // Set it's correspondent quality torrent URL.
+                stored.torrents[movie.Quality] = movie.TorrentUrl;
+
+                // Push it if not currently on array.
+                if (movies.indexOf(stored) === -1) {
+                    movies.push(stored);
+                }
+            });
+
+            console.log('Torrents found:', data.MovieList.length);
+
+            return movies;
+        }
+    });
+
+    return new MovieTorrentCollection();
+};
+
+
+/*App.getTorrentsCollection = function (options) {
+
+    var url = 'http://yts.re/api/';
 
     var supportedLanguages = ['english', 'french', 'dutch', 'portuguese', 'romanian', 'spanish', 'turkish', 'brazilian', 
                               'italian', 'german', 'hungarian', 'russian', 'ukrainian', 'finnish', 'bulgarian', 'latvian'];
@@ -59,6 +148,7 @@ App.getTorrentsCollection = function (options) {
                 }
 
                 if( (typeof movie.subtitles == 'undefined' || movie.subtitles.length == 0) && (typeof movie.videos == 'undefined' || movie.videos.length == 0) ){ return; }
+
                 
                 movies.push({
                     imdb:       movie.imdb_id,
@@ -88,3 +178,4 @@ App.getTorrentsCollection = function (options) {
 
     return new MovieTorrentCollection();
 };
+*/
