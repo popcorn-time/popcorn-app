@@ -1,0 +1,14 @@
+{
+  "name": "Popcorn-Time",
+  "repo": "popcorn-time/popcorn-app",
+  "description": "An experiment using the peerflix module of nodejs and connecting a bunch of APIs",
+  "version": "2.5.0-beta",
+  "demo": "http://getpopcornti.me",
+  "keywords": [
+    "movies",
+    "streaming",
+    "realtime"
+  ],
+  "dependencies": {},
+  "development": {}
+}
