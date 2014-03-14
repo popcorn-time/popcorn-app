@@ -248,3 +248,17 @@ vjs.TextTrack.prototype.load = function(){
   }
 
 };
+
+function(vjs) {
+  var superAddControlsListeners = vjs.MediaTechController.prototype.addControlsListeners;
+
+  vjs.MediaTechController.prototype.addControlsListeners = function() {
+    superAddControlsListeners.call(this);
+    // Don't toggle play/pause with a click on the movie player. Often you want
+    // to drag the screen and the play/pause stuff is pretty annoying.
+    //
+    // Disabling the event is speedier than just overriding the onClick method
+    // with a noop.
+    this.off('mousedown');
+  }
+}(videojs);
