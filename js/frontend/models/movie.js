@@ -61,10 +61,18 @@ App.Model.Movie = Backbone.Model.extend({
         });
     },
 
+    setTrailer: function() {
+      var model = this;
+      App.findTrailer(model.get('title'), function(data) {
+        model.set('trailer', data);
+      });
+    },
+
     initialize: function () {
         this.buildBasicView();
         //this.setRottenInfo();
         //this.setSubtitles();
+        this.setTrailer();
         this.calculateTorrentHealth();
     },
 

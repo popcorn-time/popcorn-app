@@ -125,7 +125,7 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
 
     var player =
       '<video autoplay id="video_player" width="100%" height="100%" class="video-js vjs-default-skin" controls preload>' +
-        '<source src="' + url + '" type="video/mp4" />' +
+        '<source src="' + url + '" type="' + (movieModel ? 'video/mp4' : 'video/youtube') + '" />' +
         subtracks +
       '</video>' +
       '<a href="javascript:;" id="video_player_close" class="btn-close"><img src="/images/close.svg" width="50" /></a>';
@@ -146,22 +146,36 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
       $('.vjs-fullscreen-control').trigger('click');
     });
 
+    // Youtube support (for trailers)
+    if(!movieModel) {
+      var options = { 
+        techOrder: ["html5", "youtube"],
+        forceSSL: true,
+        loop: true
+      };
+    } else {
+      var options = { 
+        techOrder: ["html5"],
+        plugins: { biggerSubtitle : {}, smallerSubtitle : {}, customSubtitles: {} }
+      };
+    }
+
     // Init video.
-    var video = window.videoPlaying = videojs('video_player', { plugins: { biggerSubtitle : {}, smallerSubtitle : {}, customSubtitles: {} }});
+    var video = window.videoPlaying = videojs('video_player', options);
 
 
-    userTracking.pageview('/movies/watch/'+movieModel.get('slug'), movieModel.get('niceTitle') ).send();
+    if(movieModel) userTracking.pageview('/movies/watch/'+movieModel.get('slug'), movieModel.get('niceTitle') ).send();
 
 
     // Enter full-screen
     $('.vjs-fullscreen-control').on('click', function () {
       if(win.isFullscreen) {
         win.leaveFullscreen();
-        userTracking.event('Video Size', 'Normal', movieModel.get('niceTitle') ).send();
+        if(movieModel) userTracking.event('Video Size', 'Normal', movieModel.get('niceTitle') ).send();
         win.focus();
       } else {
         win.enterFullscreen();
-        userTracking.event('Video Size', 'Fullscreen', movieModel.get('niceTitle') ).send();
+        if(movieModel) userTracking.event('Video Size', 'Fullscreen', movieModel.get('niceTitle') ).send();
         win.focus();
       }
     });
@@ -171,7 +185,7 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
       if (e.keyCode == 27) {
         if(win.isFullscreen) {
           win.leaveFullscreen();
-          userTracking.event('Video Size', 'Normal', movieModel.get('niceTitle') ).send();
+          if(movieModel) userTracking.event('Video Size', 'Normal', movieModel.get('niceTitle') ).send();
           win.focus();
         }
       }
@@ -183,7 +197,7 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
       tracks[i].on('loaded', function(){
         // Trigger a resize to get the subtitles position right
         $(window).trigger('resize');
-        userTracking.event('Video Subtitles', 'Select '+ this.language_, movieModel.get('niceTitle') ).send();
+        if(movieModel) userTracking.event('Video Subtitles', 'Select '+ this.language_, movieModel.get('niceTitle') ).send();
       });
     }
 
@@ -207,7 +221,7 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
 
       if( typeof video == 'undefined' || video == null ){ clearInterval(statusReportInterval); return; }
 
-      userTracking.event('Video Playing', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
+      if(movieModel) userTracking.event('Video Playing', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
 
     }, 1000*60*10);
 
@@ -218,10 +232,10 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
       // Determine if the user quit because he watched the entire movie
       // Give 15 minutes or 15% of the movie for credits (everyone quits there)
       if( video.duration() > 0 && video.currentTime() >= Math.min(video.duration() * 0.85, video.duration() - 15*60) ) {
-        userTracking.event('Video Finished', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
+        if(movieModel) userTracking.event('Video Finished', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
       }
       else {
-        userTracking.event('Video Quit', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
+        if(movieModel) userTracking.event('Video Quit', movieModel.get('niceTitle'), getTimeLabel(), Math.round(video.currentTime()/60) ).send();
       }
 
       // Clear the status report interval so it doesn't leak
