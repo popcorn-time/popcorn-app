@@ -24,7 +24,7 @@
     "network-address" : "https://github.com/gpt-modules/network-address/tarball/master",
     "node-uuid" : "https://github.com/gpt-modules/node-uuid/tarball/master",
     "numeral" : "https://github.com/gpt-modules/numeral-js/tarball/master",
-    "popcornflix" : "git://github.com/popcorn-time/popcornflix",
+    "popcornflix" : "https://github.com/popcorn-time/popcornflix/tarball/master",
     "request" : "https://github.com/gpt-modules/request/tarball/master",
     "universal-analytics" : "https://github.com/gpt-modules/universal-analytics/tarball/master",
     "url" : "https://github.com/gpt-modules/url/tarball/master",
