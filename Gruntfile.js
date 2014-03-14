@@ -42,6 +42,11 @@ module.exports = function(grunt) {
             flatten: true
           },
           {
+            src: 'libraries/linux32/libffmpegsumo.so',
+            dest: 'build/releases/Popcorn-Time/linux32/Popcorn-Time/libffmpegsumo.so',
+            flatten: true
+          },
+          {
             src: 'libraries/linux64/libffmpegsumo.so',
             dest: 'build/releases/Popcorn-Time/linux64/Popcorn-Time/libffmpegsumo.so',
             flatten: true
