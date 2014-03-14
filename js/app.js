@@ -33,7 +33,10 @@ var
     tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
 
     // i18n module (translations)
-    i18n = require("i18n");
+    i18n = require("i18n"),
+
+    // Enable User tracking
+    enableUserTracking = true;
 
     isWin = (process.platform === 'win32');
     isLinux = (process.platform === 'linux');

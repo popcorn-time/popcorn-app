@@ -1,5 +1,7 @@
 // Tracking
 var getTrackingId = function(){
+    //Check if user tracking is enabled
+    if( !enableUserTracking ) return null;
 
     var clientId = Settings.get('trackingId');
 
