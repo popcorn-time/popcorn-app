@@ -144,7 +144,18 @@ window.spawnVideoPlayer = function (url, subs, movieModel) {
     // Double Click to toggle Fullscreen
     $('#video-container video').dblclick(function(event){
       $('.vjs-fullscreen-control').trigger('click');
+      return false;
     });
+
+    // Disable default vjs onclick, because dblclick triggers it
+    vjs.MediaTechController.prototype.onClick = function() {};
+
+    // Single click to play/pause video
+    $('#video-container video').bind('singleclick', function(event){
+      $('.vjs-play-control').trigger('click');
+      return false;
+    });
+
 
     // Init video.
     var video = window.videoPlaying = videojs('video_player', { plugins: { biggerSubtitle : {}, smallerSubtitle : {}, customSubtitles: {} }});
