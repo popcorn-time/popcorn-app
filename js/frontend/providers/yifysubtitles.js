@@ -15,8 +15,19 @@ var request = require('request'),
         'romanian'  : 'Română',
         'portuguese': 'Português',
         'brazilian' : 'Português-Br',
+<<<<<<< HEAD
         'dutch'     : 'Nederlands'
     };
+=======
+        'dutch'     : 'Nederlands',
+        'german'    : 'Deutsch',
+        'hungarian' : 'Magyar',
+        'russian'   : 'Русский',
+        'ukrainian' : 'Українська',
+        'finnish'   : 'Suomi',
+        'latvian'	: 'Latviski',
+        'bulgarian' : 'Български'    };
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
 App.findSubtitle = function (model, cb, isFallback) {
     var doRequest = function () {

@@ -5,6 +5,7 @@
     <script>window.__startTime = (new Date()*1);</script>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="js/vendor/video-js/video-js.css">
+<<<<<<< HEAD
   </head>
   <body>
 
@@ -20,6 +21,28 @@
       <h1>Popcorn Time</h1>
     </header>
   
+=======
+
+  </head>
+  <body>
+
+    <header id="header"></header>
+
+    <script id="header-tpl" type="text/x-template">
+        <nav class="btn-set <%= process.platform %>">
+
+          <% _.each(buttons, function(button) { %>
+            <button class="btn-os <%= button %>"></button>
+          <% }); %>
+        </nav>
+
+        <nav class="btn-set fs-<%= process.platform %>">
+          <button class="btn-os fullscreen"></button>
+        </nav>
+        <h1>Popcorn Time</h1>
+    </script>
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     <div id="notification"></div>
 
     <div id="catalog-select">
@@ -30,7 +53,11 @@
 
       <h4 data-translate="movies">Movies</h4>
       <ul class="categories">
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
       </ul>
     </div>
 
@@ -85,6 +112,7 @@
                   <% } %>
                 </li>
               </ul>
+<<<<<<< HEAD
                               
               <i data-placement="left" data-toggle="tooltip" title="<%= health %> health" class="health <%= health %> fa fa-flash"></i>
 
@@ -107,11 +135,34 @@
                     <i class="fa fa-star-o"></i>
                   </ul>
                 <% } %>
+=======
+
+              <i data-placement="left" data-toggle="tooltip" title="<%= health %> health" class="health <%= health %> fa fa-flash"></i>
+
+              <% var p_rating = this.model.get('voteAverage') ? this.model.get('voteAverage').toFixed(1) : 0.0 %>
+              <div class="rating">
+                <ul class="votes" title="<%= p_rating %> / 10">
+                  <% p_rating = Math.round(p_rating) / 2; // Roundoff number to nearest 0.5 %>
+                  <% for (var i = 1; i <= Math.floor(p_rating); i++) { %>
+                    <i class="fa fa-star"></i>
+                  <% }; %>
+                  <% if (p_rating % 1 > 0) { %>
+                    <i class="fa fa-star-half-o"></i>
+                  <% }; %>
+                  <% for (var i = Math.ceil(p_rating); i < 5; i++) { %>
+                    <i class="fa fa-star-o"></i>
+                  <% }; %>
+                </ul>
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
               </div>
             </div>
 
             <p><%= synopsis %></p>
 
+<<<<<<< HEAD
+=======
+            <% if ( ! _.isEmpty(subtitles) ) { %>
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
             <div class="subtitles-list">
               <h4><%= i18n.__('subtitledIn') %></h4>
 
@@ -125,6 +176,10 @@
                 <% } %>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+            <% } %>
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
             <% if (this.model.get('torrents')) { %>
               <a href="" class="p_tooltip play-button"><%= i18n.__('watchItNow') %></a>
@@ -145,7 +200,11 @@
     </div>
 
     <div id="video-container"></div>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     <div class="popcorn-disclaimer hidden">
       <div class="wrapper">
         <span class="text" data-translate="legalDisclaimer"></span>
@@ -155,6 +214,7 @@
         <a class="btn confirmation continue" data-translate="legalDisclaimerAccept"></a>
       </div>
     </div>
+<<<<<<< HEAD
     
 
     <script src="js/vendor/jquery-2.1.0.min.js"></script>
@@ -171,6 +231,35 @@
     <script src="js/frontend/providers/cache.js"></script>
     <script src="js/frontend/providers/themoviedb.js"></script>
     <script src="js/frontend/providers/yifysubtitles.js"></script>
+=======
+
+
+    <!-- Basic Dependencies -->
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone-1.1.0.js"></script>
+    <script src="js/vendor/marionette.1.6.4.js"></script>
+    <script src="js/vendor/bootstrap-tooltip.min.js"></script>
+
+    <!-- Settings Module and API Keys -->
+    <script src="js/vendor/settings.js"></script>
+    <script src="js/vendor/config.js"></script>
+
+    <!-- App Initialization -->
+    <script src="js/app.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/tracking.js"></script>
+    <script src="js/updater.js"></script>
+
+    <!-- UI and UI-related Initialization -->
+    <script src="js/frontend/ui.js"></script>
+    <script src="js/frontend/player.js"></script>
+
+    <!-- Data Sources -->
+    <script src="js/frontend/providers/torrents.js"></script>
+
+    <!-- Backbone Models, Views and Controllers -->
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     <script src="js/frontend/models/movie.js"></script>
     <script src="js/frontend/views/page.js"></script>
     <script src="js/frontend/views/listview.js"></script>
@@ -181,6 +270,22 @@
     <script src="js/frontend/controllers/filter.js"></script>
     <script src="js/frontend/router.js"></script>
 
+<<<<<<< HEAD
     <script>userTracking.event('App Start', 'Ready - '+Settings.get('version'),  (Math.round(((new Date()*1) - __startTime) / 100) * 100) +'ms' ).send();</script>
+=======
+<<<<<<< HEAD
+    <script>userTracking.event('App Start', 'Ready - '+Settings.get('version'),  Math.round(((new Date()*1) - __startTime) / 100)+'ms' ).send();</script>
+=======
+    <!-- Remote Control -->
+    <script src="rc/index.js"></script>
+
+    <!-- Other Dependencies -->
+    <script src="js/vendor/video-js/video.dev.js"></script>
+    <script src="js/vendor/videojsplugins.js"></script>
+    <script src="js/vendor/dragwindow.js"></script>
+
+    <script>userTracking.event('App Start', 'Ready - '+Settings.get('version'),  (Math.round(((new Date()*1) - __startTime) / 100) * 100) +'ms' ).send();</script>
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
+>>>>>>> popcorn-master
   </body>
 </html>

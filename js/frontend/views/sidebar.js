@@ -33,11 +33,15 @@ App.View.Sidebar = Backbone.View.extend({
             .closest('.dropdown').removeClass('active')
             .find('.lang-placeholder').attr('src', $button.find('img').attr('src'));
         this.model.set('selectedSubtitle', lang);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     },
 
     play: function (evt) {
         evt.preventDefault();
+<<<<<<< HEAD
         if( videoPeerflix != null ){ return; } 
 
         var file = this.model.get('torrent'),
@@ -127,20 +131,36 @@ App.View.Sidebar = Backbone.View.extend({
             }
         }
 
+=======
+        if( videoStreamer != null ){ return; }
+
+        var file = this.model.get('torrent'),
+            subs = this.model.get('subtitles');
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
         $('.popcorn-load').addClass('withProgressBar').addClass('cancellable').find('.progress').css('width', 0.0+'%');
         $('.popcorn-load .progressinfo').text( i18n.__('connecting') );
 
         App.loader(true, i18n.__('loadingVideo'));
         $('body').removeClass().addClass('loading');
+<<<<<<< HEAD
         
         
+=======
+
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
         // Used to keep track of loading status changes
         var previousStatus = '';
         var movieModel = this.model;
 
+<<<<<<< HEAD
         playTorrent(file, subsFiles, movieModel,
             function(){}, 
+=======
+        playTorrent(file, subs, movieModel,
+            function(){},
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
             function(percent){
 
                 // Loading Progress Handler. Percent is 5% + Actual progress, to keep the progressbar moving even when it's at the min-width
@@ -152,6 +172,7 @@ App.View.Sidebar = Backbone.View.extend({
 
                 // Update the loader status
                 var bufferStatus = 'connecting';
+<<<<<<< HEAD
                 if( videoPeerflix.peers.length > 0 ) {
                     bufferStatus = 'startingDownload';
                     if( videoPeerflix.downloaded > 0 ) {
@@ -159,15 +180,32 @@ App.View.Sidebar = Backbone.View.extend({
                     }
                 }
                 
+=======
+                if( videoStreamer.peers.length > 0 ) {
+                    bufferStatus = 'startingDownload';
+                    if( videoStreamer.downloaded > 0 ) {
+                        bufferStatus = 'downloading';
+                    }
+                }
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
                 if( bufferStatus != previousStatus ) {
                     userTracking.event('Video Preloading', bufferStatus, movieModel.get('niceTitle')).send();
                     previousStatus = bufferStatus;
                 }
+<<<<<<< HEAD
                 
                 $('.popcorn-load .progressinfo').text( i18n.__(bufferStatus) );
             }
         );
         
+=======
+
+                $('.popcorn-load .progressinfo').text( i18n.__(bufferStatus) );
+            }
+        );
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
         userTracking.event('Movie Quality', 'Watch on '+this.model.get('quality')+' - '+this.model.get('health').capitalize(), this.model.get('niceTitle') ).send();
     },
 
@@ -200,7 +238,11 @@ App.View.Sidebar = Backbone.View.extend({
       // Maybe we can move this to a better place
       if( $('.movie.active').size() > 0 ) {
         var userLocale = window.navigator.language.substr(0,2);
+<<<<<<< HEAD
         var avaliableSubs = this.model.get('subtitles');
+=======
+        var availableSubs = this.model.get('subtitles');
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
         var languageLookup = {
           "brazilian": "pt",
           "dutch": "nl",
@@ -209,30 +251,60 @@ App.View.Sidebar = Backbone.View.extend({
           "portuguese": "pt",
           "romanian": "ro",
           "spanish": "es",
+<<<<<<< HEAD
           "turkish": "tr"
         }
 
         var noSubForUser = true;
         for (as in avaliableSubs) {
+=======
+          "turkish": "tr",
+          "german": "de",
+          "hungarian": "hu",
+          "finnish": "fi",
+          "bulgarian": "bg"        }
+
+        var noSubForUser = true;
+        for (var as in availableSubs) {
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
           var subLocale = languageLookup[as];
           if (subLocale == userLocale) {
             noSubForUser = false;
           }
         }
 
+<<<<<<< HEAD
 
         userTracking.event( 'Movie Closed', this.model.get('niceTitle'), 
+=======
+        userTracking.event( 'Movie Closed', this.model.get('niceTitle'),
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
                             (noSubForUser ? 'No Local Subtitles' : 'With Local Subtitles') +' - '+ this.model.get('health').capitalize() ).send();
       }
 
       $('.movie.active').removeClass('active');
       this.$el.addClass('hidden');
+<<<<<<< HEAD
+=======
+      if( typeof this.backdropCache != 'undefined' ) {
+        this.backdropCache.src = null;
+      }
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
     },
 
     show: function () {
         $('body').removeClass().addClass('sidebar-open');
         this.$el.removeClass('hidden');
 
+<<<<<<< HEAD
+=======
+        this.backdropCache = new Image();
+        this.backdropCache.src = this.model.get('backdrop');
+        this.backdropCache.onload = function () {
+            $(".backdrop-image").addClass("loaded")
+        };
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
         userTracking.pageview('/movies/view/'+this.model.get('slug'), this.model.get('niceTitle') ).send();
     },
 

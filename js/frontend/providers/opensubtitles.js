@@ -20,8 +20,19 @@ var xmlrpc = require('xmlrpc'),
         'tur': 'Turkish',
         'dut': 'Dutch',
         'fre': 'French',
+<<<<<<< HEAD
         'ger': 'German'
     },
+=======
+        'ger': 'German',
+        'lit': 'Lithuanian',
+        'lat': 'Latvian',
+        'hun': 'Hungarian',
+        'rus': 'Russian',
+        'ukr': 'Ukrainian',
+        'fin': 'Finnish',
+        'bul': 'Bulgarian'    },
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 
     token;
 

@@ -11,6 +11,11 @@ lib-cov
 
 node_modules/
 
+<<<<<<< HEAD
+=======
+build/
+
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
 pids
 logs
 results
@@ -29,6 +34,7 @@ dist/windows/Install Popcorn Time.exe
 dist/mac/Popcorn Time.app/
 dist/mac/Popcorn Time.zip
 
+<<<<<<< HEAD
 node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/
 node-webkit.app/Contents/Frameworks/crash_inspector
 
@@ -105,3 +111,8 @@ node-webkit.app/Contents/MacOS/node-webkit
 node-webkit.app/Contents/PkgInfo
 
 node-webkit.app/Contents/Resources/nw.icns
+=======
+
+# vim swap files
+*.swp
+>>>>>>> 7e4d851bc02082d5bbc0260315fd61fe856d0bdc
