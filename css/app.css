@@ -1410,7 +1410,7 @@ sidebar .play .poster img.big-poster {
   height: 100%;
   border-radius: 4px;
 }
-sidebar .play a.play-button {
+sidebar .play a.play-button, a.trailer-button {
   text-align: center;
   color: #FFF;
   font-weight: bold;
@@ -1424,7 +1424,7 @@ sidebar .play a.play-button {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   background: #cc181e;
 }
-sidebar .play a.play-button:hover {
+sidebar .play a.play-button:hover, a.trailer-button:hover {
   background: #eb282e;
 }
 sidebar .play .movie-detail {
@@ -1740,7 +1740,7 @@ sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-hunga
 sidebar .play .movie-detail .side-content .subtitles-list ul li .flag.flag-bulgarian {
   background-image: url(../images/bulgarian.png);
 }
-sidebar .play .movie-detail .side-content a.play-button {
+sidebar .play .movie-detail .side-content a.play-button, a.trailer-button {
   background: #286dc4;
   background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
   color: #FFF;
@@ -1752,7 +1752,7 @@ sidebar .play .movie-detail .side-content a.play-button {
   margin-top: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-sidebar .play .movie-detail .side-content a.play-button:hover {
+sidebar .play .movie-detail .side-content a.play-button:hover, a.trailer-button:hover {
   background-image: linear-gradient(to bottom, #4387de 0%, #175ab0 100%);
 }
 
