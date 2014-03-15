@@ -1,86 +1,70 @@
 App.getTorrentsCollection = function (options) {
 
-    var url = 'http://subapi.com/';
+    var start = +new Date(),
+        url = 'http://yts.re/api/list.json?sort=seeds&limit=50';
 
-    var supportedLanguages = ['english', 'french', 'dutch', 'portuguese', 'romanian', 'spanish', 'turkish', 'brazilian', 'italian', 'german'];
+    if (options.keywords) {
+        url += '&keywords=' + options.keywords;
+    }
 
     if (options.genre) {
-        url += options.genre.toLowerCase() + '.json';
-    } else {
-        if (options.keywords) {
-            url += 'search.json?query=' + options.keywords;
-        } else {
-            url += 'popular.json';
-        }
+        url += '&genre=' + options.genre;
     }
 
     if (options.page && options.page.match(/\d+/)) {
-        var str = url.match(/\?/) ? '&' : '?';
-        url += str + 'page=' + options.page;
+        url += '&set=' + options.page;
     }
 
     var MovieTorrentCollection = Backbone.Collection.extend({
         url: url,
         model: App.Model.Movie,
         parse: function (data) {
-            
-            var movies = [];
+            var movies = [],
+                memory = {};
 
-            data.movies.forEach(function (movie) {
+            if (data.error || typeof data.MovieList === 'undefined') {
+                return movies;
+            }
 
-                var videos = {};
-                var torrents = {};
-                torrent = '';
-                quality = '';
-                var subtitles = {};
-
-                // Put the video and torrent list into a {quality: url} format
-                for( var k in movie.videos ) {
-                    if( typeof videos[movie.videos[k].quality] == 'undefined' ) {
-                      videos[movie.videos[k].quality] = movie.videos[k].url;
-                    }
-                }
-
-                for( var k in movie.torrents ) {
-                  if( typeof torrents[movie.torrents[k].quality] == 'undefined' ) {
-                    torrents[movie.torrents[k].quality] = movie.torrents[k].url;
-                  }
-                }
-
-                // Pick the worst quality by default
-                if( typeof torrents['720p'] != 'undefined' ){ quality = '720p'; torrent = torrents['720p']; }
-                else if( typeof torrents['1080p'] != 'undefined' ){ quality = '1080p'; torrent = torrents['1080p']; }
-
-                for( var k in movie.subtitles ) {
-                    if( supportedLanguages.indexOf(movie.subtitles[k].language) < 0 ){ continue; }
-                    if( typeof subtitles[movie.subtitles[k].language] == 'undefined' ) {
-                        subtitles[movie.subtitles[k].language] = movie.subtitles[k].url;
-                    }
-                }
-
-                if( (typeof movie.subtitles == 'undefined' || movie.subtitles.length == 0) && (typeof movie.videos == 'undefined' || movie.videos.length == 0) ){ return; }
+            data.MovieList.forEach(function (movie) {
+                // No imdb, no movie.
+                if( typeof movie.ImdbCode != 'string' || movie.ImdbCode.replace('tt', '') == '' ){ return; }
                 
-                movies.push({
-                    imdb:       movie.imdb_id,
-                    title:      movie.title,
-                    year:       movie.year,
-                    runtime:    movie.runtime,
-                    synopsis:   movie.synopsis,
-                    voteAverage:movie.vote_average,
+                // Temporary object
+                var movieModel = {
+                    imdb:       movie.ImdbCode.replace('tt', ''),
+                    coverImage: movie.CoverImage,
+                    year:       movie.MovieYear,
+                    title:      movie.MovieTitleClean,
+                    torrent:    movie.TorrentUrl,
+                    torrents:   {},
+                    quality:    movie.Quality,
+                    seeders:    movie.TorrentSeeds,
+                    leechers:   movie.TorrentPeers
+                };
 
-                    image:      movie.poster,
-                    bigImage:   movie.poster,
-                    backdrop:   movie.backdrop,
+                var stored = memory[movieModel.imdb];
 
-                    quality:    quality,
-                    torrent:    torrent,
-                    torrents:   torrents,
-                    videos:     videos,
-                    subtitles:  subtitles,
-                    seeders:    movie.seeders,
-                    leechers:   movie.leechers
-                });
+                // Create it on memory map if it doesn't exist.
+                if (typeof stored === 'undefined') {
+                    stored = memory[movieModel.imdb] = movieModel;
+                }
+
+                if (stored.quality !== movieModel.quality && movieModel.quality === '720p') {
+                    stored.torrent = movieModel.torrent;
+                    stored.quality = '720p';
+                }
+
+                // Set it's correspondent quality torrent URL.
+                stored.torrents[movie.Quality] = movie.TorrentUrl;
+
+                // Push it if not currently on array.
+                if (movies.indexOf(stored) === -1) {
+                    movies.push(stored);
+                }
             });
+
+            console.log('Torrents found:', data.MovieList.length);
 
             return movies;
         }
