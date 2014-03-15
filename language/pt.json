@@ -52,6 +52,7 @@
     "thriller": "Thriller",
     "war": "Guerra",
     "western": "Western"
+<<<<<<< HEAD
   },
   "french": "French",
   "english": "English",
@@ -64,4 +65,7 @@
   "italian": "Italian",
   "danish": "Danish",
   "arabic": "Arabic"
+=======
+  }
+>>>>>>> upstream/master
 }

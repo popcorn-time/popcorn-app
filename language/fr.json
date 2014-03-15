@@ -63,5 +63,12 @@
    "dutch": "Néerlandais",
    "italian": "Italien",
    "danish": "Danois",
+<<<<<<< HEAD
    "arabic": "Arabe"
+=======
+   "arabic": "Arabe",
+   "korean": "Coréen",
+   "hungarian": "Hongrois",
+   "bulgarian": "Bulgare"
+>>>>>>> upstream/master
 }
