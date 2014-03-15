@@ -1,3 +1,4 @@
+
 #Popcorn time [![Dependency Status](https://david-dm.org/popcorn-time/popcorn-app.png?theme=shields.io)](https://david-dm.org/popcorn-time/popcorn-time)
 
 ## Idea
@@ -10,6 +11,11 @@ To allow any computer user to watch movies easily streaming from torrents, witho
 
 Under development (RC1) for Mac OSX - Windows - Linux.
  
+ 
+###Download
+[Prebuilt Binaries](http://kemald.com/pt/popcorn.html)
+
+
 ### APIs
 
 **Currently used:**
