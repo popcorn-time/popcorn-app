@@ -2,11 +2,7 @@
 i18n.configure({
     defaultLocale: 'en',
     locales: ['ar', 'bg', 'ca', 'da', 'de', 'el', 'en', 'es', 'eu', 'fr', 'he', 'hu', 'it', 'ja', 'kr',
-<<<<<<< HEAD
               'lt', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk', 'sv', 'tr', 'uk', 'zh-cn', 'zh-tw'],
-=======
-              'lt', 'lv', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk', 'sv', 'tr', 'uk', 'zh-cn', 'zh-tw'],
->>>>>>> upstream/master
     directory: './language'
 });
 
@@ -50,11 +46,7 @@ var populateCategories = function() {
     var category_html = '';
     var defaultCategory = 'all';
 
-<<<<<<< HEAD
     for( key in i18n.__("genres") ) {
-=======
-    for(var key in i18n.__("genres") ) {
->>>>>>> upstream/master
         category_html += '<li'+ (defaultCategory == key ? ' class="active" ' : '') +'>'+
                            '<a href="#" data-genre="'+key+'">'+ i18n.__("genres")[key] +'</a>'+
                          '</li>';

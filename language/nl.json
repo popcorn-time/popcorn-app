@@ -22,11 +22,7 @@
   "UpgradeVersion": "Update Popcorn Time",
   "UpgradeVersionDescription": " is net uitgekomen. Download hem nu!",
   
-<<<<<<< HEAD
   "legalDisclaimer": "Popcorn Time downloadt en uploadt film met behulp van torrents, dit kan illegaal zijn in jouw land.",
-=======
-  "legalDisclaimer": "Popcorn Time downloadt en uploadt films met behulp van torrents, dit kan illegaal zijn in jouw land.",
->>>>>>> upstream/master
   "legalDisclaimerResponsible": "Wij zijn niet verantwoordelijk voor mogelijke wettelijke problemen, dus lees de voorwaarden goed alvorens de applicatie te gebruiken.",
   "legalDisclaimerAccept": "Ik begrijp dit en wil Popcorn Time gebruiken",
   "legalDisclaimerCancel": "Sluit Popcorn Time",
@@ -56,7 +52,6 @@
     "thriller": "Thriller",
     "war": "Oorlog",
     "western": "Western"
-<<<<<<< HEAD
   },
   "french": "French",
   "english": "English",
@@ -69,7 +64,4 @@
   "italian": "Italian",
   "danish": "Danish",
   "arabic": "Arabic"
-=======
-  }
->>>>>>> upstream/master
 }

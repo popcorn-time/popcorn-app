@@ -52,7 +52,6 @@
     "thriller": "スリラー",
     "war": "戦争",
     "western": "西洋"
-<<<<<<< HEAD
   },
   "french": "French",
   "english": "English",
@@ -65,7 +64,4 @@
   "italian": "Italian",
   "danish": "Danish",
   "arabic": "Arabic"
-=======
-  }
->>>>>>> upstream/master
 }
