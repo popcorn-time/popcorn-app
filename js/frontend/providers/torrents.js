@@ -8,7 +8,7 @@ App.getTorrentsCollection = function (options) {
         url += '?genre=' + options.genre;
     } else {
         if (options.keywords) {
-            url += '?query=' + options.keywords;
+            url += '?keywords=' + options.keywords;
         } 
     }
 
