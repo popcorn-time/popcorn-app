@@ -1,44 +1,35 @@
 {
   "name": "Popcorn-Time",
   "main": "app://host/index.html",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "window": {
     "title": "Popcorn Time",
     "icon": "images/icon.png",
     "toolbar": false,
     "frame": false,
-    "width": 962,
+    "width": 945,
     "height": 600,
-    "min_width": 962,
+    "min_width": 945,
     "min_height": 600,
     "resizable": true
   },
   "dependencies": {
-    "adm-zip" : "https://github.com/gpt-modules/adm-zip.git",
-    "cheerio" : "https://github.com/gpt-modules/cheerio.git",
-    "clivas" : "https://github.com/gpt-modules/clivas.git",
-    "i18n" : "https://github.com/gpt-modules/i18n-node.git",
-    "iconv-lite" : "https://github.com/gpt-modules/iconv-lite.git",
-    "jschardet" : "https://github.com/gpt-modules/jschardet.git",
-    "moviedb" : "https://github.com/gpt-modules/moviedb.git",
-    "network-address" : "https://github.com/gpt-modules/network-address.git",
-    "node-uuid" : "https://github.com/gpt-modules/node-uuid.git",
-    "numeral" : "https://github.com/gpt-modules/numeral-js.git",
-    "popcornflix" : "https://github.com/popcorn-time/popcornflix.git",
-    "request" : "https://github.com/gpt-modules/request.git",
-    "universal-analytics" : "https://github.com/gpt-modules/universal-analytics.git",
-    "url" : "https://github.com/gpt-modules/url.git",
-    "xmlrpc" : "https://github.com/gpt-modules/node-xmlrpc.git",
-    "socket.io": "https://github.com/gpt-modules/socket.io.git",
-    "express": "https://github.com/gpt-modules/express.git",
-    "ip": "https://github.com/gpt-modules/node-ip.git"
+    "request": "~2.33.0",
+    "peerflix": "~0.1.5",
+    "network-address": "0.0.4",
+    "xmlrpc": "~1.2.0",
+    "clivas": "~0.1.4",
+    "numeral": "~1.5.3",
+    "moviedb": "~0.1.1",
+    "jschardet": "~1.1.0",
+    "iconv-lite": "~0.2.11",
+    "adm-zip": "~0.4.4"
   },
   "devDependencies": {
-    "grunt": "https://github.com/gpt-modules/grunt.git",
-    "grunt-node-webkit-builder": "https://github.com/gpt-modules/grunt-node-webkit-builder.git",
-    "grunt-contrib-sass": "https://github.com/gpt-modules/grunt-contrib-sass.git",
-    "grunt-contrib-watch": "https://github.com/gpt-modules/grunt-contrib-watch.git",
-    "grunt-contrib-compass": "https://github.com/gpt-modules/grunt-contrib-compass.git",
-    "grunt-contrib-copy": "https://github.com/gpt-modules/grunt-contrib-copy.git"
+    "grunt": "~0.4.2",
+    "grunt-node-webkit-builder": "~0.1.16",
+    "grunt-contrib-sass": "~0.7.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.7.1"
   }
 }

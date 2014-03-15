@@ -13,10 +13,7 @@ var request = require('request'),
         'french'    : 'Français',
         'turkish'   : 'Türkçe',
         'romanian'  : 'Română',
-        'portuguese': 'Português',
-        'brazilian' : 'Português-Br',
-        'dutch'     : 'Nederlands',
-        'german'    : 'Deutsch'
+        'portuguese': 'Português'
     };
 
 App.findSubtitle = function (model, cb, isFallback) {
@@ -41,12 +38,6 @@ App.findSubtitle = function (model, cb, isFallback) {
                         var link = a.attr("href");
                         var linkData = (link.substr(link.lastIndexOf('/') + 1)).split('-');
                         var language = linkData[linkData.length-3];
-
-                        //This verification sets the subtitle to portuguese of Brazil or European(regionalization)
-                        if(language == 'portuguese' && linkData[linkData.length-4] == 'brazilian'){
-                            language = linkData[linkData.length-4];
-                        }
-                        
                         // TODO: we can get more info from the site (like rating, hear-impaired)
                         if ($.isEmptyObject(queries[language])
                             && !($.isEmptyObject(Languages[language]))) {
@@ -71,8 +62,8 @@ App.findSubtitle = function (model, cb, isFallback) {
                             if (!error && response.statusCode == 200) {
                                 var $c = cheerio.load(html);
                                 var subDownloadLink = $c('a.download-subtitle').attr('href');
-                                if (!(language in subs)) {
-                                    subs[language] = subDownloadLink;
+                                subs[language] = subDownloadLink;
+                                if (key == (Object.keys(Languages).length - 1)) {
                                     App.Cache.setItem('subtitle', model, subs);
                                     // Callback
                                     cb(subs);
