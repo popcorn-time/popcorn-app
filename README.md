@@ -1,3 +1,6 @@
+##NOTE: 
+Currently mainstream repo is : [https://github.com/Yify/popcorn-app](https://github.com/Yify/popcorn-app)
+I only maintain this repo for educational purposes
 
 #Popcorn time [![Dependency Status](https://david-dm.org/popcorn-time/popcorn-app.png?theme=shields.io)](https://david-dm.org/popcorn-time/popcorn-time)
 
@@ -10,6 +13,12 @@ To allow any computer user to watch movies easily streaming from torrents, witho
 ### Status
 
 Under development (RC1) for Mac OSX - Windows - Linux.
+
+Currently all functionality is back online using subapi.com replacement:
+
+Repo : [https://github.com/cettox/popcorn-subapi-replacement](https://github.com/cettox/popcorn-subapi-replacement)
+HostedAt : [http://cettox-popcorn-subapi-replacement.nodejitsu.com/](http://cettox-popcorn-subapi-replacement.nodejitsu.com/)
+
  
  
 ###Download
