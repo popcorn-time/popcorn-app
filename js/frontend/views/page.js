@@ -19,7 +19,7 @@ App.View.Page = Backbone.View.extend({
 
         // ontransitionend could be buggy here.
         setTimeout(function () {
-            $pages.removeClass('notransition').hide();
+            //$pages.removeClass('notransition').hide();
 
             $el.show();
         }, 350);
