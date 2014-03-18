@@ -3,7 +3,7 @@ var request = require('request'),
     zlib = require('zlib'),
     fs = require('fs'),
 
-    appUserAgent = 'PopcornHour v1',
+    appUserAgent = 'Some IE Shit',
 
     baseUrl = 'http://www.yifysubtitles.com',
 
@@ -32,7 +32,7 @@ App.findSubtitle = function (model, cb, isFallback) {
                 'User-Agent': appUserAgent
             }
         };
-
+        console.log('url base '+baseUrl + '/movie-imdb/tt' + model.imdb);
         request(requestOptions, function(error, response, html) {
             if (!error && response.statusCode == 200) {
                 var queries = {},
@@ -82,6 +82,8 @@ App.findSubtitle = function (model, cb, isFallback) {
                                     // Callback
                                     cb(subs);
                                 }
+                            }else{
+                                console.log('error motherfucker');
                             }
                         });
                     }

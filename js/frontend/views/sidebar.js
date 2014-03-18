@@ -92,10 +92,13 @@ App.View.Sidebar = Backbone.View.extend({
 
     load: function (model) {
         // TODO: QUEUE PLAY BUTTON
-        this.listenTo(model, 'change:subtitles', this.render);
-
-        this.model = model;
-        this.render();
+        var self = this;
+        App.findSubtitle(model.attributes, function(subs){
+            model.set('subtitles',subs);
+            self.listenTo(model, 'change:subtitles', self.render);
+            self.model = model;
+            self.render();
+        });
     },
 
     render: function () {
