@@ -22,7 +22,7 @@ HostedAt : [http://cettox-popcorn-subapi-replacement.nodejitsu.com/](http://cett
  
  
 ###Download
-[Prebuilt Binaries](http://kemald.com/pt/popcorn.html)
+[See Releases](https://github.com/cettox/popcorn-app/releases)
 
 
 ### APIs
