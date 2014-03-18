@@ -10,7 +10,7 @@
   "search": "Procurar",
   "movies": "Filmes",
 
-  "subtitledIn": "Legendas em",
+  "subtitledIn": "Legendado em",
   "quality": "Qualidade",
   "watchItNow": "Assistir agora",
   "durationUnit": "min",
@@ -61,5 +61,10 @@
   "romanian": "Romeno",
   "turkish": "Turco",
   "dutch": "Holandês",
-  "italian": "Italiano"
+  "italian": "Italiano",
+  "danish": "Dinamarquês",
+  "arabic": "Árabe",
+  "korean": "Coreano",
+  "hungarian": "Húngaro",
+  "bulgarian": "Búlgaro"
 }
