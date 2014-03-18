@@ -14,7 +14,7 @@ To allow any computer user to watch movies easily streaming from torrents, witho
 
 Under development (RC1) for Mac OSX - Windows - Linux.
 
-Currently all functionality except subtitles is back online using subapi.com replacement:
+All previous functionality was restored! Only small movie details are missing.
 
 Repo : [https://github.com/cettox/popcorn-subapi-replacement](https://github.com/cettox/popcorn-subapi-replacement)
 HostedAt : [http://cettox-popcorn-subapi-replacement.nodejitsu.com/](http://cettox-popcorn-subapi-replacement.nodejitsu.com/)
