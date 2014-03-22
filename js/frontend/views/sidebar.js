@@ -93,6 +93,7 @@ App.View.Sidebar = Backbone.View.extend({
     load: function (model) {
         // TODO: QUEUE PLAY BUTTON
         var self = this;
+        self.renderLoader();
         App.findSubtitle(model.attributes, function(subs){
             model.set('subtitles',subs);
             self.listenTo(model, 'change:subtitles', self.render);
@@ -104,6 +105,11 @@ App.View.Sidebar = Backbone.View.extend({
     render: function () {
         this.$el.html(this.template(this.model.attributes));
         this.show();
+    },
+    renderLoader : function(){
+        this.$el.html('loading subtitles');
+        $('body').removeClass().addClass('sidebar-open');
+        this.$el.removeClass('hidden');
     },
 
     isVisible: function () {

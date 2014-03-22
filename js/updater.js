@@ -1,6 +1,7 @@
 
 // Check if there's a newer version and shows a prompt if that's the case
 var checkForUpdates = function() {
+    return false; //currently disable auto updates
     var http = require('http');
 
     var currentOs = getOperatingSystem();
