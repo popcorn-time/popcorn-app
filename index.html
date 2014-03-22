@@ -93,7 +93,7 @@
 
               <i data-placement="left" data-toggle="tooltip" title="<%= health %> health" class="health <%= health %> fa fa-flash"></i>
 
-              <% var p_rating = this.model.get('voteAverage') ? this.model.get('voteAverage').toFixed(1) : 0.0 %>
+              <% var p_rating = this.model.get('voteAverage') ? parseFloat(this.model.get('voteAverage')) : 0.0 %>
               <div class="rating">
                 <ul class="votes" title="<%= p_rating %> / 10">
                   <% p_rating = Math.round(p_rating) / 2; // Roundoff number to nearest 0.5 %>
@@ -182,6 +182,8 @@
 
     <!-- Data Sources -->
     <script src="js/frontend/providers/torrents.js"></script>
+    <script src="js/frontend/providers/cache.js"></script>
+    <script src="js/frontend/providers/yifysubtitles.js"></script>
 
     <!-- Backbone Models, Views and Controllers -->
     <script src="js/frontend/models/movie.js"></script>
