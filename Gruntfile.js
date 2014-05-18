@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     },
     nodewebkit: {
       options: {
+        download_url: 'http://dl.node-webkit.org/',
         version: '0.9.2',
         build_dir: './build', // Where the build version of my node-webkit app is saved
         mac_icns: './images/popcorntime.icns', // Path to the Mac icon file
