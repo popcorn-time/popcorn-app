@@ -30,7 +30,7 @@ var
     url = require('url'),
 
     // TMP Folder
-    tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time'),
+    tmpFolder = path.join(os.tmpDir(), 'Popcorn-Time-tmp'),
 
     // i18n module (translations)
     i18n = require("i18n");
