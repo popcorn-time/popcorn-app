@@ -26,6 +26,10 @@ html {
   in-line: block;
 }
 
+html > h1 {
+  line-height: 1;
+  in-line: block;
+}
 ol, ul {
   list-style: none;
 }
