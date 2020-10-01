@@ -30,7 +30,7 @@ Under development (RC1) for Mac OSX - Windows - Linux.
 
 ### Dependencies
 
-You will need nodejs and grunt:
+You will need nodejs and grunt to be installed:
 
     $ npm install -g grunt-cli
 
